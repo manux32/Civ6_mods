@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bakery_Building -->
+<!-- Author: manux -->
+<!-- DateCreated: 3/2/2024 7:35:56 AM -->
+<GameData>
+	<Types>
+		<Row>
+			<Type>BUILDING_BAKERY_LRS</Type>
+			<Kind>KIND_BUILDING</Kind>
+		</Row>
+	</Types>
+	<Buildings>
+		<Row>
+			<BuildingType>BUILDING_BAKERY_LRS</BuildingType>
+			<Name>LOC_BUILDING_BAKERY_LRS_NAME</Name>
+			<PrereqTech>TECH_POTTERY</PrereqTech>
+			<Description>LOC_BUILDING_BAKERY_LRS_DESCRIPTION</Description>
+			<PrereqDistrict>DISTRICT_CITY_CENTER</PrereqDistrict>
+			<PurchaseYield>YIELD_GOLD</PurchaseYield>
+			<Cost>80</Cost>
+			<Maintenance>1</Maintenance>
+			<AdvisorType>ADVISOR_GENERIC</AdvisorType>
+		</Row>
+	</Buildings>
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_BAKERY_LRS</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+	</Building_YieldChanges>
+</GameData>

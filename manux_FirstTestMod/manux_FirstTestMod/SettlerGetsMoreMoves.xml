@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SettlerGetsMoreMoves -->
+<!-- Author: User -->
+<!-- DateCreated: 3/2/2024 8:45:40 AM -->
+<GameData>
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_SETTLER" />
+			<Set BaseMoves="6" />
+		</Update>
+	</Units>
+</GameData>

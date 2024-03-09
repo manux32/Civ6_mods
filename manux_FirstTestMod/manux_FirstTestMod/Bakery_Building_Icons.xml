@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bakery_Building_Icons -->
+<!-- Author: manux -->
+<!-- DateCreated: 3/2/2024 8:34:21 AM -->
+
+<GameData>
+	<IconDefinitions>
+		<!-- Use the existing granary icons -->
+		<Row Name="ICON_BUILDING_BAKERY_LRS" Atlas="ICON_ATLAS_BUILDINGS" Index="3"/>
+		<Row Name="ICON_BUILDING_BAKERY_LRS_FOW" Atlas="ICON_ATLAS_BUILDINGS_FOW" Index="3"/>
+	</IconDefinitions>
+</GameData>

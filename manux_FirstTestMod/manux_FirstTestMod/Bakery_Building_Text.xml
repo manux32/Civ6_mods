@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bakery_Building_Text -->
+<!-- Author: manux -->
+<!-- DateCreated: 3/2/2024 8:12:43 AM -->
+<GameData>
+	<LocalizedText>
+		<Row Tag="LOC_BUILDING_BAKERY_LRS_NAME" Language="en_US">
+			<Text>Bakery</Text>
+		</Row>
+		<Row Tag="LOC_BUILDING_BAKERY_LRS_DESCRIPTION" Language="en_US">
+			<Text>Bakery add +2 food to a City</Text>
+		</Row>
+	</LocalizedText>
+</GameData>

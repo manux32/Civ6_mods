@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>Manux First Test Mod</Name>
+    <Guid>8e55d05f-558b-476b-a8ae-8d66d12ba620</Guid>
+    <ProjectGuid>8e332310-4d15-4f27-b73e-16da97e45975</ProjectGuid>
+    <ModVersion>1</ModVersion>
+    <Teaser>Manux First Test Mod</Teaser>
+    <Description>Manux First Test Mod</Description>
+    <Authors>manux</Authors>
+    <SpecialThanks>
+    </SpecialThanks>
+    <AffectsSavedGames>true</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+    <AssociationData><![CDATA[<Associations>
+  <Dependency type="Dlc" title="Expansion: Rise and Fall" id="1B28771A-C749-434B-9053-D1380C553DE9" />
+</Associations>]]></AssociationData>
+    <AssemblyName>manux_FirstTestMod</AssemblyName>
+    <RootNamespace>manux_FirstTestMod</RootNamespace>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="Bakery_Database"><File>Bakery_Building.xml</File><File>SettlerGetsMoreMoves.xml</File></UpdateDatabase><UpdateText id="Bakery_Text"><File>Bakery_Building_Text.xml</File></UpdateText><UpdateIcons id="Bakery_Icons"><File>Bakery_Building_Icons.xml</File></UpdateIcons></InGameActions>]]></InGameActionData>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="manux_FirstTestMod.Art.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bakery_Building.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Bakery_Building_Icons.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Bakery_Building_Text.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SettlerGetsMoreMoves.xml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
