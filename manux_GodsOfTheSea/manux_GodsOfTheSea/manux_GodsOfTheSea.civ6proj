@@ -45,9 +45,6 @@
     <Content Include="Requirements.sql">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="TEST_CALISSE.sql">
-      <SubType>Content</SubType>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
 </Project>
