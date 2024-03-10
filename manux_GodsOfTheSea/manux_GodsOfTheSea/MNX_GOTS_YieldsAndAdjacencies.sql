@@ -35,7 +35,7 @@ VALUES	('TRAIT_MNX_NO_REG_DIST_ADJ',		'District_Faith'),
 
 INSERT OR IGNORE INTO Modifiers 
 		(ModifierId,								ModifierType,															OwnerRequirementSetId,		SubjectRequirementSetId)
-VALUES	-- Districts double adjacency
+VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_HOLYSITE_2X_ADJACENCY',			'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CIV_NOT_JAPAN'),
 		('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',		'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CIV_NOT_JAPAN'),
 		('MOD_MNX_HARBOR_2X_ADJACENCY',				'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CIV_NOT_JAPAN'),
@@ -82,7 +82,7 @@ VALUES	-- Districts double adjacency
 
 INSERT OR IGNORE INTO ModifierArguments
 		(ModifierId,									Name,						Value)
-VALUES	-- Districts 2x adjacency
+VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_HOLYSITE_2X_ADJACENCY',				'DistrictType',				'DISTRICT_HOLY_SITE'),
 		('MOD_MNX_HOLYSITE_2X_ADJACENCY',				'YieldType',				'YIELD_FAITH'),
 		('MOD_MNX_HOLYSITE_2X_ADJACENCY',				'Amount',					'1'),
@@ -121,8 +121,11 @@ VALUES	-- Districts 2x adjacency
 		('MOD_MNX_HARBOR_REM_REG_ADJ_TEXT',				'Amount',					'1'),
 		('MOD_MNX_HARBOR_REM_REG_ADJ_TEXT',				'Description',				'GOTS'),*/
 
+		-- Coastal Housing
+		('MOD_MNX_COASTAL_HOUSING',						'Amount',					'2'),
 		-- Water adjacent districts gain +1 amenity 
 		('MOD_MNX_WATER_DISTRICT_AMENITY',				'Amount',					'1'),
+		
 		-- Holy Site extra adjacency Yields
 		('MOD_MNX_HOLYSITE_ADJ_FOOD',					'YieldTypeToGrant',			'YIELD_FOOD'),
 		('MOD_MNX_HOLYSITE_ADJ_FOOD',					'YieldTypeToMirror',		'YIELD_FAITH'),
@@ -138,7 +141,7 @@ VALUES	-- Districts 2x adjacency
 		('MOD_MNX_HOLYSITE_ADJ_CULT',					'YieldTypeToMirror',		'YIELD_FAITH'),
 		('MOD_MNX_HARBOR_ADJ_FOOD',						'YieldTypeToGrant',			'YIELD_FOOD'),
 		('MOD_MNX_HARBOR_ADJ_FOOD',						'YieldTypeToMirror',		'YIELD_GOLD'),
-		-- Tiles yeilds from adjacent Holy Site or Harbor
+		-- Tiles yields from adjacent Holy Site or Harbor
 		('MOD_MNX_PLOT_FAITH_FROM_ADJ_HOLYSITE',		'YieldType',				'YIELD_FAITH'),
 		('MOD_MNX_PLOT_FAITH_FROM_ADJ_HOLYSITE',		'Amount',					'2'),
 		('MOD_MNX_PLOT_GOLD_FROM_ADJ_HARBOR',			'YieldType',				'YIELD_GOLD'),
@@ -178,10 +181,7 @@ VALUES	-- Districts 2x adjacency
 		('MOD_MNX_WATER_YIELD_SCI',						'YieldType',				'YIELD_SCIENCE'),
 		('MOD_MNX_WATER_YIELD_SCI',						'Amount',					'1'),
 		('MOD_MNX_WATER_YIELD_CULT',					'YieldType',				'YIELD_CULTURE'),
-		('MOD_MNX_WATER_YIELD_CULT',					'Amount',					'1'),
-		
-		-- Coastal Housing
-		('MOD_MNX_COASTAL_HOUSING',						'Amount',					'3');
+		('MOD_MNX_WATER_YIELD_CULT',					'Amount',					'1');
 
 
  -- Add modifiers to all districts to get Yields from Holy Site and Harbor
@@ -198,17 +198,20 @@ FROM Districts;
 
 INSERT OR IGNORE INTO TraitModifiers 
 		(TraitType,					ModifierId) 
-VALUES	-- Districts 2x adjacency
+VALUES	-- Holy Site and Harbor 2x adjacency
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HOLYSITE_2X_ADJACENCY'),
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HARBOR_2X_ADJACENCY'),	
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HOLYSITE_REM_REG_ADJACENCY'),
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HARBOR_REM_REG_ADJACENCY'),		
 		--('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HOLYSITE_REM_REG_ADJ_TEXT'),	
 		--('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HARBOR_REM_REG_ADJ_TEXT'),
-			
+		
+		-- Coastal Housing
+		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_COASTAL_HOUSING'),
 		-- Water adjacent districts gain +1 amenity 
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_WATER_DISTRICT_AMENITY'),
-		-- Holy Site and Harbor extra adjacency Yields
+		
+		-- Holy Site and Harbor extra adjacency Yields (FOOD)
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HOLYSITE_ADJ_FOOD'),
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HARBOR_ADJ_FOOD'),
 		--('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HOLYSITE_ADJ_PROD'),
@@ -217,7 +220,7 @@ VALUES	-- Districts 2x adjacency
 		--('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HOLYSITE_ADJ_SCI'),
 		--('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HOLYSITE_ADJ_CULT'),
 		-------------------------------------------------------------------
-		-- Tiles yeilds from adjacent Districts
+		-- Tiles yields from adjacent Districts
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_PLOT_FAITH_FROM_ADJ_HOLYSITE'),	
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_PLOT_GOLD_FROM_ADJ_HARBOR'),
 		-- Holy Site: get yields from other yield producing districts
@@ -236,9 +239,7 @@ VALUES	-- Districts 2x adjacency
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_WATER_YIELD_GOLD'),
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_WATER_YIELD_FAITH'),
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_WATER_YIELD_SCI'),
-		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_WATER_YIELD_CULT'),
-		-- Coastal Housing
-		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_COASTAL_HOUSING');
+		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_WATER_YIELD_CULT');
 		
 		
 

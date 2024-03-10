@@ -52,7 +52,7 @@ VALUES	-- Great People boosts
 		('MOD_MNX_POL_SLOT_WILDCARD_1',					'GovernmentSlotType',		'SLOT_WILDCARD'),
 		('MOD_MNX_POL_SLOT_WILDCARD_2',					'GovernmentSlotType',		'SLOT_WILDCARD'),
 		-- Governor points
-		('MOD_MNX_GOV_POINT_1',							'Delta',					'10');
+		('MOD_MNX_GOV_POINT_1',							'Delta',					'1');
 
 
 INSERT OR IGNORE INTO TraitModifiers 
@@ -69,8 +69,8 @@ VALUES	-- Great People boosts
 		-- Unique Units
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_UNIQUE_UNIT_DROMON'),
 		-- Units Abilities
-		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_EMBARK'),  -- doesn't work anymore
-		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_OCEAN'),
+		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_EMBARK_ALL_UNITS'),  -- now works!
+		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_UNLOCK_OCEAN'),
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_IGNORE_EMBARK_DISEMBARK_COST'),
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_FIGHT_WHILE_EMBARKED'),		
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_SHIP_HEAL_NEUTRAL'),
@@ -86,20 +86,23 @@ VALUES	-- Great People boosts
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_GOV_POINT_1');
 
 
--- Early embark that works
+/*-- Early embark that works. 
+-- ABILITY_MANA now works! Disabling this way of doing it for now.
+	-- I think it's a question of load order that it wasn't working before. 
+	-- Some units like the Gaul warrior not yet loaded or something.
 INSERT OR IGNORE INTO Modifiers
-		(ModifierId,					ModifierType,											RunOnce,	Permanent)
+		(ModifierId,						ModifierType,											RunOnce,	Permanent)
 SELECT	'MOD_MNX_EMBARK_'||UnitType,		'MODIFIER_PLAYER_ADJUST_EMBARK_UNIT_PASS',				0,			1
 FROM	Units	
 WHERE Domain='DOMAIN_LAND';
 
 INSERT OR IGNORE INTO ModifierArguments
-		(ModifierId,									Name,							Value)
-SELECT	'MOD_MNX_EMBARK_'||UnitType,						'UnitType',						UnitType
+		(ModifierId,							Name,							Value)
+SELECT	'MOD_MNX_EMBARK_'||UnitType,			'UnitType',						UnitType
 FROM	Units	WHERE Domain='DOMAIN_LAND';
 
 INSERT OR IGNORE INTO TraitModifiers
 		(TraitType,						ModifierId)
 SELECT	'TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_EMBARK_'||UnitType
 FROM	Units	
-WHERE Domain='DOMAIN_LAND';
+WHERE Domain='DOMAIN_LAND';*/

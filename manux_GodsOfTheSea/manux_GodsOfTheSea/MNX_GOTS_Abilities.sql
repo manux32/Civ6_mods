@@ -55,8 +55,8 @@ VALUES	('ABILITY_MNX_IGNORE_EMBARK_DISEMBARK_COST',		'CLASS_ALL_COMBAT_UNITS'),
 INSERT OR IGNORE INTO Modifiers 
 		(ModifierId,									ModifierType,											OwnerRequirementSetId,		SubjectRequirementSetId)
 VALUES	-- Water unlock
-		--('MOD_MNX_EMBARK',								'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',					'PLAYER_IS_HUMAN',			NULL),
-		('MOD_MNX_OCEAN',								'MODIFIER_PLAYER_UNITS_ADJUST_VALID_TERRAIN',			'PLAYER_IS_HUMAN',			NULL),
+		('MOD_MNX_EMBARK_ALL_UNITS',					'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',					'PLAYER_IS_HUMAN',			NULL),
+		('MOD_MNX_UNLOCK_OCEAN',						'MODIFIER_PLAYER_UNITS_ADJUST_VALID_TERRAIN',			'PLAYER_IS_HUMAN',			NULL),
 		-- Unique Units
 		('MOD_MNX_UNIQUE_UNIT_DROMON',					'MODIFIER_PLAYER_ADJUST_VALID_UNIT_BUILD',				'PLAYER_IS_HUMAN',			'REQSR_MNX_HAS_TECH_SHIPBUILDING'),
 		-- Units Abilities
@@ -72,9 +72,9 @@ VALUES	-- Water unlock
 INSERT OR IGNORE INTO ModifierArguments
 		(ModifierId,									Name,						Value)
 VALUES	-- Water unlock
-		--('MOD_MNX_EMBARK',								'AbilityType',				'ABILITY_MANA'),
-		('MOD_MNX_OCEAN',								'TerrainType',				'TERRAIN_OCEAN'),
-		('MOD_MNX_OCEAN',								'Valid',					'1'),
+		('MOD_MNX_EMBARK_ALL_UNITS',					'AbilityType',				'ABILITY_MANA'),
+		('MOD_MNX_UNLOCK_OCEAN',						'TerrainType',				'TERRAIN_OCEAN'),
+		('MOD_MNX_UNLOCK_OCEAN',						'Valid',					'1'),
 		-- Unique Units
 		('MOD_MNX_UNIQUE_UNIT_DROMON',					'UnitType',					'UNIT_BYZANTINE_DROMON'),
 		-- Units Abilities
