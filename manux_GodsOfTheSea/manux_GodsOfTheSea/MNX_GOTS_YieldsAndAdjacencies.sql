@@ -3,17 +3,35 @@
 -- DateCreated: 3/3/2024 6:49:05 PM
 --------------------------------------------------------------
 
---INSERT OR IGNORE INTO Types (Type, Kind) VALUES ('TRAIT_REMOVE_REGULAR_DISTRICTS_ADJ', 'KIND_TRAIT');
---INSERT OR IGNORE INTO Traits (TraitType, InternalOnly) VALUES ('TRAIT_REMOVE_REGULAR_DISTRICTS_ADJ', 1);
+-- Attempt to add a trait to remove regular Faith and Gold districts adjacencies.
+-- Works but removes adj from com-hub completely and it's given to all leaders
+-- Need a way to give the trait just to the current player
 /*
+INSERT OR IGNORE INTO Types
+		(Type,											Kind)
+VALUES	('TRAIT_MNX_NO_REG_DIST_ADJ',					'KIND_TRAIT');
+
+INSERT OR IGNORE INTO Traits
+		(TraitType,							InternalOnly)
+VALUES	('TRAIT_MNX_NO_REG_DIST_ADJ',		1);
+
+
+INSERT OR IGNORE INTO LeaderTraits
+		(TraitType,							LeaderType)
+SELECT	'TRAIT_MNX_NO_REG_DIST_ADJ',		LeaderType
+FROM	Leaders
+WHERE	InheritFrom='LEADER_DEFAULT';
+
+
 INSERT OR IGNORE INTO ExcludedAdjacencies 
-		(TraitType,						YieldChangeId) 
-VALUES	('TRAIT_LEADER_MAJOR_CIV',		'District_Faith'),
-		('TRAIT_LEADER_MAJOR_CIV',		'District_Science'),
-		('TRAIT_LEADER_MAJOR_CIV',		'District_Gold'),
-		('TRAIT_LEADER_MAJOR_CIV',		'District_Culture'),
-		('TRAIT_LEADER_MAJOR_CIV',		'District_Production');
+		(TraitType,							YieldChangeId) 
+VALUES	('TRAIT_MNX_NO_REG_DIST_ADJ',		'District_Faith'),
+		--('TRAIT_LEADER_MAJOR_CIV',		'District_Science'),
+		('TRAIT_MNX_NO_REG_DIST_ADJ',		'District_Gold');
+		--('TRAIT_LEADER_MAJOR_CIV',		'District_Culture'),
+		--('TRAIT_LEADER_MAJOR_CIV',		'District_Production');
 */
+
 
 INSERT OR IGNORE INTO Modifiers 
 		(ModifierId,								ModifierType,															OwnerRequirementSetId,		SubjectRequirementSetId)
@@ -22,6 +40,9 @@ VALUES	-- Districts double adjacency
 		('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',		'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CIV_NOT_JAPAN'),
 		('MOD_MNX_HARBOR_2X_ADJACENCY',				'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CIV_NOT_JAPAN'),
 		('MOD_MNX_HARBOR_REM_REG_ADJACENCY',		'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CIV_NOT_JAPAN'),
+		--('MOD_MNX_HOLYSITE_REM_REG_ADJ_TEXT',		'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CIV_NOT_JAPAN'),
+		--('MOD_MNX_HARBOR_REM_REG_ADJ_TEXT',		'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CIV_NOT_JAPAN'),
+
 		-- Coastal Housing
 		('MOD_MNX_COASTAL_HOUSING',					'MODIFIER_PLAYER_CITIES_ADJUST_WATER_HOUSING',							'PLAYER_IS_HUMAN',			'PLOT_IS_COASTAL_LAND_REQUIREMENTS'),
 		-- Water adjacent districts gain +1	amenity 
@@ -67,25 +88,39 @@ VALUES	-- Districts 2x adjacency
 		('MOD_MNX_HOLYSITE_2X_ADJACENCY',				'Amount',					'1'),
 		('MOD_MNX_HOLYSITE_2X_ADJACENCY',				'TilesRequired',			'1'),
 		('MOD_MNX_HOLYSITE_2X_ADJACENCY',				'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_HOLYSITE_2X_ADJACENCY',				'Description',				'+{1_num} [ICON_Faith] Faith from the adjacent {1_Num : plural 1?district; other?districts;} (Gods of the Sea).'),
 
 		('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',			'DistrictType',				'DISTRICT_HOLY_SITE'),
 		('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',			'YieldType',				'YIELD_FAITH'),
 		('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',			'Amount',					'-1'),
 		('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',			'TilesRequired',			'2'),
 		('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',			'OtherDistrictAdjacent',	'1'),
+		/*('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',		'Description',				'-{1_num} [ICON_Faith] Faith compensation from the adjacent {1_Num : plural 1?district; other?districts;} (Gods of the Sea).'),
 		
+		('MOD_MNX_HOLYSITE_REM_REG_ADJ_TEXT',			'DistrictType',				'District_Faith'),
+		('MOD_MNX_HOLYSITE_REM_REG_ADJ_TEXT',			'YieldType',				'YIELD_FAITH'),
+		('MOD_MNX_HOLYSITE_REM_REG_ADJ_TEXT',			'Amount',					'1'),
+		('MOD_MNX_HOLYSITE_REM_REG_ADJ_TEXT',			'Description',				'GOTS'),*/
+
 		('MOD_MNX_HARBOR_2X_ADJACENCY',					'DistrictType',				'DISTRICT_HARBOR'),
 		('MOD_MNX_HARBOR_2X_ADJACENCY',					'YieldType',				'YIELD_GOLD'),
 		('MOD_MNX_HARBOR_2X_ADJACENCY',					'Amount',					'1'),
 		('MOD_MNX_HARBOR_2X_ADJACENCY',					'TilesRequired',			'1'),
 		('MOD_MNX_HARBOR_2X_ADJACENCY',					'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_HARBOR_2X_ADJACENCY',					'Description',				'+{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?district; other?districts;} (Gods of the Sea).'),
 
 		('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'DistrictType',				'DISTRICT_HARBOR'),
 		('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'YieldType',				'YIELD_GOLD'),
 		('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'Amount',					'-1'),
 		('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'TilesRequired',			'2'),
 		('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'OtherDistrictAdjacent',	'1'),
-			
+		/*('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'Description',				'-{1_num} [ICON_Gold] Gold compensation from the adjacent {1_Num : plural 1?district; other?districts;} (Gods of the Sea).'),
+		
+		('MOD_MNX_HARBOR_REM_REG_ADJ_TEXT',				'DistrictType',				'District_Gold'),
+		('MOD_MNX_HARBOR_REM_REG_ADJ_TEXT',				'YieldType',				'YIELD_GOLD'),
+		('MOD_MNX_HARBOR_REM_REG_ADJ_TEXT',				'Amount',					'1'),
+		('MOD_MNX_HARBOR_REM_REG_ADJ_TEXT',				'Description',				'GOTS'),*/
+
 		-- Water adjacent districts gain +1 amenity 
 		('MOD_MNX_WATER_DISTRICT_AMENITY',				'Amount',					'1'),
 		-- Holy Site extra adjacency Yields
@@ -168,6 +203,9 @@ VALUES	-- Districts 2x adjacency
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HARBOR_2X_ADJACENCY'),	
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HOLYSITE_REM_REG_ADJACENCY'),
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HARBOR_REM_REG_ADJACENCY'),		
+		--('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HOLYSITE_REM_REG_ADJ_TEXT'),	
+		--('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_HARBOR_REM_REG_ADJ_TEXT'),
+			
 		-- Water adjacent districts gain +1 amenity 
 		('TRAIT_LEADER_MAJOR_CIV', 'MOD_MNX_WATER_DISTRICT_AMENITY'),
 		-- Holy Site and Harbor extra adjacency Yields
