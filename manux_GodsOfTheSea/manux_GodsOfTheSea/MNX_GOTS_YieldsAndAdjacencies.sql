@@ -88,14 +88,14 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_HOLYSITE_2X_ADJACENCY',				'Amount',					'1'),
 		('MOD_MNX_HOLYSITE_2X_ADJACENCY',				'TilesRequired',			'1'),
 		('MOD_MNX_HOLYSITE_2X_ADJACENCY',				'OtherDistrictAdjacent',	'1'),
-		('MOD_MNX_HOLYSITE_2X_ADJACENCY',				'Description',				'+{1_num} [ICON_Faith] Faith from the adjacent {1_Num : plural 1?district; other?districts;} (Gods of the Sea).'),
+		('MOD_MNX_HOLYSITE_2X_ADJACENCY',				'Description',				'(GOTS) +{1_num} [ICON_Faith] Faith from the adjacent {1_Num : plural 1?district; other?districts;}.'),
 
 		('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',			'DistrictType',				'DISTRICT_HOLY_SITE'),
 		('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',			'YieldType',				'YIELD_FAITH'),
 		('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',			'Amount',					'-1'),
 		('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',			'TilesRequired',			'2'),
 		('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',			'OtherDistrictAdjacent',	'1'),
-		/*('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',		'Description',				'-{1_num} [ICON_Faith] Faith compensation from the adjacent {1_Num : plural 1?district; other?districts;} (Gods of the Sea).'),
+		/*('MOD_MNX_HOLYSITE_REM_REG_ADJACENCY',		'Description',				'(GOTS) -{1_num} [ICON_Faith] Faith compensation from the adjacent {1_Num : plural 1?district; other?districts;}.'),
 		
 		('MOD_MNX_HOLYSITE_REM_REG_ADJ_TEXT',			'DistrictType',				'District_Faith'),
 		('MOD_MNX_HOLYSITE_REM_REG_ADJ_TEXT',			'YieldType',				'YIELD_FAITH'),
@@ -107,14 +107,14 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_HARBOR_2X_ADJACENCY',					'Amount',					'1'),
 		('MOD_MNX_HARBOR_2X_ADJACENCY',					'TilesRequired',			'1'),
 		('MOD_MNX_HARBOR_2X_ADJACENCY',					'OtherDistrictAdjacent',	'1'),
-		('MOD_MNX_HARBOR_2X_ADJACENCY',					'Description',				'+{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?district; other?districts;} (Gods of the Sea).'),
+		('MOD_MNX_HARBOR_2X_ADJACENCY',					'Description',				'(GOTS) +{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?district; other?districts;}.'),
 
 		('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'DistrictType',				'DISTRICT_HARBOR'),
 		('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'YieldType',				'YIELD_GOLD'),
 		('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'Amount',					'-1'),
 		('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'TilesRequired',			'2'),
 		('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'OtherDistrictAdjacent',	'1'),
-		/*('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'Description',				'-{1_num} [ICON_Gold] Gold compensation from the adjacent {1_Num : plural 1?district; other?districts;} (Gods of the Sea).'),
+		/*('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'Description',				'(GOTS) -{1_num} [ICON_Gold] Gold compensation from the adjacent {1_Num : plural 1?district; other?districts;}.'),
 		
 		('MOD_MNX_HARBOR_REM_REG_ADJ_TEXT',				'DistrictType',				'District_Gold'),
 		('MOD_MNX_HARBOR_REM_REG_ADJ_TEXT',				'YieldType',				'YIELD_GOLD'),

@@ -66,15 +66,27 @@ VALUES	-- Great People boosts
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_APOSTLE_ANY_PROMO'),
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_ROCKBAND_ANY_PROMO'),
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_SPY_ANY_PROMO'),
+
 		-- Unique Units
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_UNIQUE_UNIT_DROMON'),
+		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_UNIQUE_UNIT_SEADOG'),
+		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_UNIQUE_UNIT_UBOAT'),	
+		
 		-- Units Abilities
-		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_EMBARK_ALL_UNITS'),  -- now works!
+		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_ALL_MOVEMENT_1'),
+		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_SEA_MOVEMENT_1'),
+		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_EMBARK_MOVEMENT_1'),
+		
+		--('TRAIT_LEADER_MAJOR_CIV',	'MOD_MNX_EMBARK_ALL_UNITS'),  -- now works! But it also gives extra embarked movement
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_UNLOCK_OCEAN'),
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_IGNORE_EMBARK_DISEMBARK_COST'),
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_FIGHT_WHILE_EMBARKED'),		
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_SHIP_HEAL_NEUTRAL'),
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_WATER_TRADER_PROTECT'),
+
+		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_COMBAT_STRENGTH_1'),
+		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_RELIGIOUS_STRENGTH_1'),
+		
 		-- City districts limit boost
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_DISTRICT_LIMIT_BOOST'),
 		-- Policy slots
@@ -86,10 +98,9 @@ VALUES	-- Great People boosts
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_GOV_POINT_1');
 
 
-/*-- Early embark that works. 
--- ABILITY_MANA now works! Disabling this way of doing it for now.
-	-- I think it's a question of load order that it wasn't working before. 
-	-- Some units like the Gaul warrior not yet loaded or something.
+-- Early embark that works. (Can't be done as a custom ability using tags, I already tried)
+-- ABILITY_MANA now works! But it also gives extra embarked movement.
+	-- I think it's a question of load order that ABILITY_MANA wasn't working before. Some units like the Gaul warrior not yet loaded or something.
 INSERT OR IGNORE INTO Modifiers
 		(ModifierId,						ModifierType,											RunOnce,	Permanent)
 SELECT	'MOD_MNX_EMBARK_'||UnitType,		'MODIFIER_PLAYER_ADJUST_EMBARK_UNIT_PASS',				0,			1
@@ -105,4 +116,4 @@ INSERT OR IGNORE INTO TraitModifiers
 		(TraitType,						ModifierId)
 SELECT	'TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_EMBARK_'||UnitType
 FROM	Units	
-WHERE Domain='DOMAIN_LAND';*/
+WHERE Domain='DOMAIN_LAND';
