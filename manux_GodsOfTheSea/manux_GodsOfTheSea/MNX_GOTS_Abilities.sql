@@ -27,17 +27,17 @@ VALUES	--('MOD_MNX_OWNER_ATTACH_MODIFIER',					'KIND_MODIFIER'),
 
 INSERT OR IGNORE INTO UnitAbilities
 		(UnitAbilityType,								Inactive,	Description)
-VALUES	('ABILITY_MNX_ALL_MOVEMENT_1',					1,			'(GOTS) +10 [ICON_Movement] Movement to all Units.'),
-		('ABILITY_MNX_LAND_UNITS_MOVEMENT_1',			1,			'(GOTS) +10 [ICON_Movement] Movement to all Land Units.'),
-		('ABILITY_MNX_SEA_MOVEMENT_1',					1,			'(GOTS) +20 [ICON_Movement] Movement to all Naval Units.'),
-		('ABILITY_MNX_EMBARK_MOVEMENT_1',				1,			'(GOTS) +10 [ICON_Movement] Movement when embarked.'),
+VALUES	('ABILITY_MNX_ALL_MOVEMENT_1',					1,			'(GOTS) +1 [ICON_Movement] Movement to all Units.'),
+		('ABILITY_MNX_LAND_UNITS_MOVEMENT_1',			1,			'(GOTS) +1 [ICON_Movement] Movement to all Land Units.'),
+		('ABILITY_MNX_EMBARK_MOVEMENT_1',				1,			'(GOTS) +2 [ICON_Movement] Movement when embarked.'),
+		('ABILITY_MNX_SEA_MOVEMENT_1',					1,			'(GOTS) +3 [ICON_Movement] Movement to all Naval Units.'),
 		
 		('ABILITY_MNX_IGNORE_EMBARK_DISEMBARK_COST',	1,			'(GOTS) Ignores embark and disambark movement cost.'),
 		('ABILITY_MNX_FIGHT_WHILE_EMBARKED',			1,			'(GOTS) Can fight while embarked.'),
 		('ABILITY_MNX_HEAL_NEUTRAL_TERRITORY',			1,			'(GOTS) Can heal in neutral territory.'),
 
-		('ABILITY_MNX_COMBAT_STRENGTH_1',				1,			'(GOTS) +50 [ICON_Strength] Combat Strength.'),
-		('ABILITY_MNX_RELIGIOUS_STRENGTH_1',			1,			'(GOTS) +10 [ICON_Religion] Religious Strength in Theological Combat.');
+		('ABILITY_MNX_COMBAT_STRENGTH_1',				1,			'(GOTS) +5 [ICON_Strength] Combat Strength.'),
+		('ABILITY_MNX_RELIGIOUS_STRENGTH_1',			1,			'(GOTS) +5 [ICON_Religion] Religious Strength in Theological Combat.');
 
 
 INSERT OR IGNORE INTO UnitAbilityModifiers
@@ -191,15 +191,15 @@ VALUES	-- Unique Units
 		('MOD_MNX_RELIGIOUS_STRENGTH_1',				'AbilityType',				'ABILITY_MNX_RELIGIOUS_STRENGTH_1'),
 		
 		-- Units Abilities
-		('MOD_MNX_ABIL_ALL_MOVEMENT_1',					'Amount',					'10'),
-		('MOD_MNX_ABIL_LAND_UNITS_MOVEMENT_1',			'Amount',					'10'),
-		('MOD_MNX_ABIL_SEA_MOVEMENT_1',					'Amount',					'20'),
-		('MOD_MNX_ABIL_EMBARK_MOVEMENT_1',				'Amount',					'10'),
+		('MOD_MNX_ABIL_ALL_MOVEMENT_1',					'Amount',					'1'),
+		('MOD_MNX_ABIL_LAND_UNITS_MOVEMENT_1',			'Amount',					'1'),
+		('MOD_MNX_ABIL_EMBARK_MOVEMENT_1',				'Amount',					'2'),
+		('MOD_MNX_ABIL_SEA_MOVEMENT_1',					'Amount',					'3'),
 		
 		('MOD_MNX_ABIL_IGNORE_EMBARK_DISEMBARK_COST',	'Ignore',					'1'),
 		('MOD_MNX_ABIL_FIGHT_WHILE_EMBARKED',			'CanFight',					'1'),
 		('MOD_MNX_ABIL_SHIP_HEAL_NEUTRAL',				'Type',						'NEUTRAL'),
 		('MOD_MNX_ABIL_SHIP_HEAL_NEUTRAL',				'Amount',					'10'),
 
-		('MOD_MNX_ABIL_COMBAT_STRENGTH_1',				'Amount',					'50'),
-		('MOD_MNX_ABIL_RELIGIOUS_STRENGTH_1',			'Amount',					'10');
+		('MOD_MNX_ABIL_COMBAT_STRENGTH_1',				'Amount',					'5'),
+		('MOD_MNX_ABIL_RELIGIOUS_STRENGTH_1',			'Amount',					'5');

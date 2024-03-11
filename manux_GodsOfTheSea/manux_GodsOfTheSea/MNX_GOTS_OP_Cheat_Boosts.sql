@@ -71,15 +71,15 @@ VALUES	-- Unlock Techs
 	
 		-- Cities Yields boosts
 		('MOD_MNX_GOLD_BOOST',							'YieldType',				'YIELD_GOLD'),
-		('MOD_MNX_GOLD_BOOST',							'Amount',					'1000'),
+		('MOD_MNX_GOLD_BOOST',							'Amount',					'10000'),
 		('MOD_MNX_FAITH_BOOST',							'YieldType',				'YIELD_FAITH'),
-		('MOD_MNX_FAITH_BOOST',							'Amount',					'1000'),
+		('MOD_MNX_FAITH_BOOST',							'Amount',					'10000'),
 		('MOD_MNX_FOOD_BOOST',							'YieldType',				'YIELD_FOOD'),
 		('MOD_MNX_FOOD_BOOST',							'Amount',					'20'),
 		('MOD_MNX_PROD_BOOST',							'YieldType',				'YIELD_PRODUCTION'),
-		('MOD_MNX_PROD_BOOST',							'Amount',					'200'),
+		('MOD_MNX_PROD_BOOST',							'Amount',					'500'),
 		('MOD_MNX_SCI_BOOST',							'YieldType',				'YIELD_SCIENCE'),
-		('MOD_MNX_SCI_BOOST',							'Amount',					'500'),
+		('MOD_MNX_SCI_BOOST',							'Amount',					'100000'),
 		('MOD_MNX_CULT_BOOST',							'YieldType',				'YIELD_CULTURE'),
 		('MOD_MNX_CULT_BOOST',							'Amount',					'100000');
 
@@ -106,11 +106,11 @@ VALUES	-- Unlock Techs
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_SHIPBUILDING'),
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_CEL_NAV'),		-- Harbors
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_CURRENCY'),
-		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_FLIGHT'),
-		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_ADV_FLIGHT'),
-		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_SYNTH_MAT'),
-		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_COMB_ARMS'),
-		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_ELECTRICITY'),
+		--('TRAIT_LEADER_MAJOR_CIV',	'MOD_MNX_FLIGHT'),
+		--('TRAIT_LEADER_MAJOR_CIV',	'MOD_MNX_ADV_FLIGHT'),
+		--('TRAIT_LEADER_MAJOR_CIV',	'MOD_MNX_SYNTH_MAT'),
+		--('TRAIT_LEADER_MAJOR_CIV',	'MOD_MNX_COMB_ARMS'),
+		--('TRAIT_LEADER_MAJOR_CIV',	'MOD_MNX_ELECTRICITY'),
 		-----------------------------------------------------------
 
 		-- Cities Yields boosts

@@ -45,11 +45,11 @@ INSERT OR IGNORE INTO ModifierArguments
 		(ModifierId,									Name,						Value)
 VALUES	-- Great People boosts
 		('MOD_MNX_PROPHET_POINTS',						'GreatPersonClassType',		'GREAT_PERSON_CLASS_PROPHET'),
-		('MOD_MNX_PROPHET_POINTS',						'Amount',					'10'),
+		('MOD_MNX_PROPHET_POINTS',						'Amount',					'100'),
 		('MOD_MNX_ADMIRAL_POINTS',						'GreatPersonClassType',		'GREAT_PERSON_CLASS_ADMIRAL'),
-		('MOD_MNX_ADMIRAL_POINTS',						'Amount',					'10'),
+		('MOD_MNX_ADMIRAL_POINTS',						'Amount',					'2'),
 		('MOD_MNX_MERCHANT_POINTS',						'GreatPersonClassType',		'GREAT_PERSON_CLASS_MERCHANT'),
-		('MOD_MNX_MERCHANT_POINTS',						'Amount',					'10'),
+		('MOD_MNX_MERCHANT_POINTS',						'Amount',					'2'),
 		
 		-- City districts limit boost
 		('MOD_MNX_DISTRICT_LIMIT_BOOST',				'Amount',					'5'),
@@ -109,7 +109,7 @@ VALUES	-- Great People boosts
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_UNIQUE_UNIT_UBOAT'),	
 		
 		-- Units Abilities
-		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_ALL_MOVEMENT_1'),
+		--('TRAIT_LEADER_MAJOR_CIV',	'MOD_MNX_ALL_MOVEMENT_1'),
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_LAND_UNITS_MOVEMENT_1'),
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_SEA_MOVEMENT_1'),
 		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_EMBARK_MOVEMENT_1'),
