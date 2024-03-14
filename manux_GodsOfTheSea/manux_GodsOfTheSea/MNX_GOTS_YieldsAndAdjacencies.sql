@@ -32,7 +32,7 @@ VALUES	('TRAIT_MNX_NO_REG_DIST_ADJ',		'District_Faith'),
 		--('TRAIT_LEADER_MAJOR_CIV',		'District_Production');
 */
 
-/*
+
 INSERT INTO Types
 			(Type,												Kind)
 VALUES		('DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',		'KIND_MODIFIER');
@@ -41,7 +41,7 @@ VALUES		('DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',		'KIND_MODIFIER');
 INSERT INTO DynamicModifiers
 			(ModifierType,										CollectionType,						EffectType)
 VALUES		('DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',		'COLLECTION_OWNER',			'EFFECT_DISTRICT_ADJACENCY');
-*/
+
 
 
 INSERT OR IGNORE INTO Modifiers 
@@ -54,22 +54,44 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		--('MOD_MNX_HOLYSITE_REM_REG_ADJ_TEXT',			'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CIV_NOT_JAPAN'),
 		--('MOD_MNX_HARBOR_REM_REG_ADJ_TEXT',			'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CIV_NOT_JAPAN'),
 
-		-- Yield Districts major adjacency from Holy Site and Harbor
-		('MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE',			'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_HOLYSITE_ADJ_HS_OR_HR'),
-		('MOD_MNX_HARBOR_ADJ_FROM_HOLYSITE',			'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_HARBOR_ADJ_HS_OR_HR'),
-		('MOD_MNX_COMHUB_ADJ_FROM_HOLYSITE',			'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_COMHUB_ADJ_HS_OR_HR'),
-		('MOD_MNX_CAMPUS_ADJ_FROM_HOLYSITE',			'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CAMPUS_ADJ_HS_OR_HR'),
-		('MOD_MNX_THEATER_ADJ_FROM_HOLYSITE',			'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_THEATER_ADJ_HS_OR_HR'),
-		('MOD_MNX_INDZONE_ADJ_FROM_HOLYSITE',			'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_INDZONE_ADJ_HS_OR_HR'),
-		('MOD_MNX_WATERFRONT_ADJ_FROM_HOLYSITE',		'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_WATERFRONT_ADJ_HS_OR_HR'),
+		--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		-- ATTACH: Yield Districts major adjacency from Holy Site and Harbor
+		--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		('MOD_MNX_ATTACH_HOLYSITE_ADJ_FROM_HOLYSITE',			'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
+		('MOD_MNX_ATTACH_HARBOR_ADJ_FROM_HOLYSITE',				'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
+		('MOD_MNX_ATTACH_COMHUB_ADJ_FROM_HOLYSITE',				'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
+		('MOD_MNX_ATTACH_CAMPUS_ADJ_FROM_HOLYSITE',				'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
+		('MOD_MNX_ATTACH_THEATER_ADJ_FROM_HOLYSITE',			'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
+		('MOD_MNX_ATTACH_INDZONE_ADJ_FROM_HOLYSITE',			'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
+		('MOD_MNX_ATTACH_WATERFRONT_ADJ_FROM_HOLYSITE',			'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
 
-		('MOD_MNX_HOLYSITE_ADJ_FROM_HARBOR',			'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_HOLYSITE_ADJ_HS_OR_HR'),
-		('MOD_MNX_HARBOR_ADJ_FROM_HARBOR',				'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_HARBOR_ADJ_HS_OR_HR'),
-		('MOD_MNX_COMHUB_ADJ_FROM_HARBOR',				'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_COMHUB_ADJ_HS_OR_HR'),
-		('MOD_MNX_CAMPUS_ADJ_FROM_HARBOR',				'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CAMPUS_ADJ_HS_OR_HR'),
-		('MOD_MNX_THEATER_ADJ_FROM_HARBOR',				'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_THEATER_ADJ_HS_OR_HR'),
-		('MOD_MNX_INDZONE_ADJ_FROM_HARBOR',				'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_INDZONE_ADJ_HS_OR_HR'),
-		('MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR',			'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_WATERFRONT_ADJ_HS_OR_HR'),
+		('MOD_MNX_ATTACH_HOLYSITE_ADJ_FROM_HARBOR',				'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
+		('MOD_MNX_ATTACH_HARBOR_ADJ_FROM_HARBOR',				'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
+		('MOD_MNX_ATTACH_COMHUB_ADJ_FROM_HARBOR',				'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
+		('MOD_MNX_ATTACH_CAMPUS_ADJ_FROM_HARBOR',				'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
+		('MOD_MNX_ATTACH_THEATER_ADJ_FROM_HARBOR',				'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
+		('MOD_MNX_ATTACH_INDZONE_ADJ_FROM_HARBOR',				'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
+		('MOD_MNX_ATTACH_WATERFRONT_ADJ_FROM_HARBOR',			'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',							'PLAYER_IS_HUMAN',			NULL),		
+		--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		-- Yield Districts major adjacency from Holy Site and Harbor
+		--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		('MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE',			'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_HOLYSITE_ADJ_HOLYSITE'),		
+		('MOD_MNX_HARBOR_ADJ_FROM_HOLYSITE',			'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_HARBOR_ADJ_HOLYSITE'),		
+		('MOD_MNX_COMHUB_ADJ_FROM_HOLYSITE',			'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_COMHUB_ADJ_HOLYSITE'),		
+		('MOD_MNX_CAMPUS_ADJ_FROM_HOLYSITE',			'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CAMPUS_ADJ_HOLYSITE'),		
+		('MOD_MNX_THEATER_ADJ_FROM_HOLYSITE',			'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_THEATER_ADJ_HOLYSITE'),		
+		('MOD_MNX_INDZONE_ADJ_FROM_HOLYSITE',			'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_INDZONE_ADJ_HOLYSITE'),		
+		('MOD_MNX_WATERFRONT_ADJ_FROM_HOLYSITE',		'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_WATERFRONT_ADJ_HOLYSITE'),	
+																																						
+		('MOD_MNX_HOLYSITE_ADJ_FROM_HARBOR',			'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_HOLYSITE_ADJ_HARBOR'),		
+		('MOD_MNX_HARBOR_ADJ_FROM_HARBOR',				'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_HARBOR_ADJ_HARBOR'),			
+		('MOD_MNX_COMHUB_ADJ_FROM_HARBOR',				'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_COMHUB_ADJ_HARBOR'),			
+		('MOD_MNX_CAMPUS_ADJ_FROM_HARBOR',				'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_CAMPUS_ADJ_HARBOR'),			
+		('MOD_MNX_THEATER_ADJ_FROM_HARBOR',				'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_THEATER_ADJ_HARBOR'),		
+		('MOD_MNX_INDZONE_ADJ_FROM_HARBOR',				'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_INDZONE_ADJ_HARBOR'),		
+		('MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR',			'DMOD_MNX_SINGLE_CITY_DISTRICT_ADJACENCY',							'PLAYER_IS_HUMAN',			'REQSR_MNX_WATERFRONT_ADJ_HARBOR'),	
+																																									
+		--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		-- Districts minor water adjacency
 		('MOD_MNX_FAITH_DIST_MINOR_WATER_ADJ',			'MODIFIER_PLAYER_CITIES_TERRAIN_ADJACENCY',								'PLAYER_IS_HUMAN',			'REQSR_MNX_PLOT_HAS_ANY_DISTRICT'),
@@ -161,6 +183,26 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'OtherDistrictAdjacent',	'1'),
 		--('MOD_MNX_HARBOR_REM_REG_ADJACENCY',			'Description',				'(GOTS) -{1_num} [ICON_Gold] Gold compensation from the adjacent {1_Num : plural 1?district; other?districts;}.'),
 
+
+		-----------------------------------------------------------------------------------------------------------
+		-- ATTACH: Yield Districts major adjacency from Holy Site and Harbor
+		-----------------------------------------------------------------------------------------------------------
+		('MOD_MNX_ATTACH_HOLYSITE_ADJ_FROM_HOLYSITE',			'ModifierId',				'MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE'),
+		('MOD_MNX_ATTACH_HARBOR_ADJ_FROM_HOLYSITE',				'ModifierId',				'MOD_MNX_HARBOR_ADJ_FROM_HOLYSITE'),
+		('MOD_MNX_ATTACH_COMHUB_ADJ_FROM_HOLYSITE',				'ModifierId',				'MOD_MNX_COMHUB_ADJ_FROM_HOLYSITE'),
+		('MOD_MNX_ATTACH_CAMPUS_ADJ_FROM_HOLYSITE',				'ModifierId',				'MOD_MNX_CAMPUS_ADJ_FROM_HOLYSITE'),
+		('MOD_MNX_ATTACH_THEATER_ADJ_FROM_HOLYSITE',			'ModifierId',				'MOD_MNX_THEATER_ADJ_FROM_HOLYSITE'),
+		('MOD_MNX_ATTACH_INDZONE_ADJ_FROM_HOLYSITE',			'ModifierId',				'MOD_MNX_INDZONE_ADJ_FROM_HOLYSITE'),
+		('MOD_MNX_ATTACH_WATERFRONT_ADJ_FROM_HOLYSITE',			'ModifierId',				'MOD_MNX_WATERFRONT_ADJ_FROM_HOLYSITE'),
+
+		('MOD_MNX_ATTACH_HOLYSITE_ADJ_FROM_HARBOR',				'ModifierId',				'MOD_MNX_HOLYSITE_ADJ_FROM_HARBOR'),
+		('MOD_MNX_ATTACH_HARBOR_ADJ_FROM_HARBOR',				'ModifierId',				'MOD_MNX_HARBOR_ADJ_FROM_HARBOR'),
+		('MOD_MNX_ATTACH_COMHUB_ADJ_FROM_HARBOR',				'ModifierId',				'MOD_MNX_COMHUB_ADJ_FROM_HARBOR'),
+		('MOD_MNX_ATTACH_CAMPUS_ADJ_FROM_HARBOR',				'ModifierId',				'MOD_MNX_CAMPUS_ADJ_FROM_HARBOR'),
+		('MOD_MNX_ATTACH_THEATER_ADJ_FROM_HARBOR',				'ModifierId',				'MOD_MNX_THEATER_ADJ_FROM_HARBOR'),
+		('MOD_MNX_ATTACH_INDZONE_ADJ_FROM_HARBOR',				'ModifierId',				'MOD_MNX_INDZONE_ADJ_FROM_HARBOR'),
+		('MOD_MNX_ATTACH_WATERFRONT_ADJ_FROM_HARBOR',			'ModifierId',				'MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR'),
+
 		-----------------------------------------------------------------------------------------------------------
 		-- Yield Districts major adjacency from Holy Site
 		-----------------------------------------------------------------------------------------------------------
@@ -168,7 +210,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE',				'YieldType',				'YIELD_FAITH'),
 		('MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE',				'Amount',					'1'),
 		('MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE',				'TilesRequired',			'1'),
-		('MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE',				'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE',				'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE',				'AdjacentDistrict',			'DISTRICT_HOLY_SITE'),
 		('MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE',				'Description',				'(GOTS) +{1_num} [ICON_Faith] Faith from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.'),
 
@@ -176,7 +218,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_HARBOR_ADJ_FROM_HOLYSITE',				'YieldType',				'YIELD_GOLD'),
 		('MOD_MNX_HARBOR_ADJ_FROM_HOLYSITE',				'Amount',					'1'),
 		('MOD_MNX_HARBOR_ADJ_FROM_HOLYSITE',				'TilesRequired',			'1'),
-		('MOD_MNX_HARBOR_ADJ_FROM_HOLYSITE',				'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_HARBOR_ADJ_FROM_HOLYSITE',				'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_HARBOR_ADJ_FROM_HOLYSITE',				'AdjacentDistrict',			'DISTRICT_HOLY_SITE'),
 		('MOD_MNX_HARBOR_ADJ_FROM_HOLYSITE',				'Description',				'(GOTS) +{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.'),
 
@@ -184,7 +226,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_COMHUB_ADJ_FROM_HOLYSITE',				'YieldType',				'YIELD_GOLD'),
 		('MOD_MNX_COMHUB_ADJ_FROM_HOLYSITE',				'Amount',					'1'),
 		('MOD_MNX_COMHUB_ADJ_FROM_HOLYSITE',				'TilesRequired',			'1'),
-		('MOD_MNX_COMHUB_ADJ_FROM_HOLYSITE',				'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_COMHUB_ADJ_FROM_HOLYSITE',				'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_COMHUB_ADJ_FROM_HOLYSITE',				'AdjacentDistrict',			'DISTRICT_HOLY_SITE'),
 		('MOD_MNX_COMHUB_ADJ_FROM_HOLYSITE',				'Description',				'(GOTS) +{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.'),
 
@@ -192,7 +234,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_CAMPUS_ADJ_FROM_HOLYSITE',				'YieldType',				'YIELD_SCIENCE'),
 		('MOD_MNX_CAMPUS_ADJ_FROM_HOLYSITE',				'Amount',					'1'),
 		('MOD_MNX_CAMPUS_ADJ_FROM_HOLYSITE',				'TilesRequired',			'1'),
-		('MOD_MNX_CAMPUS_ADJ_FROM_HOLYSITE',				'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_CAMPUS_ADJ_FROM_HOLYSITE',				'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_CAMPUS_ADJ_FROM_HOLYSITE',				'AdjacentDistrict',			'DISTRICT_HOLY_SITE'),
 		('MOD_MNX_CAMPUS_ADJ_FROM_HOLYSITE',				'Description',				'(GOTS) +{1_num} [ICON_Science] Science from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.'),
 
@@ -200,7 +242,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_THEATER_ADJ_FROM_HOLYSITE',				'YieldType',				'YIELD_CULTURE'),
 		('MOD_MNX_THEATER_ADJ_FROM_HOLYSITE',				'Amount',					'1'),
 		('MOD_MNX_THEATER_ADJ_FROM_HOLYSITE',				'TilesRequired',			'1'),
-		('MOD_MNX_THEATER_ADJ_FROM_HOLYSITE',				'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_THEATER_ADJ_FROM_HOLYSITE',				'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_THEATER_ADJ_FROM_HOLYSITE',				'AdjacentDistrict',			'DISTRICT_HOLY_SITE'),
 		('MOD_MNX_THEATER_ADJ_FROM_HOLYSITE',				'Description',				'(GOTS) +{1_num} [ICON_Culture] Culture from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.'),
 
@@ -208,7 +250,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_INDZONE_ADJ_FROM_HOLYSITE',				'YieldType',				'YIELD_PRODUCTION'),
 		('MOD_MNX_INDZONE_ADJ_FROM_HOLYSITE',				'Amount',					'1'),
 		('MOD_MNX_INDZONE_ADJ_FROM_HOLYSITE',				'TilesRequired',			'1'),
-		('MOD_MNX_INDZONE_ADJ_FROM_HOLYSITE',				'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_INDZONE_ADJ_FROM_HOLYSITE',				'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_INDZONE_ADJ_FROM_HOLYSITE',				'AdjacentDistrict',			'DISTRICT_HOLY_SITE'),
 		('MOD_MNX_INDZONE_ADJ_FROM_HOLYSITE',				'Description',				'(GOTS) +{1_num} [ICON_Production] Production from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.'),
 
@@ -216,7 +258,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_WATERFRONT_ADJ_FROM_HOLYSITE',			'YieldType',				'YIELD_FOOD'),
 		('MOD_MNX_WATERFRONT_ADJ_FROM_HOLYSITE',			'Amount',					'1'),
 		('MOD_MNX_WATERFRONT_ADJ_FROM_HOLYSITE',			'TilesRequired',			'1'),
-		('MOD_MNX_WATERFRONT_ADJ_FROM_HOLYSITE',			'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_WATERFRONT_ADJ_FROM_HOLYSITE',			'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_WATERFRONT_ADJ_FROM_HOLYSITE',			'AdjacentDistrict',			'DISTRICT_HOLY_SITE'),
 		('MOD_MNX_WATERFRONT_ADJ_FROM_HOLYSITE',			'Description',				'(GOTS) +{1_num} [ICON_Food] Food from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.'),
 		
@@ -227,7 +269,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_HOLYSITE_ADJ_FROM_HARBOR',				'YieldType',				'YIELD_FAITH'),
 		('MOD_MNX_HOLYSITE_ADJ_FROM_HARBOR',				'Amount',					'1'),
 		('MOD_MNX_HOLYSITE_ADJ_FROM_HARBOR',				'TilesRequired',			'1'),
-		('MOD_MNX_HOLYSITE_ADJ_FROM_HARBOR',				'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_HOLYSITE_ADJ_FROM_HARBOR',				'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_HOLYSITE_ADJ_FROM_HARBOR',				'AdjacentDistrict',			'DISTRICT_HARBOR'),
 		('MOD_MNX_HOLYSITE_ADJ_FROM_HARBOR',				'Description',				'(GOTS) +{1_num} [ICON_Faith] Faith from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.'),
 
@@ -235,7 +277,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_HARBOR_ADJ_FROM_HARBOR',					'YieldType',				'YIELD_GOLD'),
 		('MOD_MNX_HARBOR_ADJ_FROM_HARBOR',					'Amount',					'1'),
 		('MOD_MNX_HARBOR_ADJ_FROM_HARBOR',					'TilesRequired',			'1'),
-		('MOD_MNX_HARBOR_ADJ_FROM_HARBOR',					'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_HARBOR_ADJ_FROM_HARBOR',					'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_HARBOR_ADJ_FROM_HARBOR',					'AdjacentDistrict',			'DISTRICT_HARBOR'),
 		('MOD_MNX_HARBOR_ADJ_FROM_HARBOR',					'Description',				'(GOTS) +{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.'),
 
@@ -243,7 +285,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_COMHUB_ADJ_FROM_HARBOR',					'YieldType',				'YIELD_GOLD'),
 		('MOD_MNX_COMHUB_ADJ_FROM_HARBOR',					'Amount',					'1'),
 		('MOD_MNX_COMHUB_ADJ_FROM_HARBOR',					'TilesRequired',			'1'),
-		('MOD_MNX_COMHUB_ADJ_FROM_HARBOR',					'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_COMHUB_ADJ_FROM_HARBOR',					'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_COMHUB_ADJ_FROM_HARBOR',					'AdjacentDistrict',			'DISTRICT_HARBOR'),
 		('MOD_MNX_COMHUB_ADJ_FROM_HARBOR',					'Description',				'(GOTS) +{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.'),
 
@@ -251,7 +293,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_CAMPUS_ADJ_FROM_HARBOR',					'YieldType',				'YIELD_SCIENCE'),
 		('MOD_MNX_CAMPUS_ADJ_FROM_HARBOR',					'Amount',					'1'),
 		('MOD_MNX_CAMPUS_ADJ_FROM_HARBOR',					'TilesRequired',			'1'),
-		('MOD_MNX_CAMPUS_ADJ_FROM_HARBOR',					'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_CAMPUS_ADJ_FROM_HARBOR',					'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_CAMPUS_ADJ_FROM_HARBOR',					'AdjacentDistrict',			'DISTRICT_HARBOR'),
 		('MOD_MNX_CAMPUS_ADJ_FROM_HARBOR',					'Description',				'(GOTS) +{1_num} [ICON_Science] Science from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.'),
 
@@ -259,7 +301,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_THEATER_ADJ_FROM_HARBOR',					'YieldType',				'YIELD_CULTURE'),
 		('MOD_MNX_THEATER_ADJ_FROM_HARBOR',					'Amount',					'1'),
 		('MOD_MNX_THEATER_ADJ_FROM_HARBOR',					'TilesRequired',			'1'),
-		('MOD_MNX_THEATER_ADJ_FROM_HARBOR',					'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_THEATER_ADJ_FROM_HARBOR',					'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_THEATER_ADJ_FROM_HARBOR',					'AdjacentDistrict',			'DISTRICT_HARBOR'),
 		('MOD_MNX_THEATER_ADJ_FROM_HARBOR',					'Description',				'(GOTS) +{1_num} [ICON_Culture] Culture from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.'),
 
@@ -267,7 +309,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_INDZONE_ADJ_FROM_HARBOR',					'YieldType',				'YIELD_PRODUCTION'),
 		('MOD_MNX_INDZONE_ADJ_FROM_HARBOR',					'Amount',					'1'),
 		('MOD_MNX_INDZONE_ADJ_FROM_HARBOR',					'TilesRequired',			'1'),
-		('MOD_MNX_INDZONE_ADJ_FROM_HARBOR',					'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_INDZONE_ADJ_FROM_HARBOR',					'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_INDZONE_ADJ_FROM_HARBOR',					'AdjacentDistrict',			'DISTRICT_HARBOR'),
 		('MOD_MNX_INDZONE_ADJ_FROM_HARBOR',					'Description',				'(GOTS) +{1_num} [ICON_Production] Production from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.'),
 
@@ -275,7 +317,7 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR',				'YieldType',				'YIELD_FOOD'),
 		('MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR',				'Amount',					'1'),
 		('MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR',				'TilesRequired',			'1'),
-		('MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR',				'OtherDistrictAdjacent',	'1'),
+		('MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR',				'OtherDistrictAdjacent',	'0'),
 		('MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR',				'AdjacentDistrict',			'DISTRICT_HARBOR'),
 		('MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR',				'Description',				'(GOTS) +{1_num} [ICON_Food] Food from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.'),
 		
@@ -438,6 +480,48 @@ VALUES	('DISTRICT_HOLY_SITE',				'MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE'),
 		('DISTRICT_WATERFRONT',				'MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR');*/
 ---------------------------------------------------------------------------------------------------
 
+---------------------------------------------------------------------------------------------------
+-- Way to do it for everyone. Was useful for testing and isolating the issue. One stupid flag was wrong! OtherDistrictAdjacent needs to be 0 for AdjacentDistrict to work.
+INSERT OR IGNORE INTO Adjacency_YieldChanges
+		(ID,									Description,																										YieldType,				YieldChange,	OtherDistrictAdjacent,		TilesRequired,		AdjacentDistrict	)
+VALUES
+		('MNX_Faith_Dist_Adj_HolySite',			'(GOTS) +{1_num} [ICON_Faith] Faith from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.',			'YIELD_FAITH',			1,				0,					  		1,					'DISTRICT_HOLY_SITE'),
+		('MNX_Gold_Dist_Adj_HolySite',			'(GOTS) +{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.',				'YIELD_GOLD',			1,				0,					  		1,					'DISTRICT_HOLY_SITE'),
+		('MNX_Science_Dist_Adj_HolySite',		'(GOTS) +{1_num} [ICON_Science] Science from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.',		'YIELD_SCIENCE',		1,				0,					  		1,					'DISTRICT_HOLY_SITE'),
+		('MNX_Culture_Dist_Adj_HolySite',		'(GOTS) +{1_num} [ICON_Culture] Culture from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.',		'YIELD_CULTURE',		1,				0,					  		1,					'DISTRICT_HOLY_SITE'),
+		('MNX_Prod_Dist_Adj_HolySite',			'(GOTS) +{1_num} [ICON_Production] Production from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.',	'YIELD_PRODUCTION',		1,				0,					  		1,					'DISTRICT_HOLY_SITE'),
+		('MNX_Food_Dist_Adj_HolySite',			'(GOTS) +{1_num} [ICON_Food] Food from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.',				'YIELD_FOOD',			1,				0,					  		1,					'DISTRICT_HOLY_SITE'),
+		
+		('MNX_Faith_Dist_Adj_Harbor',			'(GOTS) +{1_num} [ICON_Faith] Faith from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.',					'YIELD_FAITH',			1,				0,					  		1,					'DISTRICT_HARBOR'),
+		('MNX_Gold_Dist_Adj_Harbor',			'(GOTS) +{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.',					'YIELD_GOLD',			1,				0,					  		1,					'DISTRICT_HARBOR'),
+		('MNX_Science_Dist_Adj_Harbor',			'(GOTS) +{1_num} [ICON_Science] Science from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.',				'YIELD_SCIENCE',		1,				0,					  		1,					'DISTRICT_HARBOR'),
+		('MNX_Culture_Dist_Adj_Harbor',			'(GOTS) +{1_num} [ICON_Culture] Culture from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.',				'YIELD_CULTURE',		1,				0,					  		1,					'DISTRICT_HARBOR'),
+		('MNX_Prod_Dist_Adj_Harbor',			'(GOTS) +{1_num} [ICON_Production] Production from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.',		'YIELD_PRODUCTION',		1,				0,					  		1,					'DISTRICT_HARBOR'),
+		('MNX_Food_Dist_Adj_Harbor',			'(GOTS) +{1_num} [ICON_Food] Food from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.',					'YIELD_FOOD',			1,				0,					  		1,					'DISTRICT_HARBOR');
+
+
+INSERT OR IGNORE INTO District_Adjacencies
+		(DistrictType,						YieldChangeID					)	
+VALUES
+		('DISTRICT_HOLY_SITE',				'MNX_Faith_Dist_Adj_HolySite'),
+		('DISTRICT_HARBOR',					'MNX_Gold_Dist_Adj_HolySite'),
+		('DISTRICT_COMMERCIAL_HUB',			'MNX_Gold_Dist_Adj_HolySite'),
+		('DISTRICT_CAMPUS',					'MNX_Science_Dist_Adj_HolySite'),
+		('DISTRICT_THEATER',				'MNX_Culture_Dist_Adj_HolySite'),
+		('DISTRICT_INDUSTRIAL_ZONE',		'MNX_Prod_Dist_Adj_HolySite'),
+		('DISTRICT_WATERFRONT',				'MNX_Food_Dist_Adj_HolySite'),
+
+		('DISTRICT_HOLY_SITE',				'MNX_Faith_Dist_Adj_Harbor'),
+		('DISTRICT_HARBOR',					'MNX_Gold_Dist_Adj_Harbor'),
+		('DISTRICT_COMMERCIAL_HUB',			'MNX_Gold_Dist_Adj_Harbor'),
+		('DISTRICT_CAMPUS',					'MNX_Science_Dist_Adj_Harbor'),
+		('DISTRICT_THEATER',				'MNX_Culture_Dist_Adj_Harbor'),
+		('DISTRICT_INDUSTRIAL_ZONE',		'MNX_Prod_Dist_Adj_Harbor'),
+		('DISTRICT_WATERFRONT',				'MNX_Food_Dist_Adj_Harbor');
+---------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
  -- Add modifiers to all districts to get Yields from Holy Site and Harbor
  -- Holy Site
 INSERT OR IGNORE INTO DistrictModifiers
@@ -482,8 +566,25 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_HOLYSITE_REM_REG_ADJ_TEXT'),	
 		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_HARBOR_REM_REG_ADJ_TEXT'),
 		
+		-------------------------------------------------------------------------------------------
+		/*('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_HOLYSITE_ADJ_FROM_HOLYSITE'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_HARBOR_ADJ_FROM_HOLYSITE'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_COMHUB_ADJ_FROM_HOLYSITE'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_CAMPUS_ADJ_FROM_HOLYSITE'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_THEATER_ADJ_FROM_HOLYSITE'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_INDZONE_ADJ_FROM_HOLYSITE'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_WATERFRONT_ADJ_FROM_HOLYSITE'),
+
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_HOLYSITE_ADJ_FROM_HARBOR'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_HARBOR_ADJ_FROM_HARBOR'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_COMHUB_ADJ_FROM_HARBOR'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_CAMPUS_ADJ_FROM_HARBOR'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_THEATER_ADJ_FROM_HARBOR'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_INDZONE_ADJ_FROM_HARBOR'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_ATTACH_WATERFRONT_ADJ_FROM_HARBOR'),*/
+		--------------------------------------------------------------------------------------
 		-- Yield Districts major adjacency from Holy Site and Harbor
-		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE'),
+		/*('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE'),
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HARBOR_ADJ_FROM_HOLYSITE'),
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_COMHUB_ADJ_FROM_HOLYSITE'),
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_CAMPUS_ADJ_FROM_HOLYSITE'),
@@ -497,8 +598,9 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_CAMPUS_ADJ_FROM_HARBOR'),
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_THEATER_ADJ_FROM_HARBOR'),
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_INDZONE_ADJ_FROM_HARBOR'),
-		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR'),
-	
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR'),*/
+		---------------------------------------------------------------------------------------------
+
 		-- Yield Districts minor water adjacency
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_FAITH_DIST_MINOR_WATER_ADJ'),
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_GOLD_DIST_MINOR_WATER_ADJ'),
