@@ -1,0 +1,21 @@
+Starting AssetCooker...
+Argument '--shaders' has been deprecated and is no longer used.
+Opened output file: C:\Users\User\OneDrive\Documents\My Games\Sid Meier's Civilization VI\Mods\NewUnit1\ArtDefs/Units.artdef
+Cooking ArtDef: (Cultures.artdef).
+Cooking ArtDef: (Eras.artdef).
+Cooking ArtDef: (CityGenerators.artdef).
+Cooking ArtDef: (Appeal.artdef).
+Cooking ArtDef: (Civilizations.artdef).
+Cooking ArtDef: (Landmarks.artdef).
+Cooking ArtDef: (Districts.artdef).
+Cooking ArtDef: (Buildings.artdef).
+Cooking ArtDef: (StrategicView.artdef).
+Cooking ArtDef: (Clutter.artdef).
+Cooking ArtDef: (Terrains.artdef).
+Cooking ArtDef: (Features.artdef).
+Cooking ArtDef: (VFX.artdef).
+Cooking ArtDef: (Units.artdef).
+Cook finished for ArtDef at Path: 'Units.artdef' with Template: 'Units'
+ArtDef cook completed.
+Opened output file: C:/Users/User/OneDrive/Documents/My Games/Sid Meier's Civilization VI/Mods/NewUnit1/NewUnit1.dep    For project NewUnit1
+Cook completed in 0.307 seconds
