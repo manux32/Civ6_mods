@@ -482,7 +482,7 @@ VALUES	('DISTRICT_HOLY_SITE',				'MOD_MNX_HOLYSITE_ADJ_FROM_HOLYSITE'),
 
 ---------------------------------------------------------------------------------------------------
 -- Way to do it for everyone. Was useful for testing and isolating the issue. One stupid flag was wrong! OtherDistrictAdjacent needs to be 0 for AdjacentDistrict to work.
-INSERT OR IGNORE INTO Adjacency_YieldChanges
+/*INSERT OR IGNORE INTO Adjacency_YieldChanges
 		(ID,									Description,																										YieldType,				YieldChange,	OtherDistrictAdjacent,		TilesRequired,		AdjacentDistrict	)
 VALUES
 		('MNX_Faith_Dist_Adj_HolySite',			'(GOTS) +{1_num} [ICON_Faith] Faith from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.',			'YIELD_FAITH',			1,				0,					  		1,					'DISTRICT_HOLY_SITE'),
@@ -517,7 +517,7 @@ VALUES
 		('DISTRICT_CAMPUS',					'MNX_Science_Dist_Adj_Harbor'),
 		('DISTRICT_THEATER',				'MNX_Culture_Dist_Adj_Harbor'),
 		('DISTRICT_INDUSTRIAL_ZONE',		'MNX_Prod_Dist_Adj_Harbor'),
-		('DISTRICT_WATERFRONT',				'MNX_Food_Dist_Adj_Harbor');
+		('DISTRICT_WATERFRONT',				'MNX_Food_Dist_Adj_Harbor');*/
 ---------------------------------------------------------------------------------------------------
 
 
@@ -559,10 +559,11 @@ FROM Districts;
 INSERT OR IGNORE INTO TraitModifiers 
 		(TraitType,							ModifierId) 
 VALUES	-- Holy Site and Harbor 2x adjacency
-		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HOLYSITE_2X_ADJACENCY'),
+		/*('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HOLYSITE_2X_ADJACENCY'),
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HARBOR_2X_ADJACENCY'),	
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HOLYSITE_REM_REG_ADJACENCY'),
-		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HARBOR_REM_REG_ADJACENCY'),		
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HARBOR_REM_REG_ADJACENCY'),*/		
+		
 		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_HOLYSITE_REM_REG_ADJ_TEXT'),	
 		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_HARBOR_REM_REG_ADJ_TEXT'),
 		
