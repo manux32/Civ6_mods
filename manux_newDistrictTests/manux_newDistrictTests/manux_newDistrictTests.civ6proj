@@ -36,6 +36,9 @@
     <Content Include="Gots_HolySite_Text.sql">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="SwapDistrict.lua">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
 </Project>

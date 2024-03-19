@@ -5,12 +5,14 @@
 
 INSERT OR IGNORE INTO Types
 		(Type,							Kind)	
-VALUES	('DISTRICT_HOLYSITE_GOTS',		'KIND_DISTRICT');
+VALUES	('DISTRICT_HOLYSITE_GOTS',		'KIND_DISTRICT'),
+		('MNX_BUILDING_SHRINE',			'KIND_BUILDING'),
+		('MNX_BUILDING_TEMPLE',			'KIND_BUILDING');
 
-INSERT OR IGNORE INTO Types
+/*INSERT OR IGNORE INTO Types
 		(Type,							Kind)
 SELECT	'MNX_'||BuildingType,			'KIND_BUILDING'
-FROM	Buildings	WHERE PrereqDistrict='DISTRICT_HOLY_SITE';
+FROM	Buildings	WHERE PrereqDistrict='DISTRICT_HOLY_SITE';*/
 
 /*INSERT OR IGNORE INTO Types
 		(Type,							Kind)
@@ -20,10 +22,11 @@ FROM	Buildings	WHERE AdjacentDistrict='DISTRICT_HOLY_SITE';*/
 --'TRAIT_LEADER_MAJOR_CIV'
 -- TRAIT_LEADER_MEDITERRANEAN
 -- TRAIT_CIVILIZATION_ITERU
+-- TRAIT_CIVILIZATION_NO_PLAYER
 -- TECH_ASTROLOGY
 INSERT OR IGNORE INTO Districts
-		(DistrictType,				Name,								PrereqTech,			Description,								Cost,	RequiresPlacement,	RequiresPopulation,	NoAdjacentCity,	CityCenter,	Aqueduct,	InternalOnly,	ZOC,	FreeEmbark,	HitPoints,	CaptureRemovesBuildings,	CaptureRemovesCityDefenses,		PlunderType,		PlunderAmount,	MilitaryDomain,	CostProgressionModel,						CostProgressionParam1,	TraitType,						Appeal, Housing,	Entertainment,	OnePerCity,	AllowsHolyCity,	Maintenance,		CityStrengthModifier,	CanAttack,	AdvisorType,			CaptureRemovesDistrict,		MaxPerPlayer)	
-VALUES	('DISTRICT_HOLYSITE_GOTS',	'LOC_DISTRICT_HOLYSITE_GOTS_NAME',	'TECH_ASTROLOGY',	'LOC_DISTRICT_HOLYSITE_GOTS_DESCRIPTION',	'54',	'1',				'1',				'0',			'0',		'0',		'0',			'1',	'0',		'100',		'0',						'0',							'PLUNDER_FAITH',	'25',			'NO_DOMAIN',	'COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH',	'40',					NULL,							'1',	'0',		'0',			'1',		'1',			'1',				'2',					'1',		'ADVISOR_RELIGIOUS',	'0',						'-1');
+		(DistrictType,				Name,								PrereqTech,				Description,								Cost,	RequiresPlacement,	RequiresPopulation,	NoAdjacentCity,	CityCenter,	Aqueduct,	InternalOnly,	ZOC,	FreeEmbark,	HitPoints,	CaptureRemovesBuildings,	CaptureRemovesCityDefenses,		PlunderType,		PlunderAmount,	MilitaryDomain,	CostProgressionModel,						CostProgressionParam1,	TraitType,						Appeal, Housing,	Entertainment,	OnePerCity,	AllowsHolyCity,	Maintenance,		CityStrengthModifier,	CanAttack,	AdvisorType,			CaptureRemovesDistrict,		MaxPerPlayer)	
+VALUES	('DISTRICT_HOLYSITE_GOTS',	'LOC_DISTRICT_HOLYSITE_GOTS_NAME',	'TECH_FUTURE_TECH',		'LOC_DISTRICT_HOLYSITE_GOTS_DESCRIPTION',	'54',	'1',				'1',				'0',			'0',		'0',		'0',			'1',	'0',		'100',		'0',						'0',							'PLUNDER_FAITH',	'25',			'NO_DOMAIN',	'COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH',	'40',					NULL,							'1',	'0',		'0',			'1',		'1',			'1',				'2',					'1',		'ADVISOR_RELIGIOUS',	'0',						'-1');
 
 INSERT OR IGNORE INTO Districts_XP2
 		(DistrictType,					AttackRange)	
@@ -35,7 +38,18 @@ VALUES	('DISTRICT_HOLYSITE_GOTS',		'2');
 VALUES	('DISTRICT_HOLYSITE_GOTS',		'DISTRICT_HOLY_SITE');
 		--('DISTRICT_HOLYSITE_GOTS',		'DISTRICT_LAVRA');*/
 
-INSERT OR IGNORE INTO DistrictModifiers
+-- DISTRICT_HOLYSITE_GOTS
+INSERT OR IGNORE INTO Buildings
+		(BuildingType,Name,PrereqTech,PrereqCivic,Cost,MaxPlayerInstances,MaxWorldInstances,Capital,PrereqDistrict,AdjacentDistrict,Description,RequiresPlacement,RequiresRiver,OuterDefenseHitPoints,Housing,Entertainment,AdjacentResource,Coast,EnabledByReligion,AllowsHolyCity,PurchaseYield,MustPurchase,Maintenance,IsWonder,TraitType,OuterDefenseStrength,CitizenSlots,MustBeLake,MustNotBeLake,RegionalRange,AdjacentToMountain,ObsoleteEra,RequiresReligion,GrantFortification,DefenseModifier,InternalOnly,RequiresAdjacentRiver,Quote,QuoteAudio,MustBeAdjacentLand,AdvisorType,AdjacentCapital,AdjacentImprovement,CityAdjacentTerrain,UnlocksGovernmentPolicy,GovernmentTierRequirement)
+SELECT	'MNX_'||BuildingType,'GOTS_'||BuildingType,PrereqTech,PrereqCivic,Cost,MaxPlayerInstances,MaxWorldInstances,Capital,PrereqDistrict,AdjacentDistrict,Description,RequiresPlacement,RequiresRiver,OuterDefenseHitPoints,Housing,Entertainment,AdjacentResource,Coast,EnabledByReligion,AllowsHolyCity,PurchaseYield,MustPurchase,Maintenance,IsWonder,TraitType,OuterDefenseStrength,CitizenSlots,MustBeLake,MustNotBeLake,RegionalRange,AdjacentToMountain,ObsoleteEra,RequiresReligion,GrantFortification,DefenseModifier,InternalOnly,RequiresAdjacentRiver,Quote,QuoteAudio,MustBeAdjacentLand,AdvisorType,AdjacentCapital,AdjacentImprovement,CityAdjacentTerrain,UnlocksGovernmentPolicy,GovernmentTierRequirement
+FROM	Buildings	WHERE BuildingType IN ('BUILDING_SHRINE', 'BUILDING_TEMPLE');
+
+/*INSERT OR IGNORE INTO DistrictReplaces
+		(CivUniqueBuildingType,			ReplacesBuildingType)	
+VALUES	('MNX_BUILDING_SHRINE',		'BUILDING_SHRINE'),
+		('MNX_BUILDING_TEMPLE',		'BUILDING_TEMPLE');*/
+
+/*INSERT OR IGNORE INTO DistrictModifiers
 		(DistrictType,						ModifierId)
 SELECT	'DISTRICT_HOLYSITE_GOTS',			ModifierId
 FROM	DistrictModifiers	WHERE DistrictType='DISTRICT_HOLY_SITE';
@@ -44,14 +58,14 @@ FROM	DistrictModifiers	WHERE DistrictType='DISTRICT_HOLY_SITE';
 INSERT OR IGNORE INTO Buildings
 		(BuildingType,Name,PrereqTech,PrereqCivic,Cost,MaxPlayerInstances,MaxWorldInstances,Capital,PrereqDistrict,AdjacentDistrict,Description,RequiresPlacement,RequiresRiver,OuterDefenseHitPoints,Housing,Entertainment,AdjacentResource,Coast,EnabledByReligion,AllowsHolyCity,PurchaseYield,MustPurchase,Maintenance,IsWonder,TraitType,OuterDefenseStrength,CitizenSlots,MustBeLake,MustNotBeLake,RegionalRange,AdjacentToMountain,ObsoleteEra,RequiresReligion,GrantFortification,DefenseModifier,InternalOnly,RequiresAdjacentRiver,Quote,QuoteAudio,MustBeAdjacentLand,AdvisorType,AdjacentCapital,AdjacentImprovement,CityAdjacentTerrain,UnlocksGovernmentPolicy,GovernmentTierRequirement)
 SELECT	'MNX_'||BuildingType,Name,PrereqTech,PrereqCivic,Cost,MaxPlayerInstances,MaxWorldInstances,Capital,'DISTRICT_HOLYSITE_GOTS',AdjacentDistrict,Description,RequiresPlacement,RequiresRiver,OuterDefenseHitPoints,Housing,Entertainment,AdjacentResource,Coast,EnabledByReligion,AllowsHolyCity,PurchaseYield,MustPurchase,Maintenance,IsWonder,TraitType,OuterDefenseStrength,CitizenSlots,MustBeLake,MustNotBeLake,RegionalRange,AdjacentToMountain,ObsoleteEra,RequiresReligion,GrantFortification,DefenseModifier,InternalOnly,RequiresAdjacentRiver,Quote,QuoteAudio,MustBeAdjacentLand,AdvisorType,AdjacentCapital,AdjacentImprovement,CityAdjacentTerrain,UnlocksGovernmentPolicy,GovernmentTierRequirement
-FROM	Buildings	WHERE PrereqDistrict='DISTRICT_HOLY_SITE';
+FROM	Buildings	WHERE PrereqDistrict='DISTRICT_HOLY_SITE';*/
 
 /*INSERT OR IGNORE INTO Buildings
 		(BuildingType,Name,PrereqTech,PrereqCivic,Cost,MaxPlayerInstances,MaxWorldInstances,Capital,PrereqDistrict,AdjacentDistrict,Description,RequiresPlacement,RequiresRiver,OuterDefenseHitPoints,Housing,Entertainment,AdjacentResource,Coast,EnabledByReligion,AllowsHolyCity,PurchaseYield,MustPurchase,Maintenance,IsWonder,TraitType,OuterDefenseStrength,CitizenSlots,MustBeLake,MustNotBeLake,RegionalRange,AdjacentToMountain,ObsoleteEra,RequiresReligion,GrantFortification,DefenseModifier,InternalOnly,RequiresAdjacentRiver,Quote,QuoteAudio,MustBeAdjacentLand,AdvisorType,AdjacentCapital,AdjacentImprovement,CityAdjacentTerrain,UnlocksGovernmentPolicy,GovernmentTierRequirement)
 SELECT	'MNX_'||BuildingType,Name,PrereqTech,PrereqCivic,Cost,MaxPlayerInstances,MaxWorldInstances,Capital,PrereqDistrict,'DISTRICT_HOLYSITE_GOTS',Description,RequiresPlacement,RequiresRiver,OuterDefenseHitPoints,Housing,Entertainment,AdjacentResource,Coast,EnabledByReligion,AllowsHolyCity,PurchaseYield,MustPurchase,Maintenance,IsWonder,TraitType,OuterDefenseStrength,CitizenSlots,MustBeLake,MustNotBeLake,RegionalRange,AdjacentToMountain,ObsoleteEra,RequiresReligion,GrantFortification,DefenseModifier,InternalOnly,RequiresAdjacentRiver,Quote,QuoteAudio,MustBeAdjacentLand,AdvisorType,AdjacentCapital,AdjacentImprovement,CityAdjacentTerrain,UnlocksGovernmentPolicy,GovernmentTierRequirement
 FROM	Buildings	WHERE AdjacentDistrict='DISTRICT_HOLY_SITE';*/
 
-INSERT OR IGNORE INTO BuildingPrereqs
+/*INSERT OR IGNORE INTO BuildingPrereqs
 		(Building,				PrereqBuilding)
 SELECT	'MNX_'||Building,		'MNX_BUILDING_SHRINE'
 FROM	BuildingPrereqs	WHERE PrereqBuilding='BUILDING_SHRINE' AND Building NOT IN ('BUILDING_MAHABODHI_TEMPLE', 'BUILDING_BOROBUDUR', 'BUILDING_KOTOKU_IN', 'BUILDING_PHANTA_LEIFENG_PAGODA', 'BUILDING_HAGIA_SOPHIA');
@@ -64,7 +78,7 @@ FROM	BuildingPrereqs	WHERE PrereqBuilding='BUILDING_TEMPLE' AND Building NOT IN 
 
 INSERT OR IGNORE INTO District_CitizenYieldChanges
 		(DistrictType,					YieldType,			YieldChange)	
-VALUES	('DISTRICT_HOLYSITE_GOTS',		'YIELD_FAITH',		'2');
+VALUES	('DISTRICT_HOLYSITE_GOTS',		'YIELD_FAITH',		'2');*/
 
 INSERT OR IGNORE INTO Adjacency_YieldChanges
 		(ID,									Description,																										YieldType,				YieldChange,	OtherDistrictAdjacent,		TilesRequired,		AdjacentDistrict	)
@@ -79,7 +93,7 @@ VALUES
 
 
 INSERT OR IGNORE INTO District_Adjacencies
-		(DistrictType,						YieldChangeID					)	
+		(DistrictType,						YieldChangeID)	
 VALUES	('DISTRICT_HOLYSITE_GOTS',			'NaturalWonder_Faith'),
 		('DISTRICT_HOLYSITE_GOTS',			'Mountain_Faith1'),
 		('DISTRICT_HOLYSITE_GOTS',			'Mountain_Faith2'),
@@ -98,3 +112,21 @@ VALUES	('DISTRICT_HOLYSITE_GOTS',			'NaturalWonder_Faith'),
 		('DISTRICT_THEATER',				'MNX_Culture_Dist_Adj_HolySite'),
 		('DISTRICT_INDUSTRIAL_ZONE',		'MNX_Prod_Dist_Adj_HolySite'),
 		('DISTRICT_WATERFRONT',				'MNX_Food_Dist_Adj_HolySite');
+
+
+INSERT OR IGNORE INTO Modifiers 
+		(ModifierId,						ModifierType,									OwnerRequirementSetId)
+VALUES	('MOD_MNX_ALLOW_GOTS_SHRINE',		'MODIFIER_PLAYER_ADJUST_VALID_BUILDING',		'PLAYER_IS_HUMAN'),
+		('MOD_MNX_ALLOW_GOTS_TEMPLE',		'MODIFIER_PLAYER_ADJUST_VALID_BUILDING',		'PLAYER_IS_HUMAN');
+
+INSERT OR IGNORE INTO ModifierArguments
+		(ModifierId,						Name,						Value)
+VALUES	('MOD_MNX_ALLOW_GOTS_SHRINE',		'BuildingType',				'MNX_BUILDING_SHRINE'),
+		('MOD_MNX_ALLOW_GOTS_SHRINE',		'BuildingTypeToReplace',	'BUILDING_SHRINE'),
+		('MOD_MNX_ALLOW_GOTS_SHRINE',		'BuildingType',				'MNX_BUILDING_TEMPLE'),
+		('MOD_MNX_ALLOW_GOTS_SHRINE',		'BuildingTypeToReplace',	'BUILDING_TEMPLE');
+
+INSERT OR IGNORE INTO TraitModifiers 
+		(TraitType,						ModifierId) 
+VALUES	('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_ALLOW_GOTS_SHRINE'),
+		('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_ALLOW_GOTS_TEMPLE');
