@@ -21,7 +21,7 @@
 </Associations>]]></AssociationData>
     <AssemblyName>manux_newDistrictTests</AssemblyName>
     <RootNamespace>manux_newDistrictTests</RootNamespace>
-    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="UpdateDatabase"><Properties><LoadOrder>1000000</LoadOrder></Properties><File>Gots_HolySite_gameplay.sql</File></UpdateDatabase><UpdateText id="UpdateText"><File>Gots_HolySite_Text.sql</File></UpdateText></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="UpdateDatabase"><Properties><LoadOrder>1000000</LoadOrder></Properties><File>Gots_HolySite_gameplay.sql</File></UpdateDatabase><UpdateText id="UpdateText"><File>Gots_HolySite_Text.sql</File></UpdateText><AddGameplayScripts id="NewAction"><File>SwapDistrict.lua</File></AddGameplayScripts></InGameActions>]]></InGameActionData>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
     <OutputPath>.</OutputPath>

@@ -29,6 +29,17 @@ function OnDistrictConstructed(playerID, districtID, x, y)
 				
 			-- Create Gots HS
 			pCity:GetBuildQueue():CreateDistrict(d_gots_holy_site, pPlotIndex)
+
+			-- Test adding a resource to the tile. (Doesn't work. Maybe because there is a district...)
+			--local eHorses = nil;
+			for row in GameInfo.Resources() do
+				if row.ResourceClassType == 'RESOURCE_HORSES' then
+					--eHorses = row.Hash;
+					ResourceBuilder.SetResourceType(pPlot, row.Hash, 1);
+					break;
+				end
+			end
+			--ResourceBuilder.SetResourceType(pPlot, eHorses, 1);
         end
     end
 end

@@ -33,18 +33,18 @@ INSERT OR IGNORE INTO Districts_XP2
 VALUES	('DISTRICT_HOLYSITE_GOTS',		'2');
 
 -- District replacement mechanics only work when setting a TraitType to the District and adding that trait to a Leader or Civilization.
-/*INSERT OR IGNORE INTO DistrictReplaces
+INSERT OR IGNORE INTO DistrictReplaces
 		(CivUniqueDistrictType,			ReplacesDistrictType)	
 VALUES	('DISTRICT_HOLYSITE_GOTS',		'DISTRICT_HOLY_SITE');
-		--('DISTRICT_HOLYSITE_GOTS',		'DISTRICT_LAVRA');*/
+		--('DISTRICT_HOLYSITE_GOTS',		'DISTRICT_LAVRA');
 
 -- DISTRICT_HOLYSITE_GOTS
 INSERT OR IGNORE INTO Buildings
 		(BuildingType,Name,PrereqTech,PrereqCivic,Cost,MaxPlayerInstances,MaxWorldInstances,Capital,PrereqDistrict,AdjacentDistrict,Description,RequiresPlacement,RequiresRiver,OuterDefenseHitPoints,Housing,Entertainment,AdjacentResource,Coast,EnabledByReligion,AllowsHolyCity,PurchaseYield,MustPurchase,Maintenance,IsWonder,TraitType,OuterDefenseStrength,CitizenSlots,MustBeLake,MustNotBeLake,RegionalRange,AdjacentToMountain,ObsoleteEra,RequiresReligion,GrantFortification,DefenseModifier,InternalOnly,RequiresAdjacentRiver,Quote,QuoteAudio,MustBeAdjacentLand,AdvisorType,AdjacentCapital,AdjacentImprovement,CityAdjacentTerrain,UnlocksGovernmentPolicy,GovernmentTierRequirement)
-SELECT	'MNX_'||BuildingType,'GOTS_'||BuildingType,PrereqTech,PrereqCivic,Cost,MaxPlayerInstances,MaxWorldInstances,Capital,PrereqDistrict,AdjacentDistrict,Description,RequiresPlacement,RequiresRiver,OuterDefenseHitPoints,Housing,Entertainment,AdjacentResource,Coast,EnabledByReligion,AllowsHolyCity,PurchaseYield,MustPurchase,Maintenance,IsWonder,TraitType,OuterDefenseStrength,CitizenSlots,MustBeLake,MustNotBeLake,RegionalRange,AdjacentToMountain,ObsoleteEra,RequiresReligion,GrantFortification,DefenseModifier,InternalOnly,RequiresAdjacentRiver,Quote,QuoteAudio,MustBeAdjacentLand,AdvisorType,AdjacentCapital,AdjacentImprovement,CityAdjacentTerrain,UnlocksGovernmentPolicy,GovernmentTierRequirement
+SELECT	'MNX_'||BuildingType,'GOTS_'||BuildingType,PrereqTech,PrereqCivic,Cost,MaxPlayerInstances,MaxWorldInstances,Capital,'DISTRICT_HOLYSITE_GOTS',AdjacentDistrict,Description,RequiresPlacement,RequiresRiver,OuterDefenseHitPoints,Housing,Entertainment,AdjacentResource,Coast,EnabledByReligion,AllowsHolyCity,PurchaseYield,MustPurchase,Maintenance,IsWonder,TraitType,OuterDefenseStrength,CitizenSlots,MustBeLake,MustNotBeLake,RegionalRange,AdjacentToMountain,ObsoleteEra,RequiresReligion,GrantFortification,DefenseModifier,InternalOnly,RequiresAdjacentRiver,Quote,QuoteAudio,MustBeAdjacentLand,AdvisorType,AdjacentCapital,AdjacentImprovement,CityAdjacentTerrain,UnlocksGovernmentPolicy,GovernmentTierRequirement
 FROM	Buildings	WHERE BuildingType IN ('BUILDING_SHRINE', 'BUILDING_TEMPLE');
 
-/*INSERT OR IGNORE INTO DistrictReplaces
+/*INSERT OR IGNORE INTO BuildingReplaces
 		(CivUniqueBuildingType,			ReplacesBuildingType)	
 VALUES	('MNX_BUILDING_SHRINE',		'BUILDING_SHRINE'),
 		('MNX_BUILDING_TEMPLE',		'BUILDING_TEMPLE');*/
