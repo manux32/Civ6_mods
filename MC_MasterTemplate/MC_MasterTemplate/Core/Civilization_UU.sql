@@ -70,7 +70,7 @@ VALUES	('TRAIT_CIVILIZATION_MC_WEREJAGUAR',	'LOC_UNIT_MC_WEREJAGUAR_NAME',		'LOC
 		
 INSERT INTO CivilizationTraits
 		(CivilizationType,				TraitType								)
-VALUES	('CIVILIZATION_MC_OLMEC',		'TRAIT_CIVILIZATION_MC_WEREJAGUAR'		);
+VALUES	('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_MC_WEREJAGUAR'		);
 
 -----------------------------------------------
 -- Units

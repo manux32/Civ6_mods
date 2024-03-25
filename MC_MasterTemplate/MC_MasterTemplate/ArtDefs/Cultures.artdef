@@ -19,7 +19,7 @@
 							<m_eValueType>ARTDEF_REF</m_eValueType>
 							<m_Values>
 								<Element class="AssetObjects..ArtDefReferenceValue">
-									<m_ElementName text="CIVILIZATION_MC_OLMEC"/>
+									<m_ElementName text="CIVILIZATION_MNX_NORSE"/>
 									<m_RootCollectionName text="Civilization"/>
 									<m_ArtDefPath text="Civilizations.artdef"/>
 									<m_CollectionIsLocked>true</m_CollectionIsLocked>
@@ -47,7 +47,7 @@
 							<m_eValueType>ARTDEF_REF</m_eValueType>
 							<m_Values>
 								<Element class="AssetObjects..ArtDefReferenceValue">
-									<m_ElementName text="CIVILIZATION_MC_OLMEC"/>
+									<m_ElementName text="CIVILIZATION_MNX_NORSE"/>
 									<m_RootCollectionName text="Civilization"/>
 									<m_ArtDefPath text="Civilizations.artdef"/>
 									<m_CollectionIsLocked>true</m_CollectionIsLocked>

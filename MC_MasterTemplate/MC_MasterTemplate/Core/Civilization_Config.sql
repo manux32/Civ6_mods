@@ -16,7 +16,7 @@
 
 INSERT INTO	Types
 			(Type,							Kind					)
-VALUES		('CIVILIZATION_MC_OLMEC',		'KIND_CIVILIZATION'		);
+VALUES		('CIVILIZATION_MNX_NORSE',		'KIND_CIVILIZATION'		);
 		
 -----------------------------------------------
 -- Civilizations
@@ -43,13 +43,13 @@ INSERT INTO	Civilizations
 			)
 
 VALUES		(
-			'CIVILIZATION_MC_OLMEC', --CivilizationType
-			'LOC_CIVILIZATION_MC_OLMEC_NAME', -- Name
-			'LOC_CIVILIZATION_MC_OLMEC_DESCRIPTION', -- Description
-			'LOC_CIVILIZATION_MC_OLMEC_ADJECTIVE', -- Adjective
+			'CIVILIZATION_MNX_NORSE', --CivilizationType
+			'LOC_CIVILIZATION_MNX_NORSE_NAME', -- Name
+			'LOC_CIVILIZATION_MNX_NORSE_DESCRIPTION', -- Description
+			'LOC_CIVILIZATION_MNX_NORSE_ADJECTIVE', -- Adjective
 			'CIVILIZATION_LEVEL_FULL_CIV', -- StartingCivilizationLevelType
-			5, -- RandomCityNameDepth
-			'ETHNICITY_SOUTHAM' -- Ethnicity
+			10, -- RandomCityNameDepth
+			'ETHNICITY_EURO' -- Ethnicity
 			);
 
 -----------------------------------------------
@@ -64,7 +64,7 @@ VALUES		(
 -- Compatibility: NamedMountains were introduced in the Gathering Storm expansion (Expansion2). This section should only be used where there is an intention to develop a mod with a dependency on Gathering Storm (Expansion2).
 -----------------------------------------------
 
-REPLACE INTO NamedMountains
+/*REPLACE INTO NamedMountains
 		(NamedMountainType,							Name											)
 VALUES	('NAMED_MOUNTAIN_CORDILLERA_NEOVOLCANICA',	'LOC_NAMED_MOUNTAIN_CORDILLERA_NEOVOLCANICA'	),
 		('NAMED_MOUNTAIN_MEXICAN_PLATEAU',			'LOC_NAMED_MOUNTAIN_MEXICAN_PLATEAU'			),
@@ -72,7 +72,7 @@ VALUES	('NAMED_MOUNTAIN_CORDILLERA_NEOVOLCANICA',	'LOC_NAMED_MOUNTAIN_CORDILLERA
 		('NAMED_MOUNTAIN_SIERRA_MADRE_DEL_SUR',		'LOC_NAMED_MOUNTAIN_SIERRA_MADRE_DEL_SUR'		),
 		('NAMED_MOUNTAIN_SIERRA_MADRE_ORIENTAL',	'LOC_NAMED_MOUNTAIN_SIERRA_MADRE_ORIENTAL'		),
 		('NAMED_MOUNTAIN_CHIAPAS',					'LOC_NAMED_MOUNTAIN_CHIAPAS'					),
-		('NAMED_MOUNTAIN_MONTANAS_GUATEMALA',		'LOC_NAMED_MOUNTAIN_MONTANAS_GUATEMALA'			);
+		('NAMED_MOUNTAIN_MONTANAS_GUATEMALA',		'LOC_NAMED_MOUNTAIN_MONTANAS_GUATEMALA'			);*/
 
 -----------------------------------------------
 -- NamedMountainCivilizations
@@ -82,15 +82,21 @@ VALUES	('NAMED_MOUNTAIN_CORDILLERA_NEOVOLCANICA',	'LOC_NAMED_MOUNTAIN_CORDILLERA
 -- Compatibility: NamedMountainCivilizations were introduced in the Gathering Storm expansion (Expansion2). This section should only be used where there is an intention to develop a mod with a dependency on Gathering Storm (Expansion2).
 -----------------------------------------------
 
-INSERT INTO NamedMountainCivilizations
+/*INSERT INTO NamedMountainCivilizations
 		(CivilizationType,			NamedMountainType							)
-VALUES	('CIVILIZATION_MC_OLMEC',	'NAMED_MOUNTAIN_CORDILLERA_NEOVOLCANICA'	),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_MOUNTAIN_MEXICAN_PLATEAU'			),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_MOUNTAIN_SIERRA_MADRE_OCCIDENTAL'	),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_MOUNTAIN_SIERRA_MADRE_DEL_SUR'		),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_MOUNTAIN_SIERRA_MADRE_ORIENTAL'		),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_MOUNTAIN_CHIAPAS'					),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_MOUNTAIN_MONTANAS_GUATEMALA'			);
+VALUES	('CIVILIZATION_MNX_NORSE',	'NAMED_MOUNTAIN_CORDILLERA_NEOVOLCANICA'	),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_MOUNTAIN_MEXICAN_PLATEAU'			),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_MOUNTAIN_SIERRA_MADRE_OCCIDENTAL'	),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_MOUNTAIN_SIERRA_MADRE_DEL_SUR'		),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_MOUNTAIN_SIERRA_MADRE_ORIENTAL'		),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_MOUNTAIN_CHIAPAS'					),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_MOUNTAIN_MONTANAS_GUATEMALA'			);*/
+
+INSERT INTO NamedMountainCivilizations
+		(CivilizationType,				NamedMountainType)
+SELECT	'CIVILIZATION_MNX_NORSE',		NamedMountainType
+FROM	NamedMountainCivilizations	
+WHERE CivilizationType='CIVILIZATION_NORWAY';
 
 -----------------------------------------------
 -- NamedRivers
@@ -104,7 +110,7 @@ VALUES	('CIVILIZATION_MC_OLMEC',	'NAMED_MOUNTAIN_CORDILLERA_NEOVOLCANICA'	),
 -- Compatibility: NamedRivers were introduced in the Gathering Storm expansion (Expansion2). This section should only be used where there is an intention to develop a mod with a dependency on Gathering Storm (Expansion2).
 -----------------------------------------------
 
-REPLACE INTO NamedRivers
+/*REPLACE INTO NamedRivers
 		(NamedRiverType,					Name									)
 VALUES	('NAMED_RIVER_GRANDE',				'LOC_NAMED_RIVER_GRANDE'				),
 		('NAMED_RIVER_USUMACINTA',			'LOC_NAMED_RIVER_USUMACINTA'			),
@@ -115,7 +121,7 @@ VALUES	('NAMED_RIVER_GRANDE',				'LOC_NAMED_RIVER_GRANDE'				),
 		('NAMED_RIVER_LERMA',				'LOC_NAMED_RIVER_LERMA'					),
 		('NAMED_RIVER_GRANDE_DE_SANTIAGO',	'LOC_NAMED_RIVER_GRANDE_DE_SANTIAGO'	),
 		('NAMED_RIVER_FUERTE',				'LOC_NAMED_RIVER_FUERTE'				),
-		('NAMED_RIVER_CONCHOS',				'LOC_NAMED_RIVER_CONCHOS'				);
+		('NAMED_RIVER_CONCHOS',				'LOC_NAMED_RIVER_CONCHOS'				);*/
 
 -----------------------------------------------
 -- NamedRiverCivilizations
@@ -125,18 +131,24 @@ VALUES	('NAMED_RIVER_GRANDE',				'LOC_NAMED_RIVER_GRANDE'				),
 -- Compatibility: NamedRiverCivilizations were introduced in the Gathering Storm expansion (Expansion2). This section should only be used where there is an intention to develop a mod with a dependency on Gathering Storm (Expansion2).
 -----------------------------------------------
 
-INSERT INTO NamedRiverCivilizations
+/*INSERT INTO NamedRiverCivilizations
 		(CivilizationType,			NamedRiverType					)
-VALUES	('CIVILIZATION_MC_OLMEC',	'NAMED_RIVER_GRANDE'			),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_RIVER_USUMACINTA'		),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_RIVER_NAZAS'				),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_RIVER_AGUANAVAL'			),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_RIVER_BALSAS'			),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_RIVER_CULIACAN'			),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_RIVER_LERMA'				),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_RIVER_GRANDE_DE_SANTIAGO'),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_RIVER_FUERTE'			),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_RIVER_CONCHOS'			);
+VALUES	('CIVILIZATION_MNX_NORSE',	'NAMED_RIVER_GRANDE'			),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_RIVER_USUMACINTA'		),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_RIVER_NAZAS'				),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_RIVER_AGUANAVAL'			),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_RIVER_BALSAS'			),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_RIVER_CULIACAN'			),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_RIVER_LERMA'				),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_RIVER_GRANDE_DE_SANTIAGO'),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_RIVER_FUERTE'			),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_RIVER_CONCHOS'			);*/
+
+INSERT INTO NamedRiverCivilizations
+		(CivilizationType,				NamedRiverType)
+SELECT	'CIVILIZATION_MNX_NORSE',		NamedRiverType
+FROM	NamedRiverCivilizations	
+WHERE CivilizationType='CIVILIZATION_NORWAY';
 
 -----------------------------------------------
 -- NamedLakes
@@ -150,13 +162,13 @@ VALUES	('CIVILIZATION_MC_OLMEC',	'NAMED_RIVER_GRANDE'			),
 -- Compatibility: NamedLakes were introduced in the Gathering Storm expansion (Expansion2). This section should only be used where there is an intention to develop a mod with a dependency on Gathering Storm (Expansion2).
 -----------------------------------------------
 
-INSERT OR REPLACE INTO NamedLakes
+/*INSERT OR REPLACE INTO NamedLakes
 		(NamedLakeType,						Name								)
 VALUES	('NAMED_LAKE_CHAPALA',				'LOC_NAMED_LAKE_CHAPALA'			),
 		('NAMED_LAKE_PATZCUARO',			'LOC_NAMED_LAKE_PATZCUARO'			),
 		('NAMED_LAKE_BACALAR',				'LOC_NAMED_LAKE_BACALAR'			),
 		('NAMED_LAKE_LAGUNA_CATEMACO',		'LOC_NAMED_LAKE_LAGUNA_CATEMACO'	),
-		('NAMED_LAKE_EL_CARACOL',			'LOC_NAMED_LAKE_EL_CARACOL'			);
+		('NAMED_LAKE_EL_CARACOL',			'LOC_NAMED_LAKE_EL_CARACOL'			);*/
 
 -----------------------------------------------
 -- NamedLakeCivilizations
@@ -166,14 +178,20 @@ VALUES	('NAMED_LAKE_CHAPALA',				'LOC_NAMED_LAKE_CHAPALA'			),
 -- Compatibility: NamedLakeCivilizations were introduced in the Gathering Storm expansion (Expansion2). This section should only be used where there is an intention to develop a mod with a dependency on Gathering Storm (Expansion2).
 -----------------------------------------------
 
-INSERT INTO NamedLakeCivilizations
+/*INSERT INTO NamedLakeCivilizations
 		(CivilizationType,			NamedLakeType					)
-VALUES	('CIVILIZATION_MC_OLMEC',	'NAMED_LAKE_LAKE_TEXCOCO'		),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_LAKE_CHAPALA'			),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_LAKE_PATZCUARO'			),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_LAKE_BACALAR'			),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_LAKE_LAGUNA_CATEMACO'	),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_LAKE_EL_CARACOL'			);
+VALUES	('CIVILIZATION_MNX_NORSE',	'NAMED_LAKE_LAKE_TEXCOCO'		),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_LAKE_CHAPALA'			),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_LAKE_PATZCUARO'			),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_LAKE_BACALAR'			),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_LAKE_LAGUNA_CATEMACO'	),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_LAKE_EL_CARACOL'			);*/
+
+INSERT INTO NamedLakeCivilizations
+		(CivilizationType,				NamedLakeType)
+SELECT	'CIVILIZATION_MNX_NORSE',		NamedLakeType
+FROM	NamedLakeCivilizations	
+WHERE CivilizationType='CIVILIZATION_NORWAY';
 
 -----------------------------------------------
 -- NamedSeas
@@ -189,10 +207,10 @@ VALUES	('CIVILIZATION_MC_OLMEC',	'NAMED_LAKE_LAKE_TEXCOCO'		),
 -- Compatibility: NamedSeas were introduced in the Gathering Storm expansion (Expansion2). This section should only be used where there is an intention to develop a mod with a dependency on Gathering Storm (Expansion2).
 -----------------------------------------------
 
-INSERT OR IGNORE INTO NamedSeas
+/*INSERT OR IGNORE INTO NamedSeas
 		(NamedSeaType,						Name										)
 VALUES	('NAMED_SEA_GULF_OF_CALIFORNIA',	'LOC_NAMED_SEA_GULF_OF_CALIFORNIA_NAME'		),
-		('NAMED_SEA_GULF_OF_MEXICO',		'LOC_NAMED_SEA_GULF_OF_MEXICO_NAME'			);
+		('NAMED_SEA_GULF_OF_MEXICO',		'LOC_NAMED_SEA_GULF_OF_MEXICO_NAME'			);*/
 
 -----------------------------------------------
 -- NamedSeaCivilizations
@@ -202,10 +220,16 @@ VALUES	('NAMED_SEA_GULF_OF_CALIFORNIA',	'LOC_NAMED_SEA_GULF_OF_CALIFORNIA_NAME'	
 -- Compatibility: NamedSeaCivilizations were introduced in the Gathering Storm expansion (Expansion2). This section should only be used where there is an intention to develop a mod with a dependency on Gathering Storm (Expansion2).
 -----------------------------------------------
 
-INSERT INTO NamedSeaCivilizations
+/*INSERT INTO NamedSeaCivilizations
 		(CivilizationType,			NamedSeaType					)
-VALUES	('CIVILIZATION_MC_OLMEC',	'NAMED_SEA_GULF_OF_CALIFORNIA'	),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_SEA_GULF_OF_MEXICO'		);
+VALUES	('CIVILIZATION_MNX_NORSE',	'NAMED_SEA_GULF_OF_CALIFORNIA'	),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_SEA_GULF_OF_MEXICO'		);*/
+
+INSERT INTO NamedSeaCivilizations
+		(CivilizationType,				NamedSeaType)
+SELECT	'CIVILIZATION_MNX_NORSE',		NamedSeaType
+FROM	NamedSeaCivilizations	
+WHERE CivilizationType='CIVILIZATION_NORWAY';
 
 -----------------------------------------------
 -- NamedDeserts
@@ -223,11 +247,11 @@ VALUES	('CIVILIZATION_MC_OLMEC',	'NAMED_SEA_GULF_OF_CALIFORNIA'	),
 -- Compatibility: NamedDeserts were introduced in the Gathering Storm expansion (Expansion2). This section should only be used where there is an intention to develop a mod with a dependency on Gathering Storm (Expansion2).
 -----------------------------------------------
 
-REPLACE INTO NamedDeserts
+/*REPLACE INTO NamedDeserts
 		(NamedDesertType,			Name							)
 VALUES	('NAMED_DESERT_SONORAN',	'LOC_NAMED_DESERT_SONORA'		),
 		('NAMED_DESERT_LA_GUAJIRA',	'LOC_NAMED_DESERT_LA_GUAJIRA'	),
-		('NAMED_DESERT_SECHURA',	'LOC_NAMED_DESERT_SECHURA'		);
+		('NAMED_DESERT_SECHURA',	'LOC_NAMED_DESERT_SECHURA'		);*/
 
 -----------------------------------------------
 -- NamedDesertCivilizations
@@ -237,11 +261,17 @@ VALUES	('NAMED_DESERT_SONORAN',	'LOC_NAMED_DESERT_SONORA'		),
 -- Compatibility: NamedDeserts were introduced in the Gathering Storm expansion (Expansion2). This section should only be used where there is an intention to develop a mod with a dependency on Gathering Storm (Expansion2).
 -----------------------------------------------
 
-INSERT INTO NamedDesertCivilizations
+/*INSERT INTO NamedDesertCivilizations
 		(CivilizationType,			NamedDesertType				)
-VALUES	('CIVILIZATION_MC_OLMEC',	'NAMED_DESERT_SONORAN'		),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_DESERT_LA_GUAJIRA'	),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_DESERT_SECHURA'		);
+VALUES	('CIVILIZATION_MNX_NORSE',	'NAMED_DESERT_SONORAN'		),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_DESERT_LA_GUAJIRA'	),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_DESERT_SECHURA'		);*/
+
+INSERT INTO NamedDesertCivilizations
+		(CivilizationType,				NamedDesertType)
+SELECT	'CIVILIZATION_MNX_NORSE',		NamedDesertType
+FROM	NamedDesertCivilizations	
+WHERE CivilizationType='CIVILIZATION_NORWAY';
 
 -----------------------------------------------
 -- NamedVolcanoes
@@ -255,13 +285,13 @@ VALUES	('CIVILIZATION_MC_OLMEC',	'NAMED_DESERT_SONORAN'		),
 -- Compatibility: Volcanoes were introduced in the Gathering Storm expansion (Expansion2). This section should only be used where there is an intention to develop a mod with a dependency on Gathering Storm (Expansion2).
 -----------------------------------------------
 
-REPLACE INTO NamedVolcanoes
+/*REPLACE INTO NamedVolcanoes
 		(NamedVolcanoType,					Name								)
 VALUES	('NAMED_VOLCANO_PICO_DE_ORIZABA',	'LOC_NAMED_VOLCANO_PICO_DE_ORIZABA'	),
 		('NAMED_VOLCANO_TAJUMULCO',			'LOC_NAMED_VOLCANO_TAJUMULCO'		),
 		('NAMED_VOLCANO_TACANA',			'LOC_NAMED_VOLCANO_TACANA'			),
 		('NAMED_VOLCANO_SANTIAGUITO',		'LOC_NAMED_VOLCANO_SANTIAGUITO'		),
-		('NAMED_VOLCANO_CHAPARRASTIQUE',	'LOC_NAMED_VOLCANO_CHAPARRASTIQUE'	);
+		('NAMED_VOLCANO_CHAPARRASTIQUE',	'LOC_NAMED_VOLCANO_CHAPARRASTIQUE'	);*/
 
 -----------------------------------------------
 -- NamedVolcanoCivilizations
@@ -271,13 +301,19 @@ VALUES	('NAMED_VOLCANO_PICO_DE_ORIZABA',	'LOC_NAMED_VOLCANO_PICO_DE_ORIZABA'	),
 -- Compatibility: Volcanoes were introduced in the Gathering Storm expansion (Expansion2). This section should only be used where there is an intention to develop a mod with a dependency on Gathering Storm (Expansion2).
 -----------------------------------------------
 
-INSERT INTO NamedVolcanoCivilizations
+/*INSERT INTO NamedVolcanoCivilizations
 		(CivilizationType,			NamedVolcanoType				)
-VALUES	('CIVILIZATION_MC_OLMEC',	'NAMED_VOLCANO_PICO_DE_ORIZABA'	),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_VOLCANO_TAJUMULCO'		),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_VOLCANO_TACANA'			),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_VOLCANO_SANTIAGUITO'		),
-		('CIVILIZATION_MC_OLMEC',	'NAMED_VOLCANO_CHAPARRASTIQUE'	);
+VALUES	('CIVILIZATION_MNX_NORSE',	'NAMED_VOLCANO_PICO_DE_ORIZABA'	),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_VOLCANO_TAJUMULCO'		),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_VOLCANO_TACANA'			),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_VOLCANO_SANTIAGUITO'		),
+		('CIVILIZATION_MNX_NORSE',	'NAMED_VOLCANO_CHAPARRASTIQUE'	);*/
+
+INSERT INTO NamedVolcanoCivilizations
+		(CivilizationType,				NamedVolcanoType)
+SELECT	'CIVILIZATION_MNX_NORSE',		NamedVolcanoType
+FROM	NamedVolcanoCivilizations	
+WHERE CivilizationType='CIVILIZATION_NORWAY';
 
 -----------------------------------------------
 -- CityNames
@@ -287,24 +323,30 @@ VALUES	('CIVILIZATION_MC_OLMEC',	'NAMED_VOLCANO_PICO_DE_ORIZABA'	),
 -- All CityName references have a corresponding entry in Civilization_Localisation.sql. I have named them using a simple, sequential numbering system - however, it is generally accepted/common to give them more descriptive names (e.g. LOC_CITY_NAME_MC_SAN_LORENZO).
 -----------------------------------------------
 
-INSERT INTO	CityNames
+/*INSERT INTO	CityNames
 		(CivilizationType,			CityName						)
-VALUES	('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_1'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_2'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_3'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_4'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_5'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_6'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_7'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_8'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_9'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_10'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_11'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_12'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_13'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_14'		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_15'		);
-		
+VALUES	('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_1'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_2'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_3'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_4'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_5'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_6'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_7'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_8'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_9'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_10'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_11'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_12'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_13'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_14'		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITY_NAME_MC_OLMEC_15'		);*/
+
+INSERT INTO CityNames
+		(CivilizationType,				CityName)
+SELECT	'CIVILIZATION_MNX_NORSE',		CityName
+FROM	CityNames	
+WHERE CivilizationType='CIVILIZATION_NORWAY';
+
 -----------------------------------------------
 -- CivilizationCitizenNames
 
@@ -317,28 +359,34 @@ VALUES	('CIVILIZATION_MC_OLMEC',	'LOC_CITY_NAME_MC_OLMEC_1'		),
 -- All CitizenName references have a corresponding entry in Civilization_Localisation.sql.
 -----------------------------------------------
 
-INSERT INTO	CivilizationCitizenNames
+/*INSERT INTO	CivilizationCitizenNames
 		(CivilizationType,			CitizenName,						Female	)
-VALUES	('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_MALE_1',		0 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_MALE_2',		0 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_MALE_3',		0 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_MALE_4',		0 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_MALE_5',		0 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_MALE_6',		0 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_MALE_7',		0 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_MALE_8',		0 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_MALE_9',		0 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_MALE_10',		0 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_FEMALE_1',	1 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_FEMALE_2',	1 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_FEMALE_3',	1 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_FEMALE_4',	1 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_FEMALE_5',	1 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_FEMALE_6',	1 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_FEMALE_7',	1 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_FEMALE_8',	1 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_FEMALE_9',	1 		),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_FEMALE_10',	1 		);
+VALUES	('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_MALE_1',		0 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_MALE_2',		0 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_MALE_3',		0 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_MALE_4',		0 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_MALE_5',		0 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_MALE_6',		0 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_MALE_7',		0 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_MALE_8',		0 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_MALE_9',		0 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_MALE_10',		0 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_FEMALE_1',	1 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_FEMALE_2',	1 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_FEMALE_3',	1 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_FEMALE_4',	1 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_FEMALE_5',	1 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_FEMALE_6',	1 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_FEMALE_7',	1 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_FEMALE_8',	1 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_FEMALE_9',	1 		),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CITIZEN_MC_OLMEC_FEMALE_10',	1 		);*/
+
+INSERT INTO CivilizationCitizenNames
+		(CivilizationType,				CitizenName,	Female,		Modern)
+SELECT	'CIVILIZATION_MNX_NORSE',		CitizenName,	Female,		Modern
+FROM	CivilizationCitizenNames	
+WHERE CivilizationType='CIVILIZATION_NORWAY';
 
 -----------------------------------------------
 -- CivilizationInfo
@@ -350,12 +398,19 @@ VALUES	('CIVILIZATION_MC_OLMEC',	'LOC_CITIZEN_MC_OLMEC_MALE_1',		0 		),
 -- All Header and Caption references have a corresponding entry in Civilization_Localisation.sql.
 -----------------------------------------------
 
-INSERT INTO	CivilizationInfo
+/*INSERT INTO	CivilizationInfo
 		(CivilizationType,			Header,						Caption,								SortIndex	)
-VALUES	('CIVILIZATION_MC_OLMEC',	'LOC_CIVINFO_LOCATION',		'LOC_CIVINFO_MC_OLMEC_LOCATION',		10			),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CIVINFO_SIZE',			'LOC_CIVINFO_MC_OLMEC_SIZE',			20			),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CIVINFO_POPULATION',	'LOC_CIVINFO_MC_OLMEC_POPULATION',		30			),
-		('CIVILIZATION_MC_OLMEC',	'LOC_CIVINFO_CAPITAL',		'LOC_CIVINFO_MC_OLMEC_CAPITAL',			40			);
+VALUES	('CIVILIZATION_MNX_NORSE',	'LOC_CIVINFO_LOCATION',		'LOC_CIVINFO_MC_OLMEC_LOCATION',		10			),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CIVINFO_SIZE',			'LOC_CIVINFO_MC_OLMEC_SIZE',			20			),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CIVINFO_POPULATION',	'LOC_CIVINFO_MC_OLMEC_POPULATION',		30			),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CIVINFO_CAPITAL',		'LOC_CIVINFO_MC_OLMEC_CAPITAL',			40			);*/
+
+INSERT INTO CivilizationInfo
+		(CivilizationType,			Header,						Caption,								SortIndex	)
+VALUES	('CIVILIZATION_MNX_NORSE',	'LOC_CIVINFO_LOCATION',		'LOC_CIVINFO_NORWAY_LOCATION',			10			),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CIVINFO_SIZE',			'LOC_CIVINFO_NORWAY_SIZE',				20			),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CIVINFO_POPULATION',	'LOC_CIVINFO_NORWAY_POPULATION',		30			),
+		('CIVILIZATION_MNX_NORSE',	'LOC_CIVINFO_CAPITAL',		'LOC_CIVINFO_NORWAY_CAPITAL',			40			);
 		
 -----------------------------------------------
 -- Start Bias
@@ -369,19 +424,32 @@ VALUES	('CIVILIZATION_MC_OLMEC',	'LOC_CIVINFO_LOCATION',		'LOC_CIVINFO_MC_OLMEC_
 -- ResourceType: This must be an explicit value from the list defined in Resrouces.xml (base game) and Expansion1_Resources.xml (Rise & Fall). The use of a resource from Expansion1 will dictate compatibility for your mod.
 -----------------------------------------------
 
-INSERT INTO	StartBiasTerrains
+/*INSERT INTO	StartBiasTerrains
 		(CivilizationType,			TerrainType,			Tier	)
-VALUES	('CIVILIZATION_MC_OLMEC',	'TERRAIN_PLAINS',		1		),
-		('CIVILIZATION_MC_OLMEC',	'TERRAIN_GRASS',		5		);
+VALUES	('CIVILIZATION_MNX_NORSE',	'TERRAIN_PLAINS',		1		),
+		('CIVILIZATION_MNX_NORSE',	'TERRAIN_GRASS',		5		);
 
 INSERT INTO	StartBiasFeatures
 		(CivilizationType,			FeatureType,			Tier	)
-VALUES	('CIVILIZATION_MC_OLMEC',	'FEATURE_FLOODPLAINS',	4		);
+VALUES	('CIVILIZATION_MNX_NORSE',	'FEATURE_FLOODPLAINS',	4		);
 
 INSERT INTO	StartBiasResources
 		(CivilizationType,			ResourceType,			Tier	)
-VALUES	('CIVILIZATION_MC_OLMEC',	'RESOURCE_JADE',		3		);
+VALUES	('CIVILIZATION_MNX_NORSE',	'RESOURCE_JADE',		3		);
 
 INSERT INTO	StartBiasRivers
 		(CivilizationType,				Tier	)
-VALUES	('CIVILIZATION_MC_OLMEC',		2		);
+VALUES	('CIVILIZATION_MNX_NORSE',		2		);*/
+
+INSERT INTO StartBiasTerrains
+		(CivilizationType,				TerrainType,	Tier)
+SELECT	'CIVILIZATION_MNX_NORSE',		TerrainType,	Tier
+FROM	StartBiasTerrains	
+WHERE CivilizationType='CIVILIZATION_NORWAY';
+
+INSERT INTO StartBiasFeatures
+		(CivilizationType,				FeatureType,	Tier)
+SELECT	'CIVILIZATION_MNX_NORSE',		FeatureType,	Tier
+FROM	StartBiasFeatures	
+WHERE CivilizationType='CIVILIZATION_NORWAY';
+

@@ -16,20 +16,20 @@
 --INSERT INTO Players (CivilizationType, CivilizationName, CivilizationIcon, CivilizationAbilityName, CivilizationAbilityDescription, CivilizationAbilityIcon, LeaderType, LeaderName, LeaderIcon, LeaderAbilityName, LeaderAbilityDescription, LeaderAbilityIcon)
 --VALUES	(	
 		-- Civilization
---		'CIVILIZATION_MC_OLMEC', -- CivilizationType
---		'LOC_CIVILIZATION_MC_OLMEC_NAME', -- CivilizationName
---		'ICON_CIVILIZATION_MC_OLMEC', -- CivilizationIcon
+--		'CIVILIZATION_MNX_NORSE', -- CivilizationType
+--		'LOC_CIVILIZATION_MNX_NORSE_NAME', -- CivilizationName
+--		'ICON_CIVILIZATION_MNX_NORSE', -- CivilizationIcon
 --		'LOC_TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US_NAME', -- CivilizationAbilityName
 --		'LOC_TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US_DESCRIPTION', -- CivilizationAbilityDescription
---		'ICON_CIVILIZATION_MC_OLMEC', -- CivilizationAbilityIcon
+--		'ICON_CIVILIZATION_MNX_NORSE', -- CivilizationAbilityIcon
 		
 		-- Leader
---		'LEADER_MC_PO_NGBE', -- LeaderType
---		'LOC_LEADER_MC_PO_NGBE_NAME', -- LeaderName
---		'ICON_LEADER_MC_PO_NGBE', -- LeaderIcon (Portrait)
+--		'LEADER_MNX_NORSE', -- LeaderType
+--		'LOC_LEADER_MNX_NORSE_NAME', -- LeaderName
+--		'ICON_LEADER_MNX_NORSE', -- LeaderIcon (Portrait)
 --		'LOC_TRAIT_LEADER_MC_FEAR_NOT_EXPLORATION_NAME', -- LeaderAbilityName
 --		'LOC_TRAIT_LEADER_MC_FEAR_NOT_EXPLORATION_DESCRIPTION', -- LeaderAbilityDescription
---		'ICON_LEADER_MC_PO_NGBE' -- LeaderAbilityIcon
+--		'ICON_LEADER_MNX_NORSE' -- LeaderAbilityIcon
 --		);
 
 -----------------------------------------------
@@ -46,20 +46,20 @@
 --VALUES	(	
 		-- Civilization
 --		'Players:Expansion1_Players', -- Domain
---		'CIVILIZATION_MC_OLMEC', -- CivilizationType
---		'LOC_CIVILIZATION_MC_OLMEC_NAME', -- CivilizationName
---		'ICON_CIVILIZATION_MC_OLMEC', -- CivilizationIcon
+--		'CIVILIZATION_MNX_NORSE', -- CivilizationType
+--		'LOC_CIVILIZATION_MNX_NORSE_NAME', -- CivilizationName
+--		'ICON_CIVILIZATION_MNX_NORSE', -- CivilizationIcon
 --		'LOC_TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US_NAME', -- CivilizationAbilityName
 --		'LOC_TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US_DESCRIPTION', -- CivilizationAbilityDescription
---		'ICON_CIVILIZATION_MC_OLMEC', -- CivilizationAbilityIcon
+--		'ICON_CIVILIZATION_MNX_NORSE', -- CivilizationAbilityIcon
 		
 		-- Leader
---		'LEADER_MC_PO_NGBE', -- LeaderType
---		'LOC_LEADER_MC_PO_NGBE_NAME', -- LeaderName
---		'ICON_LEADER_MC_PO_NGBE', -- LeaderIcon (Portrait)
+--		'LEADER_MNX_NORSE', -- LeaderType
+--		'LOC_LEADER_MNX_NORSE_NAME', -- LeaderName
+--		'ICON_LEADER_MNX_NORSE', -- LeaderIcon (Portrait)
 --		'LOC_TRAIT_LEADER_MC_FEAR_NOT_EXPLORATION_NAME', -- LeaderAbilityName
 --		'LOC_TRAIT_LEADER_MC_FEAR_NOT_EXPLORATION_DESCRIPTION', -- LeaderAbilityDescription
---		'ICON_LEADER_MC_PO_NGBE' -- LeaderAbilityIcon
+--		'ICON_LEADER_MNX_NORSE' -- LeaderAbilityIcon
 --		);
 
 -----------------------------------------------
@@ -71,23 +71,44 @@
 -----------------------------------------------
 
 INSERT INTO Players (Domain, CivilizationType, CivilizationName, CivilizationIcon, CivilizationAbilityName, CivilizationAbilityDescription, CivilizationAbilityIcon, LeaderType, LeaderName, LeaderIcon, LeaderAbilityName, LeaderAbilityDescription, LeaderAbilityIcon)
-VALUES	(	
+VALUES	/*(	
 		-- Civilization
 		'Players:Expansion2_Players', -- Domain
-		'CIVILIZATION_MC_OLMEC', -- CivilizationType
-		'LOC_CIVILIZATION_MC_OLMEC_NAME', -- CivilizationName
-		'ICON_CIVILIZATION_MC_OLMEC', -- CivilizationIcon
+		'CIVILIZATION_MNX_NORSE', -- CivilizationType
+		'LOC_CIVILIZATION_MNX_NORSE_NAME', -- CivilizationName
+		'ICON_CIVILIZATION_MNX_NORSE', -- CivilizationIcon
 		'LOC_TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US_NAME', -- CivilizationAbilityName
 		'LOC_TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US_DESCRIPTION', -- CivilizationAbilityDescription
-		'ICON_CIVILIZATION_MC_OLMEC', -- CivilizationAbilityIcon
+		'ICON_CIVILIZATION_MNX_NORSE', -- CivilizationAbilityIcon
 		
 		-- Leader
-		'LEADER_MC_PO_NGBE', -- LeaderType
-		'LOC_LEADER_MC_PO_NGBE_NAME', -- LeaderName
-		'ICON_LEADER_MC_PO_NGBE', -- LeaderIcon (Portrait)
+		'LEADER_MNX_NORSE', -- LeaderType
+		'LOC_LEADER_MNX_NORSE_NAME', -- LeaderName
+		'ICON_LEADER_MNX_NORSE', -- LeaderIcon (Portrait)
 		'LOC_TRAIT_LEADER_MC_FEAR_NOT_EXPLORATION_NAME', -- LeaderAbilityName
 		'LOC_TRAIT_LEADER_MC_FEAR_NOT_EXPLORATION_DESCRIPTION', -- LeaderAbilityDescription
-		'ICON_LEADER_MC_PO_NGBE' -- LeaderAbilityIcon
+		'ICON_LEADER_MNX_NORSE' -- LeaderAbilityIcon
+		),*/
+		
+		-- Original Hardrada Thunderbolt
+		-- Can only have of of these per leader/civ pair
+		(	
+		-- Civilization
+		'Players:Expansion2_Players', -- Domain
+		'CIVILIZATION_MNX_NORSE', -- CivilizationType
+		'LOC_CIVILIZATION_MNX_NORSE_NAME', -- CivilizationName
+		'ICON_CIVILIZATION_MNX_NORSE', -- CivilizationIcon
+		'LOC_TRAIT_CIVILIZATION_EARLY_OCEAN_NAVIGATION_NAME', -- CivilizationAbilityName
+		'LOC_TRAIT_CIVILIZATION_EARLY_OCEAN_NAVIGATION_DESCRIPTION', -- CivilizationAbilityDescription
+		'ICON_CIVILIZATION_MNX_NORSE', -- CivilizationAbilityIcon
+		
+		-- Leader
+		'LEADER_MNX_NORSE', -- LeaderType
+		'LOC_LEADER_MNX_NORSE_NAME', -- LeaderName
+		'ICON_LEADER_MNX_NORSE', -- LeaderIcon (Portrait)
+		'LOC_TRAIT_LEADER_THUNDERBOLT_NAME', -- LeaderAbilityName
+		'LOC_TRAIT_LEADER_THUNDERBOLT_EXPANSION2_DESCRIPTION', -- LeaderAbilityDescription
+		'ICON_LEADER_MNX_NORSE' -- LeaderAbilityIcon
 		);
 
 -----------------------------------------------
@@ -101,8 +122,8 @@ VALUES	(
 --INSERT INTO PlayerItems
 --		(CivilizationType, LeaderType, Type, Icon, Name, Description, SortIndex	)
 --VALUES	(
---		'CIVILIZATION_MC_OLMEC', -- CivilizationType
---		'LEADER_MC_PO_NGBE', -- LeaderType
+--		'CIVILIZATION_MNX_NORSE', -- CivilizationType
+--		'LEADER_MNX_NORSE', -- LeaderType
 --		'UNIT_MC_WEREJAGUAR', -- Type
 --		'ICON_UNIT_MC_WEREJAGUAR', -- Icon
 --		'LOC_UNIT_MC_WEREJAGUAR_NAME', -- Name
@@ -111,8 +132,8 @@ VALUES	(
 --		),
 --		
 --		(
---		'CIVILIZATION_MC_OLMEC', -- CivilizationType
---		'LEADER_MC_PO_NGBE', -- LeaderType
+--		'CIVILIZATION_MNX_NORSE', -- CivilizationType
+--		'LEADER_MNX_NORSE', -- LeaderType
 --		'IMPROVEMENT_COLOSSAL_HEAD', -- Type
 --		'ICON_IMPROVEMENT_COLOSSAL_HEAD', -- Icon
 --		'LOC_IMPROVEMENT_OLMEC_COLOSSAL_HEAD_NAME', -- Name
@@ -134,8 +155,8 @@ VALUES	(
 --		(Domain, CivilizationType, LeaderType, Type, Icon, Name, Description, SortIndex	)
 --VALUES	(
 --		'Players:Expansion1_Players', -- Domain
---		'CIVILIZATION_MC_OLMEC', -- CivilizationType
---		'LEADER_MC_PO_NGBE', -- LeaderType
+--		'CIVILIZATION_MNX_NORSE', -- CivilizationType
+--		'LEADER_MNX_NORSE', -- LeaderType
 --		'UNIT_MC_WEREJAGUAR', -- Type
 --		'ICON_UNIT_MC_WEREJAGUAR', -- Icon
 --		'LOC_UNIT_MC_WEREJAGUAR_NAME', -- Name
@@ -145,8 +166,8 @@ VALUES	(
 --		
 --		(
 --		'Players:Expansion1_Players', -- Domain
---		'CIVILIZATION_MC_OLMEC', -- CivilizationType
---		'LEADER_MC_PO_NGBE', -- LeaderType
+--		'CIVILIZATION_MNX_NORSE', -- CivilizationType
+--		'LEADER_MNX_NORSE', -- LeaderType
 --		'IMPROVEMENT_COLOSSAL_HEAD', -- Type
 --		'ICON_IMPROVEMENT_COLOSSAL_HEAD', -- Icon
 --		'LOC_IMPROVEMENT_OLMEC_COLOSSAL_HEAD_NAME', -- Name
@@ -166,8 +187,8 @@ INSERT INTO PlayerItems
 		(Domain, CivilizationType, LeaderType, Type, Icon, Name, Description, SortIndex	)
 VALUES	(
 		'Players:Expansion2_Players', -- Domain
-		'CIVILIZATION_MC_OLMEC', -- CivilizationType
-		'LEADER_MC_PO_NGBE', -- LeaderType
+		'CIVILIZATION_MNX_NORSE', -- CivilizationType
+		'LEADER_MNX_NORSE', -- LeaderType
 		'UNIT_MC_WEREJAGUAR', -- Type
 		'ICON_UNIT_MC_WEREJAGUAR', -- Icon
 		'LOC_UNIT_MC_WEREJAGUAR_NAME', -- Name
@@ -177,11 +198,36 @@ VALUES	(
 		
 		(
 		'Players:Expansion2_Players', -- Domain
-		'CIVILIZATION_MC_OLMEC', -- CivilizationType
-		'LEADER_MC_PO_NGBE', -- LeaderType
+		'CIVILIZATION_MNX_NORSE', -- CivilizationType
+		'LEADER_MNX_NORSE', -- LeaderType
 		'IMPROVEMENT_COLOSSAL_HEAD', -- Type
 		'ICON_IMPROVEMENT_COLOSSAL_HEAD', -- Icon
 		'LOC_IMPROVEMENT_OLMEC_COLOSSAL_HEAD_NAME', -- Name
 		'LOC_IMPROVEMENT_OLMEC_COLOSSAL_HEAD_DESCRIPTION', -- Description
 		20 -- SortIndex
 		);
+
+
+INSERT INTO PlayerItems
+		(Domain,	CivilizationType,			LeaderType,				Type, Icon, Name, Description, SortIndex)
+SELECT	Domain,		'CIVILIZATION_MNX_NORSE',	'LEADER_MNX_NORSE',		Type, Icon, Name, Description, SortIndex
+FROM	PlayerItems
+WHERE	LeaderType='LEADER_HARDRADA' AND Domain='Players:Expansion2_Players' AND Type NOT IN ('MIK_IMPROVEMENT_NWY_SHIP');
+
+INSERT INTO PlayerItems
+		(Domain,	CivilizationType,			LeaderType,				Type, Icon, Name, Description, SortIndex)
+SELECT	Domain,		'CIVILIZATION_MNX_NORSE',	'LEADER_MNX_NORSE',		Type, Icon, Name, Description, SortIndex
+FROM	PlayerItems
+WHERE	Type='UNIT_BYZANTINE_DROMON' AND Domain='Players:Expansion2_Players';
+
+INSERT INTO PlayerItems
+		(Domain,	CivilizationType,			LeaderType,				Type, Icon, Name, Description, SortIndex)
+SELECT	Domain,		'CIVILIZATION_MNX_NORSE',	'LEADER_MNX_NORSE',		Type, Icon, Name, Description, SortIndex
+FROM	PlayerItems
+WHERE	Type='UNIT_ENGLISH_SEADOG' AND Domain='Players:Expansion2_Players';
+
+INSERT INTO PlayerItems
+		(Domain,	CivilizationType,			LeaderType,				Type, Icon, Name, Description, SortIndex)
+SELECT	Domain,		'CIVILIZATION_MNX_NORSE',	'LEADER_MNX_NORSE',		Type, Icon, Name, Description, SortIndex
+FROM	PlayerItems
+WHERE	Type='UNIT_GERMAN_UBOAT' AND Domain='Players:Expansion2_Players';

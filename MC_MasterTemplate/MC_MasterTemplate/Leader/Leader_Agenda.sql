@@ -57,7 +57,7 @@ VALUES 		('AGENDA_MC_PO_NGBE',	'TRAIT_AGENDA_MC_PO_NGBE'	);
 
 INSERT INTO HistoricalAgendas
 			(LeaderType,			AgendaType				)
-VALUES 		('LEADER_MC_PO_NGBE',	'AGENDA_MC_PO_NGBE'		);
+VALUES 		('LEADER_MNX_NORSE',	'AGENDA_MC_PO_NGBE'		);
 
 -----------------------------------------------
 -- ExclusiveAgendas
@@ -134,14 +134,14 @@ VALUES		('AGENDA_MODIFIER_MC_PO_NGBE_UNHAPPY',	'InitialValue',					-5											
 			('AGENDA_MODIFIER_MC_PO_NGBE_UNHAPPY',	'IncrementValue',				-1													),
 			('AGENDA_MODIFIER_MC_PO_NGBE_UNHAPPY',	'IncrementTurns',				-10													),
 			('AGENDA_MODIFIER_MC_PO_NGBE_UNHAPPY',	'MaxValue',						-25													),
-			('AGENDA_MODIFIER_MC_PO_NGBE_UNHAPPY',	'StatementKey',					'LOC_DIPLO_WARNING_LEADER_MC_PO_NGBE_REASON_ANY'	),
+			('AGENDA_MODIFIER_MC_PO_NGBE_UNHAPPY',	'StatementKey',					'LOC_DIPLO_WARNING_LEADER_MNX_NORSE_REASON_ANY'	),
 			('AGENDA_MODIFIER_MC_PO_NGBE_UNHAPPY',	'SimpleModifierDescription',	'LOC_DIPLO_MODIFIER_MC_PO_NGBE_UNHAPPY'				),
 	
 			('AGENDA_MODIFIER_MC_PO_NGBE_HAPPY',	'InitialValue',					5													),
 			('AGENDA_MODIFIER_MC_PO_NGBE_HAPPY',	'IncrementValue',				1													),
 			('AGENDA_MODIFIER_MC_PO_NGBE_HAPPY',	'IncrementTurns',				10													),
 			('AGENDA_MODIFIER_MC_PO_NGBE_HAPPY',	'MaxValue',						12													),
-			('AGENDA_MODIFIER_MC_PO_NGBE_HAPPY',	'StatementKey',					'LOC_DIPLO_KUDO_LEADER_MC_PO_NGBE_REASON_ANY'		),
+			('AGENDA_MODIFIER_MC_PO_NGBE_HAPPY',	'StatementKey',					'LOC_DIPLO_KUDO_LEADER_MNX_NORSE_REASON_ANY'		),
 			('AGENDA_MODIFIER_MC_PO_NGBE_HAPPY',	'SimpleModifierDescription',	'LOC_DIPLO_MODIFIER_MC_PO_NGBE_HAPPY'				);
 			
 -----------------------------------------------
