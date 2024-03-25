@@ -19,7 +19,7 @@
 
 INSERT INTO	Types
 		(Type,												Kind			)
-VALUES	('TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US',		'KIND_TRAIT'	);
+VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'KIND_TRAIT'	);
 
 -----------------------------------------------
 -- Traits
@@ -28,8 +28,8 @@ VALUES	('TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US',		'KIND_TRAIT'	);
 -----------------------------------------------
 
 INSERT INTO	Traits	
-		(TraitType,											Name,														Description														)
-VALUES	('TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US',		'LOC_TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US_NAME',		'LOC_TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US_DESCRIPTION'	);
+		(TraitType,									Name,												Description														)
+VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_NAME',		'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_DESCRIPTION'			);
 		
 -----------------------------------------------
 -- CivilizationTraits
@@ -39,13 +39,20 @@ VALUES	('TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US',		'LOC_TRAIT_CIVILIZATION_M
 
 INSERT INTO	CivilizationTraits
 		(CivilizationType,				TraitType										)
-VALUES	('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US'	),
+VALUES	('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN'			),
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_BUILDING_STAVE_CHURCH'		),
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_UNIT_NORWEGIAN_BERSERKER'	),
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_EARLY_OCEAN_NAVIGATION'		),
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_UNIT_BYZANTINE_DROMON'		),
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_UNIT_ENGLISH_SEADOG'		),
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_UNIT_GERMAN_UBOAT'			);
+
+-----------------------------------------------
+
+INSERT INTO	ExcludedAdjacencies
+		(TraitType,									YieldChangeId		)
+VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'District_Faith'	),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'District_Gold'		);
 
 -----------------------------------------------
 -- TraitModifiers
@@ -63,8 +70,12 @@ VALUES	('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US'	
 
 INSERT INTO	TraitModifiers	
 		(TraitType,											ModifierId											)
-VALUES	('TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US',		'MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD'		),
-		('TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US',		'MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD'		);
+VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY'				),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HARBOR_2X_ADJACENCY'					),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_COMHUB_REG_ADJACENCY'					),
+
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD'		),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD'		);
 
 -----------------------------------------------
 -- Modifiers
@@ -84,7 +95,11 @@ VALUES	('TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US',		'MODIFIER_MC_LET_THE_GODS
 
 INSERT INTO	Modifiers
 		(ModifierId,											ModifierType,											RunOnce,		Permanent	)
-VALUES	('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',		'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE',	0,				1			),
+VALUES	('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',			0,				1			),
+		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',			0,				1			),
+		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',			0,				1			),
+
+		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',		'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE',	0,				1			),
 		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',		'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE',	0,				1			);
 
 -----------------------------------------------
@@ -103,9 +118,33 @@ VALUES	('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',		'MODIFIER_PLAYER_CITIE
 
 INSERT INTO	ModifierArguments
 		(ModifierId,												Name,							Value									)
-VALUES	('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',			'BuildingType',					'BUILDING_SHRINE'						),
+VALUES	('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'DistrictType',					'DISTRICT_HOLY_SITE'					),
+		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'YieldType',					'YIELD_FAITH'							),
+		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'OtherDistrictAdjacent',		1										),
+		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'TilesRequired',				1										),
+		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'Amount',						1										),
+		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'Description',					'(ODIN) +{1_num} [ICON_Faith] Faith from the adjacent {1_Num : plural 1?district; other?districts;}.'),
+
+		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'DistrictType',					'DISTRICT_HARBOR'						),
+		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'YieldType',					'YIELD_GOLD'							),
+		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'OtherDistrictAdjacent',		1										),
+		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'TilesRequired',				1										),
+		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'Amount',						1										),
+		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'Description',					'(ODIN) +{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?district; other?districts;}.'),
+
+
+		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',						'DistrictType',					'DISTRICT_COMMERCIAL_HUB'				),
+		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',						'YieldType',					'YIELD_GOLD'							),
+		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',						'OtherDistrictAdjacent',		1										),
+		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',						'TilesRequired',				2										),
+		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',						'Amount',						1										),
+		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',						'Description',					'+{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?district; other?districts;}.'),
+
+		
+		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',			'BuildingType',					'BUILDING_SHRINE'						),
 		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',			'YieldType',					'YIELD_FOOD'							),
 		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',			'Amount',						2										),
+
 		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',			'BuildingType',					'BUILDING_TEMPLE'						),
 		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',			'YieldType',					'YIELD_FOOD'							),
 		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',			'Amount',						2										);

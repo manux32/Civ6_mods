@@ -98,16 +98,20 @@ VALUES	/*(
 		'CIVILIZATION_MNX_NORSE', -- CivilizationType
 		'LOC_CIVILIZATION_MNX_NORSE_NAME', -- CivilizationName
 		'ICON_CIVILIZATION_MNX_NORSE', -- CivilizationIcon
-		'LOC_TRAIT_CIVILIZATION_EARLY_OCEAN_NAVIGATION_NAME', -- CivilizationAbilityName
-		'LOC_TRAIT_CIVILIZATION_EARLY_OCEAN_NAVIGATION_DESCRIPTION', -- CivilizationAbilityDescription
+		--'LOC_TRAIT_CIVILIZATION_EARLY_OCEAN_NAVIGATION_NAME', -- CivilizationAbilityName
+		--'LOC_TRAIT_CIVILIZATION_EARLY_OCEAN_NAVIGATION_DESCRIPTION', -- CivilizationAbilityDescription
+		'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_NAME', -- CivilizationAbilityName
+		'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_DESCRIPTION', -- CivilizationAbilityDescription
 		'ICON_CIVILIZATION_MNX_NORSE', -- CivilizationAbilityIcon
 		
 		-- Leader
 		'LEADER_MNX_NORSE', -- LeaderType
 		'LOC_LEADER_MNX_NORSE_NAME', -- LeaderName
 		'ICON_LEADER_MNX_NORSE', -- LeaderIcon (Portrait)
-		'LOC_TRAIT_LEADER_THUNDERBOLT_NAME', -- LeaderAbilityName
-		'LOC_TRAIT_LEADER_THUNDERBOLT_EXPANSION2_DESCRIPTION', -- LeaderAbilityDescription
+		--'LOC_TRAIT_LEADER_THUNDERBOLT_NAME', -- LeaderAbilityName
+		--'LOC_TRAIT_LEADER_THUNDERBOLT_EXPANSION2_DESCRIPTION', -- LeaderAbilityDescription
+		'LOC_TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER_NAME', -- LeaderAbilityName
+		'LOC_TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER_DESCRIPTION', -- LeaderAbilityDescription
 		'ICON_LEADER_MNX_NORSE' -- LeaderAbilityIcon
 		);
 
@@ -193,7 +197,8 @@ VALUES	(
 		'ICON_UNIT_MC_WEREJAGUAR', -- Icon
 		'LOC_UNIT_MC_WEREJAGUAR_NAME', -- Name
 		'LOC_UNIT_MC_WEREJAGUAR_DESCRIPTION', -- Description
-		10	-- SortIndex
+		--10	-- SortIndex
+		50	-- SortIndex
 		),
 		
 		(
@@ -204,16 +209,18 @@ VALUES	(
 		'ICON_IMPROVEMENT_COLOSSAL_HEAD', -- Icon
 		'LOC_IMPROVEMENT_OLMEC_COLOSSAL_HEAD_NAME', -- Name
 		'LOC_IMPROVEMENT_OLMEC_COLOSSAL_HEAD_DESCRIPTION', -- Description
-		20 -- SortIndex
+		--20 -- SortIndex
+		60 -- SortIndex
 		);
 
-
+-- Add all player items from LEADER_HARDRADA
 INSERT INTO PlayerItems
 		(Domain,	CivilizationType,			LeaderType,				Type, Icon, Name, Description, SortIndex)
 SELECT	Domain,		'CIVILIZATION_MNX_NORSE',	'LEADER_MNX_NORSE',		Type, Icon, Name, Description, SortIndex
 FROM	PlayerItems
 WHERE	LeaderType='LEADER_HARDRADA' AND Domain='Players:Expansion2_Players' AND Type NOT IN ('MIK_IMPROVEMENT_NWY_SHIP');
 
+-- Add player items of other civs that unlock unique naval units
 INSERT INTO PlayerItems
 		(Domain,	CivilizationType,			LeaderType,				Type, Icon, Name, Description, SortIndex)
 SELECT	Domain,		'CIVILIZATION_MNX_NORSE',	'LEADER_MNX_NORSE',		Type, Icon, Name, Description, SortIndex

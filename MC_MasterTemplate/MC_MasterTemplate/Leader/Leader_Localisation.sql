@@ -25,8 +25,9 @@ VALUES
 -- Leader Unique Ability
 -----------------------------------------------	
 
-	('en_US',	'LOC_TRAIT_LEADER_MC_FEAR_NOT_EXPLORATION_NAME',			'Fear not exploration, for God will guide us'	),
-	('en_US',	'LOC_TRAIT_LEADER_MC_FEAR_NOT_EXPLORATION_DESCRIPTION',		'Settlers and Builders ignore movement penalties in Hills terrain.'	),
+	('en_US',	'LOC_TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER_NAME',			'Explore and Conquer, the Gods will guide us!'	),
+	('en_US',	'LOC_TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER_DESCRIPTION',
+	'Allows coastal raiding for all naval melee units and +50% [ICON_PRODUCTION] Production toward all naval melee units. Receive [ICON_SCIENCE] Science from pillaging and coastal raiding Mines in addition to [ICON_GOLD] Gold. Pillaging or coastal raiding Quarries, Pastures, Plantations, and Camps provide [ICON_CULTURE] Culture in addition to [ICON_FAITH] Faith. Gain the Viking Longship unique unit with Sailing. Naval Units can be purchased with Faith. Settlers and Builders ignore movement penalties in Hills terrain.'	),
 
 -----------------------------------------------
 -- Leader Agenda

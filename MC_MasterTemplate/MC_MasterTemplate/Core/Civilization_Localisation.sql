@@ -33,9 +33,9 @@ VALUES
 -- Please note: The display of in-game icons in text is achieved by using [ICON_Type].
 -----------------------------------------------
 
-	('en_US',	'LOC_TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US_NAME',				'Let the Gods feed us!'				),
-	('en_US',	'LOC_TRAIT_CIVILIZATION_MC_LET_THE_GODS_FEED_US_DESCRIPTION',	
-	'Holy Site buildings will yield an additional +2 [ICON_Food] Food, alongside their usual [ICON_Faith] Faith.'	),
+	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_NAME',				'Sons of Odin'),
+	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_DESCRIPTION',
+	'Harbor, Encampment and Holy Site are 50% cheaper, and give/receive +1 adjacency to/from all districts. Harbor and Holy Site emanate their yields on adjacent tiles and districts. Units gain the ability to enter Ocean tiles after researching the Shipbuilding technology. Naval melee units heal in neutral territory. Units ignore additional [ICON_Movement] Movement costs from embarking and disembarking. Holy Site buildings will yield an additional +2 [ICON_Food] Food, alongside their usual [ICON_Faith] Faith.'),
 
 -----------------------------------------------
 -- Civilization Unique Infrastructure (Improvement)
