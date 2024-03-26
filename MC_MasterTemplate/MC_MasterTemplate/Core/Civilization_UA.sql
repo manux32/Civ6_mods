@@ -18,8 +18,9 @@
 -----------------------------------------------
 
 INSERT INTO	Types
-		(Type,												Kind			)
-VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'KIND_TRAIT'	);
+		(Type,											Kind			)
+VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',			'KIND_TRAIT'	),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',		'KIND_TRAIT'	);
 
 -----------------------------------------------
 -- Traits
@@ -30,7 +31,26 @@ VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'KIND_TRAIT'	);
 INSERT INTO	Traits	
 		(TraitType,									Name,												Description														)
 VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_NAME',		'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_DESCRIPTION'			);
-		
+
+-----------------------------------------------
+-- Add dummy Trait to all Leaders or Civs to exclude our Civ's special district adjacency bonuses for all other players
+-----------------------------------------------
+INSERT OR IGNORE INTO Traits
+		(TraitType,									InternalOnly)
+VALUES	('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	1);
+
+/*INSERT OR IGNORE INTO LeaderTraits
+		(TraitType,									LeaderType)
+SELECT	'TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	LeaderType
+FROM	Leaders
+WHERE	InheritFrom='LEADER_DEFAULT' AND LeaderType!='LEADER_MNX_NORSE';*/
+
+INSERT OR IGNORE INTO CivilizationTraits
+		(TraitType,									CivilizationType)
+SELECT	'TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	CivilizationType
+FROM	Civilizations
+WHERE	StartingCivilizationLevelType='CIVILIZATION_LEVEL_FULL_CIV' AND CivilizationType!='CIVILIZATION_MNX_NORSE';
+	
 -----------------------------------------------
 -- CivilizationTraits
 
@@ -40,20 +60,15 @@ VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'LOC_TRAIT_CIVILIZATION_MNX_SONS
 INSERT INTO	CivilizationTraits
 		(CivilizationType,				TraitType										)
 VALUES	('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN'			),
+		-- Norway Traits
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_BUILDING_STAVE_CHURCH'		),
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_UNIT_NORWEGIAN_BERSERKER'	),
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_EARLY_OCEAN_NAVIGATION'		),
+		-- Other civs unique naval units
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_UNIT_BYZANTINE_DROMON'		),
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_UNIT_ENGLISH_SEADOG'		),
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_UNIT_GERMAN_UBOAT'			);
-
------------------------------------------------
-
-INSERT INTO	ExcludedAdjacencies
-		(TraitType,									YieldChangeId		)
-VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'District_Faith'	),
-		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'District_Gold'		);
-
+														
 -----------------------------------------------
 -- TraitModifiers
 
@@ -72,7 +87,6 @@ INSERT INTO	TraitModifiers
 		(TraitType,											ModifierId											)
 VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY'				),
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HARBOR_2X_ADJACENCY'					),
-		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_COMHUB_REG_ADJACENCY'					),
 
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD'		),
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD'		);
@@ -97,7 +111,6 @@ INSERT INTO	Modifiers
 		(ModifierId,											ModifierType,											RunOnce,		Permanent	)
 VALUES	('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',			0,				1			),
 		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',			0,				1			),
-		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',			0,				1			),
 
 		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',		'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE',	0,				1			),
 		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',		'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE',	0,				1			);
@@ -117,34 +130,120 @@ VALUES	('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRI
 -----------------------------------------------
 
 INSERT INTO	ModifierArguments
-		(ModifierId,												Name,							Value									)
-VALUES	('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'DistrictType',					'DISTRICT_HOLY_SITE'					),
-		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'YieldType',					'YIELD_FAITH'							),
-		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'OtherDistrictAdjacent',		1										),
-		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'TilesRequired',				1										),
-		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'Amount',						1										),
-		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'Description',					'(ODIN) +{1_num} [ICON_Faith] Faith from the adjacent {1_Num : plural 1?district; other?districts;}.'),
+		(ModifierId,												Name,							Value												)
+VALUES	('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'DistrictType',					'DISTRICT_HOLY_SITE'								),
+		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'YieldType',					'YIELD_FAITH'										),
+		--('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',					'OtherDistrictAdjacent',		1													),
+		--('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',					'TilesRequired',				1													),
+		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'Amount',						1													),
+		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'Description',					'LOC_MNX_ODIN_HOLYSITE_2X_DISTRICTS_ADJACENCY'		),
 
-		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'DistrictType',					'DISTRICT_HARBOR'						),
-		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'YieldType',					'YIELD_GOLD'							),
-		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'OtherDistrictAdjacent',		1										),
-		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'TilesRequired',				1										),
-		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'Amount',						1										),
-		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'Description',					'(ODIN) +{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?district; other?districts;}.'),
+		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'DistrictType',					'DISTRICT_HARBOR'									),
+		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'YieldType',					'YIELD_GOLD'										),
+		--('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'OtherDistrictAdjacent',		1													),
+		--('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'TilesRequired',				1													),
+		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'Amount',						1													),
+		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'Description',					'LOC_MNX_ODIN_HARBOR_2X_DISTRICTS_ADJACENCY'		),
+
+		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',			'BuildingType',					'BUILDING_SHRINE'									),
+		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',			'YieldType',					'YIELD_FOOD'										),
+		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',			'Amount',						2													),
+
+		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',			'BuildingType',					'BUILDING_TEMPLE'									),
+		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',			'YieldType',					'YIELD_FOOD'										),
+		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',			'Amount',						2													);
 
 
-		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',						'DistrictType',					'DISTRICT_COMMERCIAL_HUB'				),
-		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',						'YieldType',					'YIELD_GOLD'							),
-		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',						'OtherDistrictAdjacent',		1										),
-		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',						'TilesRequired',				2										),
-		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',						'Amount',						1										),
-		('MOD_MNX_ODIN_COMHUB_REG_ADJACENCY',						'Description',					'+{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?district; other?districts;}.'),
-
+-----------------------------------------------
+-- Districts special adjacencies
+-----------------------------------------------
+INSERT OR IGNORE INTO Adjacency_YieldChanges
+		(ID,										AdjacentDistrict,		AdjacentTerrain,	YieldType,				YieldChange,	OtherDistrictAdjacent,	TilesRequired,	Description									)
+VALUES	-- To give Com-Hub back it's regular minor districts adjacency
+		('MNX_ODIN_Gold_Dist_Reg_Adj_AnyDist',		NULL,					NULL,				'YIELD_GOLD',			1,				1,					  	2,				'LOC_MNX_ODIN_GOLD_DIST_REG_ADJ_ANY_DIST'	),
 		
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',			'BuildingType',					'BUILDING_SHRINE'						),
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',			'YieldType',					'YIELD_FOOD'							),
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',			'Amount',						2										),
+		-- Major districts adjacency from Holy Site
+		('MNX_ODIN_Faith_Dist_Adj_HolySite',		'DISTRICT_HOLY_SITE',	NULL,				'YIELD_FAITH',			1,				0,					  	1,				'LOC_MNX_ODIN_FAITH_DIST_ADJ_HOLYSITE'		),
+		('MNX_ODIN_Gold_Dist_Adj_HolySite',			'DISTRICT_HOLY_SITE',	NULL,				'YIELD_GOLD',			1,				0,					  	1,				'LOC_MNX_ODIN_GOLD_DIST_ADJ_HOLYSITE'		),
+		('MNX_ODIN_Science_Dist_Adj_HolySite',		'DISTRICT_HOLY_SITE',	NULL,				'YIELD_SCIENCE',		1,				0,					  	1,				'LOC_MNX_ODIN_SCIENCE_DIST_ADJ_HOLYSITE'	),
+		('MNX_ODIN_Culture_Dist_Adj_HolySite',		'DISTRICT_HOLY_SITE',	NULL,				'YIELD_CULTURE',		1,				0,					  	1,				'LOC_MNX_ODIN_CULTURE_DIST_ADJ_HOLYSITE'	),
+		('MNX_ODIN_Prod_Dist_Adj_HolySite',			'DISTRICT_HOLY_SITE',	NULL,				'YIELD_PRODUCTION',		1,				0,					  	1,				'LOC_MNX_ODIN_PROD_DIST_ADJ_HOLYSITE'		),
+		('MNX_ODIN_Food_Dist_Adj_HolySite',			'DISTRICT_HOLY_SITE',	NULL,				'YIELD_FOOD',			1,				0,					  	1,				'LOC_MNX_ODIN_FOOD_DIST_ADJ_HOLYSITE'		),
 
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',			'BuildingType',					'BUILDING_TEMPLE'						),
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',			'YieldType',					'YIELD_FOOD'							),
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',			'Amount',						2										);
+		-- Major districts adjacency from Harbor
+		('MNX_ODIN_Faith_Dist_Adj_Harbor',			'DISTRICT_HARBOR',		NULL,				'YIELD_FAITH',			1,				0,					  	1,				'LOC_MNX_ODIN_FAITH_DIST_ADJ_HARBOR'		),
+		('MNX_ODIN_Gold_Dist_Adj_Harbor',			'DISTRICT_HARBOR',		NULL,				'YIELD_GOLD',			1,				0,					  	1,				'LOC_MNX_ODIN_GOLD_DIST_ADJ_HARBOR'			),
+		('MNX_ODIN_Science_Dist_Adj_Harbor',		'DISTRICT_HARBOR',		NULL,				'YIELD_SCIENCE',		1,				0,					  	1,				'LOC_MNX_ODIN_SCIENCE_DIST_ADJ_HARBOR'		),
+		('MNX_ODIN_Culture_Dist_Adj_Harbor',		'DISTRICT_HARBOR',		NULL,				'YIELD_CULTURE',		1,				0,					  	1,				'LOC_MNX_ODIN_CULTURE_DIST_ADJ_HARBOR'		),
+		('MNX_ODIN_Prod_Dist_Adj_Harbor',			'DISTRICT_HARBOR',		NULL,				'YIELD_PRODUCTION',		1,				0,					  	1,				'LOC_MNX_ODIN_PROD_DIST_ADJ_HARBOR'			),
+		('MNX_ODIN_Food_Dist_Adj_Harbor',			'DISTRICT_HARBOR',		NULL,				'YIELD_FOOD',			1,				0,					  	1,				'LOC_MNX_ODIN_FOOD_DIST_ADJ_HARBOR'			),
+
+		-- Minor districts adjacency from Water
+		('MNX_ODIN_Faith_Dist_Adj_Coast',			NULL,					'TERRAIN_COAST',	'YIELD_FAITH',			1,				0,					  	2,				'LOC_MNX_ODIN_FAITH_DIST_ADJ_COAST'		),
+		('MNX_ODIN_Gold_Dist_Adj_Coast',			NULL,					'TERRAIN_COAST',	'YIELD_GOLD',			1,				0,					  	2,				'LOC_MNX_ODIN_GOLD_DIST_ADJ_COAST'			),
+		('MNX_ODIN_Science_Dist_Adj_Coast',			NULL,					'TERRAIN_COAST',	'YIELD_SCIENCE',		1,				0,					  	2,				'LOC_MNX_ODIN_SCIENCE_DIST_ADJ_COAST'		),
+		('MNX_ODIN_Culture_Dist_Adj_Coast',			NULL,					'TERRAIN_COAST',	'YIELD_CULTURE',		1,				0,					  	2,				'LOC_MNX_ODIN_CULTURE_DIST_ADJ_COAST'		),
+		('MNX_ODIN_Prod_Dist_Adj_Coast',			NULL,					'TERRAIN_COAST',	'YIELD_PRODUCTION',		1,				0,					  	2,				'LOC_MNX_ODIN_PROD_DIST_ADJ_COAST'			),
+		('MNX_ODIN_Food_Dist_Adj_Coast',			NULL,					'TERRAIN_COAST',	'YIELD_FOOD',			1,				0,					  	2,				'LOC_MNX_ODIN_FOOD_DIST_ADJ_COAST'			);
+
+INSERT OR IGNORE INTO District_Adjacencies
+		(DistrictType,						YieldChangeID)	
+VALUES	-- Give Com-Hub back it's regular minor districts adjacency
+		('DISTRICT_COMMERCIAL_HUB',			'MNX_ODIN_Gold_Dist_Reg_Adj_AnyDist'),
+		
+		-- Major districts adjacency from Holy Site
+		('DISTRICT_HOLY_SITE',				'MNX_ODIN_Faith_Dist_Adj_HolySite'),
+		('DISTRICT_HARBOR',					'MNX_ODIN_Gold_Dist_Adj_HolySite'),
+		('DISTRICT_COMMERCIAL_HUB',			'MNX_ODIN_Gold_Dist_Adj_HolySite'),
+		('DISTRICT_CAMPUS',					'MNX_ODIN_Science_Dist_Adj_HolySite'),
+		('DISTRICT_THEATER',				'MNX_ODIN_Culture_Dist_Adj_HolySite'),
+		('DISTRICT_INDUSTRIAL_ZONE',		'MNX_ODIN_Prod_Dist_Adj_HolySite'),
+		('DISTRICT_WATERFRONT',				'MNX_ODIN_Food_Dist_Adj_HolySite'),
+		
+		-- Major districts adjacency from Harbor
+		('DISTRICT_HOLY_SITE',				'MNX_ODIN_Faith_Dist_Adj_Harbor'),
+		('DISTRICT_HARBOR',					'MNX_ODIN_Gold_Dist_Adj_Harbor'),
+		--('DISTRICT_COMMERCIAL_HUB',		'MNX_ODIN_Gold_Dist_Adj_Harbor'),  -- Already receives +2 from Harbor
+		('DISTRICT_CAMPUS',					'MNX_ODIN_Science_Dist_Adj_Harbor'),
+		('DISTRICT_THEATER',				'MNX_ODIN_Culture_Dist_Adj_Harbor'),
+		('DISTRICT_INDUSTRIAL_ZONE',		'MNX_ODIN_Prod_Dist_Adj_Harbor'),
+		('DISTRICT_WATERFRONT',				'MNX_ODIN_Food_Dist_Adj_Harbor'),
+		
+		-- Minor districts adjacency from Water
+		('DISTRICT_HOLY_SITE',				'MNX_ODIN_Faith_Dist_Adj_Coast'),
+		('DISTRICT_HARBOR',					'MNX_ODIN_Gold_Dist_Adj_Coast'),
+		('DISTRICT_COMMERCIAL_HUB',			'MNX_ODIN_Gold_Dist_Adj_Coast'),
+		('DISTRICT_CAMPUS',					'MNX_ODIN_Science_Dist_Adj_Coast'),
+		('DISTRICT_THEATER',				'MNX_ODIN_Culture_Dist_Adj_Coast'),
+		('DISTRICT_INDUSTRIAL_ZONE',		'MNX_ODIN_Prod_Dist_Adj_Coast'),
+		('DISTRICT_WATERFRONT',				'MNX_ODIN_Food_Dist_Adj_Coast');
+
+INSERT OR IGNORE INTO ExcludedAdjacencies
+		(TraitType,									YieldChangeId)
+VALUES	-- Remove the regular Faith and Gold district adjacencies for our Civ.
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'District_Faith'),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'District_Gold'),
+
+		-- Remove our special adjacency bonuses for other Civs.
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Gold_Dist_Reg_Adj_AnyDist'),
+
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Faith_Dist_Adj_HolySite'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Gold_Dist_Adj_HolySite'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Science_Dist_Adj_HolySite'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Culture_Dist_Adj_HolySite'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Prod_Dist_Adj_HolySite'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Food_Dist_Adj_HolySite'),
+
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Faith_Dist_Adj_Harbor'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Gold_Dist_Adj_Harbor'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Science_Dist_Adj_Harbor'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Culture_Dist_Adj_Harbor'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Prod_Dist_Adj_Harbor'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Food_Dist_Adj_Harbor'),
+
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Faith_Dist_Adj_Coast'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Gold_Dist_Adj_Coast'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Science_Dist_Adj_Coast'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Culture_Dist_Adj_Coast'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Prod_Dist_Adj_Coast'),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Food_Dist_Adj_Coast');

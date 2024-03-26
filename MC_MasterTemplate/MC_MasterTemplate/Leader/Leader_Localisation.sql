@@ -24,10 +24,15 @@ VALUES
 -----------------------------------------------
 -- Leader Unique Ability
 -----------------------------------------------	
+	-- Combined Traits (Norway and new) description for when we choose the player
+	('en_US',	'LOC_TRAIT_LEADER_MNX_NORSE_MAIN_NAME',						'Explore and Conquer, the Gods will guide us!'	),
+	('en_US',	'LOC_TRAIT_LEADER_MNX_NORSE_MAIN_DESCRIPTION',
+	'Allows coastal raiding for all naval melee units and +50% [ICON_PRODUCTION] Production toward all naval melee units. Receive [ICON_SCIENCE] Science from pillaging and coastal raiding Mines in addition to [ICON_GOLD] Gold. Pillaging or coastal raiding Quarries, Pastures, Plantations, and Camps provide [ICON_CULTURE] Culture in addition to [ICON_FAITH] Faith. Gain the Viking Longship unique unit with Sailing. Naval Units can be purchased with Faith. Settlers and Builders ignore movement penalties in Hills terrain.'	),
 
+	-- New Trait description only for when the Game Loads.
 	('en_US',	'LOC_TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER_NAME',			'Explore and Conquer, the Gods will guide us!'	),
 	('en_US',	'LOC_TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER_DESCRIPTION',
-	'Allows coastal raiding for all naval melee units and +50% [ICON_PRODUCTION] Production toward all naval melee units. Receive [ICON_SCIENCE] Science from pillaging and coastal raiding Mines in addition to [ICON_GOLD] Gold. Pillaging or coastal raiding Quarries, Pastures, Plantations, and Camps provide [ICON_CULTURE] Culture in addition to [ICON_FAITH] Faith. Gain the Viking Longship unique unit with Sailing. Naval Units can be purchased with Faith. Settlers and Builders ignore movement penalties in Hills terrain.'	),
+	'Naval Units can be purchased with Faith. Settlers and Builders ignore movement penalties in Hills terrain.'),
 
 -----------------------------------------------
 -- Leader Agenda

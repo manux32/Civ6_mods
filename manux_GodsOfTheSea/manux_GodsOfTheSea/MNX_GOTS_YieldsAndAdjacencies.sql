@@ -602,14 +602,14 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_WATERFRONT_ADJ_FROM_HARBOR'),*/
 		---------------------------------------------------------------------------------------------
 
-		-- Yield Districts minor water adjacency
+		/*-- Yield Districts minor water adjacency
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_FAITH_DIST_MINOR_WATER_ADJ'),
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_GOLD_DIST_MINOR_WATER_ADJ'),
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_COM_HUB_MINOR_WATER_ADJ'),
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_SCI_DIST_MINOR_WATER_ADJ'),
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_CULT_DIST_MINOR_WATER_ADJ'),
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_PROD_DIST_MINOR_WATER_ADJ'),
-		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_FOOD_DIST_MINOR_WATER_ADJ'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_FOOD_DIST_MINOR_WATER_ADJ'),*/
 
 		-- Coastal Housing
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_COASTAL_HOUSING'),

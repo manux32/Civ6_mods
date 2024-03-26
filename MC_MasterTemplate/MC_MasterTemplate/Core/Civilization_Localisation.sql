@@ -32,11 +32,46 @@ VALUES
 
 -- Please note: The display of in-game icons in text is achieved by using [ICON_Type].
 -----------------------------------------------
+	
+	-- Combined Traits (Norway and new) description for when we choose the player
+	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_NORSE_MAIN_NAME',				'Sons of Odin'),
+	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_NORSE_MAIN_DESCRIPTION',
+	'Harbor, Encampment and Holy Site are 50% cheaper, and give/receive +1 adjacency to/from all districts. Harbor and Holy Site emanate their yields on adjacent tiles and districts. Districts receive minor adjacency from Coast tiles. Units gain the ability to enter Ocean tiles after researching the Shipbuilding technology. Naval melee units heal in neutral territory. Units ignore additional [ICON_Movement] Movement costs from embarking and disembarking. Holy Site buildings will yield an additional +2 [ICON_Food] Food, alongside their usual [ICON_Faith] Faith.'),
 
+	-- New Trait description only for when the Game Loads.
 	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_NAME',				'Sons of Odin'),
 	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_DESCRIPTION',
-	'Harbor, Encampment and Holy Site are 50% cheaper, and give/receive +1 adjacency to/from all districts. Harbor and Holy Site emanate their yields on adjacent tiles and districts. Units gain the ability to enter Ocean tiles after researching the Shipbuilding technology. Naval melee units heal in neutral territory. Units ignore additional [ICON_Movement] Movement costs from embarking and disembarking. Holy Site buildings will yield an additional +2 [ICON_Food] Food, alongside their usual [ICON_Faith] Faith.'),
+	'Harbor, Encampment and Holy Site are 50% cheaper, and give/receive +1 adjacency to/from all districts. Harbor and Holy Site emanate their yields on adjacent tiles and districts. Districts receive minor adjacency from Coast tiles. Holy Site buildings will yield an additional +2 [ICON_Food] Food, alongside their usual [ICON_Faith] Faith.'),
 
+-----------------------------------------------
+-- District adjacency descriptions
+-----------------------------------------------
+	('en_US',	'LOC_MNX_ODIN_HOLYSITE_2X_DISTRICTS_ADJACENCY',		'(ODIN) +{1_num} [ICON_Faith] Faith from the adjacent {1_Num : plural 1?district; other?districts;}.'),
+	('en_US',	'LOC_MNX_ODIN_HARBOR_2X_DISTRICTS_ADJACENCY',		'(ODIN) +{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?district; other?districts;}.'),
+	
+	('en_US',	'LOC_MNX_ODIN_GOLD_DIST_REG_ADJ_ANY_DIST',			'+{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?district; other?districts;}.'),
+
+	('en_US',	'LOC_MNX_ODIN_FAITH_DIST_ADJ_HOLYSITE',				'(ODIN) +{1_num} [ICON_Faith] Faith from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.'),
+	('en_US',	'LOC_MNX_ODIN_GOLD_DIST_ADJ_HOLYSITE',				'(ODIN) +{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.'),
+	('en_US',	'LOC_MNX_ODIN_SCIENCE_DIST_ADJ_HOLYSITE',			'(ODIN) +{1_num} [ICON_Science] Science from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.'),
+	('en_US',	'LOC_MNX_ODIN_CULTURE_DIST_ADJ_HOLYSITE',			'(ODIN) +{1_num} [ICON_Culture] Culture from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.'),
+	('en_US',	'LOC_MNX_ODIN_PROD_DIST_ADJ_HOLYSITE',				'(ODIN) +{1_num} [ICON_Production] Production from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.'),
+	('en_US',	'LOC_MNX_ODIN_FOOD_DIST_ADJ_HOLYSITE',				'(ODIN) +{1_num} [ICON_Food] Food from the adjacent {1_Num : plural 1?Holy Site; other?Holy Sites;}.'),
+	
+	('en_US',	'LOC_MNX_ODIN_FAITH_DIST_ADJ_HARBOR',				'(ODIN) +{1_num} [ICON_Faith] Faith from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.'),
+	('en_US',	'LOC_MNX_ODIN_GOLD_DIST_ADJ_HARBOR',				'(ODIN) +{1_num} [ICON_Gold] Gold from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.'),
+	('en_US',	'LOC_MNX_ODIN_SCIENCE_DIST_ADJ_HARBOR',				'(ODIN) +{1_num} [ICON_Science] Science from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.'),
+	('en_US',	'LOC_MNX_ODIN_CULTURE_DIST_ADJ_HARBOR',				'(ODIN) +{1_num} [ICON_Culture] Culture from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.'),
+	('en_US',	'LOC_MNX_ODIN_PROD_DIST_ADJ_HARBOR',				'(ODIN) +{1_num} [ICON_Production] Production from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.'),
+	('en_US',	'LOC_MNX_ODIN_FOOD_DIST_ADJ_HARBOR',				'(ODIN) +{1_num} [ICON_Food] Food from the adjacent {1_Num : plural 1?Harbor; other?Harbors;}.'),
+	
+	('en_US',	'LOC_MNX_ODIN_FAITH_DIST_ADJ_COAST',				'(ODIN) +{1_num} [ICON_Faith] Faith from the adjacent water {1_Num : plural 1?tile; other?tiles;}.'),
+	('en_US',	'LOC_MNX_ODIN_GOLD_DIST_ADJ_COAST',					'(ODIN) +{1_num} [ICON_Gold] Gold from the adjacent water {1_Num : plural 1?tile; other?tiles;}.'),
+	('en_US',	'LOC_MNX_ODIN_SCIENCE_DIST_ADJ_COAST',				'(ODIN) +{1_num} [ICON_Science] Science from the adjacent water {1_Num : plural 1?tile; other?tiles;}.'),
+	('en_US',	'LOC_MNX_ODIN_CULTURE_DIST_ADJ_COAST',				'(ODIN) +{1_num} [ICON_Culture] Culture from the adjacent water {1_Num : plural 1?tile; other?tiles;}.'),
+	('en_US',	'LOC_MNX_ODIN_PROD_DIST_ADJ_COAST',					'(ODIN) +{1_num} [ICON_Production] Production from the adjacent water {1_Num : plural 1?tile; other?tiles;}.'),
+	('en_US',	'LOC_MNX_ODIN_FOOD_DIST_ADJ_COAST',					'(ODIN) +{1_num} [ICON_Food] Food from the adjacent water {1_Num : plural 1?tile; other?tiles;}.'),
+	
 -----------------------------------------------
 -- Civilization Unique Infrastructure (Improvement)
 
