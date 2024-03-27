@@ -18,9 +18,15 @@
 -----------------------------------------------
 
 INSERT INTO	Types
-		(Type,											Kind			)
-VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',			'KIND_TRAIT'	),
-		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',		'KIND_TRAIT'	);
+		(Type,														Kind			)
+VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',						'KIND_TRAIT'	),
+		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',					'KIND_TRAIT'	),
+		('DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		'KIND_MODIFIER'	);
+
+-----------------------------------------------
+INSERT INTO DynamicModifiers
+			(ModifierType,												CollectionType,						EffectType)
+VALUES		('DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		'COLLECTION_PLAYER_DISTRICTS',		'EFFECT_ADJUST_DISTRICT_BASE_YIELD_CHANGE');
 
 -----------------------------------------------
 -- Traits
@@ -87,9 +93,42 @@ INSERT INTO	TraitModifiers
 		(TraitType,											ModifierId											)
 VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY'				),
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HARBOR_2X_ADJACENCY'					),
+		-----------------------------------------------
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_COASTAL_CITY_HOUSING'					),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_COASTAL_DISTRICT_AMENITY'				),
+		-----------------------------------------------
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_CHEAP_HOLYSITE'						),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_CHEAP_HARBOR'							),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_CHEAP_ENCAMPMENT'						),
+		-----------------------------------------------
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_ATTACH_TRADE_ROUTE_FROM_SHRINES'		),
+		
+		-----------------------------------------------
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T1'			),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T2'			),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T3'			),
 
-		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD'		),
-		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD'		);
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T1'				),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T2'				),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T3'				),
+		
+		-----------------------------------------------
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T1'			),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T2'			),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T3'			),
+
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T1'				),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T2'				),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T3'				),
+		
+		-----------------------------------------------
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HOLYSITE_FOOD_T1'						),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HOLYSITE_FOOD_T2'						),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HOLYSITE_FOOD_T3'						),
+
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HARBOR_FOOD_T1'						),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HARBOR_FOOD_T2'						),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HARBOR_FOOD_T3'						);
 
 -----------------------------------------------
 -- Modifiers
@@ -108,12 +147,49 @@ VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HOLYSITE_2X_ADJA
 -----------------------------------------------
 
 INSERT INTO	Modifiers
-		(ModifierId,											ModifierType,											RunOnce,		Permanent	)
-VALUES	('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',			0,				1			),
-		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',			0,				1			),
+		(ModifierId,											ModifierType,												RunOnce,	Permanent,	SubjectRequirementSetId						)
+VALUES	('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',				0,			1,			NULL										),
+		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',				0,			1,			NULL										),
 
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',		'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE',	0,				1			),
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',		'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE',	0,				1			);
+		-----------------------------------------------
+		('MOD_MNX_ODIN_COASTAL_CITY_HOUSING',					'MODIFIER_PLAYER_CITIES_ADJUST_WATER_HOUSING',				0,			1,			'PLOT_IS_COASTAL_LAND_REQUIREMENTS'			),
+		('MOD_MNX_ODIN_COASTAL_DISTRICT_AMENITY',				'MODIFIER_PLAYER_DISTRICTS_ADJUST_EXTRA_ENTERTAINMENT',		0,			1,			'REQSR_MNX_PLOT_ADJ_TO_WATER'				),
+
+		-----------------------------------------------
+		('MOD_MNX_ODIN_CHEAP_HOLYSITE',							'MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION',		0,			1,			NULL										),
+		('MOD_MNX_ODIN_CHEAP_HARBOR',							'MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION',		0,			1,			NULL										),
+		('MOD_MNX_ODIN_CHEAP_ENCAMPMENT',						'MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION',		0,			1,			NULL										),
+
+		-----------------------------------------------
+		('MOD_MNX_ODIN_ATTACH_TRADE_ROUTE_FROM_SHRINES',		'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',					0,			1,			'REQSR_MNX_CITY_HAS_TIER1_HOLY_BUILDING'	),
+		('MOD_MNX_ODIN_TRADE_ROUTE_FROM_SHRINES',				'MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY',				0,			1,			NULL										),
+
+		-----------------------------------------------
+		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T1',				'DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		0,			1,			'REQSR_MNX_PLOT_ADJ_HOLY_TIER1_BUILDING'	),
+		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T2',				'DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		0,			1,			'REQSR_MNX_PLOT_ADJ_HOLY_TIER2_BUILDING'	),
+		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T3',				'DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		0,			1,			'REQSR_MNX_PLOT_ADJ_HOLY_TIER3_BUILDING'	),
+
+		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T1',				'DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		0,			1,			'REQSR_MNX_PLOT_ADJ_HARBOR_TIER1_BUILDING'	),
+		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T2',				'DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		0,			1,			'REQSR_MNX_PLOT_ADJ_HARBOR_TIER2_BUILDING'	),
+		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T3',				'DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		0,			1,			'REQSR_MNX_PLOT_ADJ_HARBOR_TIER3_BUILDING'	),
+		
+		-----------------------------------------------
+		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T1',				'MODIFIER_PLAYER_ADJUST_PLOT_YIELD',						0,			1,			'REQSR_MNX_PLOT_ADJ_HOLY_TIER1_BUILDING'	),
+		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T2',				'MODIFIER_PLAYER_ADJUST_PLOT_YIELD',						0,			1,			'REQSR_MNX_PLOT_ADJ_HOLY_TIER2_BUILDING'	),
+		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T3',				'MODIFIER_PLAYER_ADJUST_PLOT_YIELD',						0,			1,			'REQSR_MNX_PLOT_ADJ_HOLY_TIER3_BUILDING'	),
+		
+		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T1',				'MODIFIER_PLAYER_ADJUST_PLOT_YIELD',						0,			1,			'REQSR_MNX_PLOT_ADJ_HARBOR_TIER1_BUILDING'	),
+		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T2',				'MODIFIER_PLAYER_ADJUST_PLOT_YIELD',						0,			1,			'REQSR_MNX_PLOT_ADJ_HARBOR_TIER2_BUILDING'	),
+		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T3',				'MODIFIER_PLAYER_ADJUST_PLOT_YIELD',						0,			1,			'REQSR_MNX_PLOT_ADJ_HARBOR_TIER3_BUILDING'	),
+
+		-----------------------------------------------
+		('MOD_MNX_ODIN_HOLYSITE_FOOD_T1',						'DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		0,			1,			'REQSR_MNX_IS_HOLYSITE_W_TIER1_BUILDING'	),
+		('MOD_MNX_ODIN_HOLYSITE_FOOD_T2',						'DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		0,			1,			'REQSR_MNX_IS_HOLYSITE_W_TIER2_BUILDING'	),
+		('MOD_MNX_ODIN_HOLYSITE_FOOD_T3',						'DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		0,			1,			'REQSR_MNX_IS_HOLYSITE_W_TIER3_BUILDING'	),
+
+		('MOD_MNX_ODIN_HARBOR_FOOD_T1',							'DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		0,			1,			'REQSR_MNX_IS_HARBOR_W_TIER1_BUILDING'		),
+		('MOD_MNX_ODIN_HARBOR_FOOD_T2',							'DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		0,			1,			'REQSR_MNX_IS_HARBOR_W_TIER2_BUILDING'		),
+		('MOD_MNX_ODIN_HARBOR_FOOD_T3',							'DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		0,			1,			'REQSR_MNX_IS_HARBOR_W_TIER3_BUILDING'		);
 
 -----------------------------------------------
 -- ModifierArguments
@@ -133,26 +209,75 @@ INSERT INTO	ModifierArguments
 		(ModifierId,												Name,							Value												)
 VALUES	('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'DistrictType',					'DISTRICT_HOLY_SITE'								),
 		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'YieldType',					'YIELD_FAITH'										),
-		--('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',					'OtherDistrictAdjacent',		1													),
-		--('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',					'TilesRequired',				1													),
 		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'Amount',						1													),
 		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',						'Description',					'LOC_MNX_ODIN_HOLYSITE_2X_DISTRICTS_ADJACENCY'		),
 
 		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'DistrictType',					'DISTRICT_HARBOR'									),
 		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'YieldType',					'YIELD_GOLD'										),
-		--('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'OtherDistrictAdjacent',		1													),
-		--('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'TilesRequired',				1													),
 		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'Amount',						1													),
 		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'Description',					'LOC_MNX_ODIN_HARBOR_2X_DISTRICTS_ADJACENCY'		),
 
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',			'BuildingType',					'BUILDING_SHRINE'									),
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',			'YieldType',					'YIELD_FOOD'										),
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_SHRINE_YIELD',			'Amount',						2													),
+		-----------------------------------------------
+		('MOD_MNX_ODIN_COASTAL_CITY_HOUSING',						'Amount',						2													),
+		('MOD_MNX_ODIN_COASTAL_DISTRICT_AMENITY',					'Amount',						1													),
 
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',			'BuildingType',					'BUILDING_TEMPLE'									),
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',			'YieldType',					'YIELD_FOOD'										),
-		('MODIFIER_MC_LET_THE_GODS_FEED_US_TEMPLE_YIELD',			'Amount',						2													);
+		-----------------------------------------------
+		('MOD_MNX_ODIN_CHEAP_HOLYSITE',								'DistrictType',					'DISTRICT_HOLY_SITE'								),
+		('MOD_MNX_ODIN_CHEAP_HOLYSITE',								'Amount',						100													),
+		('MOD_MNX_ODIN_CHEAP_HARBOR',								'DistrictType',					'DISTRICT_HARBOR'									),
+		('MOD_MNX_ODIN_CHEAP_HARBOR',								'Amount',						100													),
+		('MOD_MNX_ODIN_CHEAP_ENCAMPMENT',							'DistrictType',					'DISTRICT_ENCAMPMENT'								),
+		('MOD_MNX_ODIN_CHEAP_ENCAMPMENT',							'Amount',						100													),
+		
+		-----------------------------------------------
+		('MOD_MNX_ODIN_ATTACH_TRADE_ROUTE_FROM_SHRINES',			'ModifierId',					'MOD_MNX_ODIN_TRADE_ROUTE_FROM_SHRINES'				),
+		('MOD_MNX_ODIN_TRADE_ROUTE_FROM_SHRINES',					'Amount',						1													),
 
+		-----------------------------------------------
+		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T1',					'YieldType',					'YIELD_FAITH'										),
+		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T1',					'Amount',						2													),
+		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T2',					'YieldType',					'YIELD_FAITH'										),
+		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T2',					'Amount',						2													),
+		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T3',					'YieldType',					'YIELD_FAITH'										),
+		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T3',					'Amount',						2													),
+
+		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T1',					'YieldType',					'YIELD_GOLD'										),
+		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T1',					'Amount',						2													),
+		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T2',					'YieldType',					'YIELD_GOLD'										),
+		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T2',					'Amount',						2													),
+		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T3',					'YieldType',					'YIELD_GOLD'										),
+		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T3',					'Amount',						2													),
+
+		-----------------------------------------------
+		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T1',					'YieldType',					'YIELD_FAITH'										),
+		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T1',					'Amount',						2													),
+		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T2',					'YieldType',					'YIELD_FAITH'										),
+		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T2',					'Amount',						2													),
+		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T3',					'YieldType',					'YIELD_FAITH'										),
+		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T3',					'Amount',						2													),
+
+		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T1',					'YieldType',					'YIELD_GOLD'										),
+		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T1',					'Amount',						2													),
+		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T2',					'YieldType',					'YIELD_GOLD'										),
+		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T2',					'Amount',						2													),
+		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T3',					'YieldType',					'YIELD_GOLD'										),
+		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T3',					'Amount',						2													),
+
+		-----------------------------------------------
+		('MOD_MNX_ODIN_HOLYSITE_FOOD_T1',							'YieldType',					'YIELD_FOOD'										),
+		('MOD_MNX_ODIN_HOLYSITE_FOOD_T1',							'Amount',						2													),
+		('MOD_MNX_ODIN_HOLYSITE_FOOD_T2',							'YieldType',					'YIELD_FOOD'										),
+		('MOD_MNX_ODIN_HOLYSITE_FOOD_T2',							'Amount',						2													),
+		('MOD_MNX_ODIN_HOLYSITE_FOOD_T3',							'YieldType',					'YIELD_FOOD'										),
+		('MOD_MNX_ODIN_HOLYSITE_FOOD_T3',							'Amount',						2													),
+		
+		('MOD_MNX_ODIN_HARBOR_FOOD_T1',								'YieldType',					'YIELD_FOOD'										),
+		('MOD_MNX_ODIN_HARBOR_FOOD_T1',								'Amount',						2													),
+		('MOD_MNX_ODIN_HARBOR_FOOD_T2',								'YieldType',					'YIELD_FOOD'										),
+		('MOD_MNX_ODIN_HARBOR_FOOD_T2',								'Amount',						2													),
+		('MOD_MNX_ODIN_HARBOR_FOOD_T3',								'YieldType',					'YIELD_FOOD'										),
+		('MOD_MNX_ODIN_HARBOR_FOOD_T3',								'Amount',						2													);
+		
 
 -----------------------------------------------
 -- Districts special adjacencies
@@ -206,7 +331,7 @@ VALUES	-- Give Com-Hub back it's regular minor districts adjacency
 		--('DISTRICT_COMMERCIAL_HUB',		'MNX_ODIN_Gold_Dist_Adj_Harbor'),  -- Already receives +2 from Harbor
 		('DISTRICT_CAMPUS',					'MNX_ODIN_Science_Dist_Adj_Harbor'),
 		('DISTRICT_THEATER',				'MNX_ODIN_Culture_Dist_Adj_Harbor'),
-		('DISTRICT_INDUSTRIAL_ZONE',		'MNX_ODIN_Prod_Dist_Adj_Harbor'),
+		--('DISTRICT_INDUSTRIAL_ZONE',		'MNX_ODIN_Prod_Dist_Adj_Harbor'),  -- Already receives +1 from Harbor
 		('DISTRICT_WATERFRONT',				'MNX_ODIN_Food_Dist_Adj_Harbor'),
 		
 		-- Minor districts adjacency from Water

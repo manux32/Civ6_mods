@@ -523,7 +523,7 @@ VALUES
 
 ---------------------------------------------------------------------------------------------------
  -- Add modifiers to all districts to get Yields from Holy Site and Harbor
- -- Holy Site
+/* -- Holy Site
 INSERT OR IGNORE INTO DistrictModifiers
 		(DistrictType,			ModifierId)
 SELECT	DistrictType,			'MOD_MNX_DIST_FAITH_FROM_ADJ_HOLYSITE_L1' 
@@ -554,7 +554,7 @@ INSERT OR IGNORE INTO DistrictModifiers
 		(DistrictType,			ModifierId)
 SELECT	DistrictType,			'MOD_MNX_DIST_GOLD_FROM_ADJ_HARBOR_L3' 
 FROM Districts;
-
+*/
 
 INSERT OR IGNORE INTO TraitModifiers 
 		(TraitType,							ModifierId) 
@@ -612,13 +612,13 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_FOOD_DIST_MINOR_WATER_ADJ'),*/
 
 		-- Coastal Housing
-		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_COASTAL_HOUSING'),
+		--('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_COASTAL_HOUSING'),
 		-- Water adjacent districts gain +1 amenity 
-		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_WATER_DISTRICT_AMENITY'),
+		--('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_WATER_DISTRICT_AMENITY'),
 		
 		-- Holy Site and Harbor extra adjacency Yields (FOOD)
-		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HOLYSITE_ADJ_FOOD'),
-		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HARBOR_ADJ_FOOD'),
+		--('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HOLYSITE_ADJ_FOOD'),
+		--('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HARBOR_ADJ_FOOD'),
 		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_HOLYSITE_ADJ_PROD'),
 		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_HOLYSITE_ADJ_GOLD_1'),
 		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_HOLYSITE_ADJ_GOLD_2'),
@@ -626,14 +626,14 @@ VALUES	-- Holy Site and Harbor 2x adjacency
 		--('TRAIT_LEADER_MAJOR_CIV',		'MOD_MNX_HOLYSITE_ADJ_CULT'),
 		-------------------------------------------------------------------
 		
-		-- Tiles yields from adjacent Districts
+		/*-- Tiles yields from adjacent Districts
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_PLOT_FAITH_FROM_ADJ_HOLYSITE_L1'),	
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_PLOT_FAITH_FROM_ADJ_HOLYSITE_L2'),	
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_PLOT_FAITH_FROM_ADJ_HOLYSITE_L3'),	
 
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_PLOT_GOLD_FROM_ADJ_HARBOR_L1'),
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_PLOT_GOLD_FROM_ADJ_HARBOR_L2'),
-		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_PLOT_GOLD_FROM_ADJ_HARBOR_L3'),
+		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_PLOT_GOLD_FROM_ADJ_HARBOR_L3'),*/
 
 		-- Holy Site: get yields from other yield producing districts
 		('TRAIT_LEADER_MAJOR_CIV',			'MOD_MNX_HOLYSITE_SCI_FROM_DISTRICTS'),

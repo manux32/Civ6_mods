@@ -19,7 +19,7 @@ VALUES
 -- Leader Name
 -----------------------------------------------	
 	
-	('en_US',	'LOC_LEADER_MNX_NORSE_NAME',  'Eric Le Rouge'	),
+	('en_US',	'LOC_LEADER_MNX_NORSE_NAME',  'Erik the Red'	),
 	
 -----------------------------------------------
 -- Leader Unique Ability
