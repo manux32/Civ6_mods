@@ -40,10 +40,16 @@ VALUES
 	('en_US',	'LOC_TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER_DESCRIPTION',
 	'Get the Norse Adventurer, a [ICON_Strength] stronger version of the scout with a [ICON_Range] ranged attack. All recon units get +10 [ICON_Strength] Combat Strength, +1 [ICON_Movement] Movement, +1 Sight, and +1 [ICON_Range] Attack Range once Archery is researched. Settlers and Builders ignore movement penalties in Hills terrain.'),
 
+	-- Norse Adventurer
+	('en_US',	'LOC_TRAIT_LEADER_MNX_NORSE_ADVENTURER_NAME',			'Get the Norse Adventurer'	),
+	('en_US',	'LOC_TRAIT_LEADER_MNX_NORSE_ADVENTURER_DESCRIPTION',
+	'Get the Norse Adventurer, a [ICON_Strength] stronger version of the scout with a [ICON_Range] ranged attack. All recon units get +10 [ICON_Strength] Combat Strength, +1 [ICON_Movement] Movement, +1 Sight, and +1 [ICON_Range] Attack Range once Archery is researched.'),
+
 	-- We will prevail, The Gods are with us!
 	('en_US',	'LOC_TRAIT_LEADER_MNX_THE_GODS_ARE_WITH_US_NAME',			'We will prevail, The Gods are with us!'	),
 	('en_US',	'LOC_TRAIT_LEADER_MNX_THE_GODS_ARE_WITH_US_DESCRIPTION',
 	'Get +2 [ICON_GreatProphet] Great Prophet, +2 [ICON_GreatAdmiral] Great Admiral, +2 [ICON_GreatGeneral] Great General, +2 [ICON_GreatMerchant] Great Merchant points per turn.[NEWLINE] -------- Once a RELIGION is founded: -------- [NEWLINE]Get +1 Wildcard policy slot. Naval Units can be purchased with [ICON_Faith] Faith. Buildings in City Center, Harbor, Encampment, and Holy Site can be purchased with [ICON_Faith] Faith. Cities with a Governor can purchase Districts with [ICON_Faith] Faith or [ICON_GOLD] Gold. All combat units receive +5 [ICON_Strength] Combat Strength (including Religious combat). Naval and embarked units get +1 Sight and +1 [ICON_Movement] Movement.'),
+
 
 	-----------------------------------------------
 	-- Abilities

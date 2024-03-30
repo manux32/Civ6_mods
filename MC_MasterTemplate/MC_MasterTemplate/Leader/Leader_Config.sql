@@ -104,6 +104,8 @@ VALUES	/*(
 		--'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_DESCRIPTION', -- CivilizationAbilityDescription
 		'LOC_TRAIT_CIVILIZATION_MNX_NORSE_MAIN_NAME', -- CivilizationAbilityName
 		'LOC_TRAIT_CIVILIZATION_MNX_NORSE_MAIN_DESCRIPTION', -- CivilizationAbilityDescription
+		--'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_NAME', -- CivilizationAbilityName
+		--'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_DESCRIPTION', -- CivilizationAbilityDescription
 		'ICON_CIVILIZATION_MNX_NORSE', -- CivilizationAbilityIcon
 		
 		-- Leader

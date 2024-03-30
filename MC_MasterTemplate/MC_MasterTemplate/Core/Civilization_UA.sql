@@ -37,7 +37,7 @@ VALUES		('DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		'COLLECTION_PLAY
 INSERT INTO	Traits	
 		(TraitType,									Name,												Description														)
 VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_NAME',		'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_DESCRIPTION'			);
-
+		
 -----------------------------------------------
 -- Add dummy Trait to all Leaders or Civs to exclude our Civ's special district adjacency bonuses for all other players
 -----------------------------------------------
@@ -91,7 +91,13 @@ VALUES	('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN'			),
 
 INSERT INTO	TraitModifiers	
 		(TraitType,											ModifierId											)
-VALUES	-- Holy Site and Harbor 2X districts adjacency
+VALUES	-- Norway Civ Knarr (Early Ocean Navigation) Trait
+		--('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'TRAIT_EARLY_OCEAN_NAVIGATION'						),
+		--('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'TRAIT_MELEE_NAVAL_HEAL_NEUTRAL'					),
+		--('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'TRAIT_IGNORE_EMBARK_DISEMBARK_COST'				),
+		
+		-----------------------------------------------
+		-- Holy Site and Harbor 2X districts adjacency
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY'				),
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HARBOR_2X_ADJACENCY'					),
 		
