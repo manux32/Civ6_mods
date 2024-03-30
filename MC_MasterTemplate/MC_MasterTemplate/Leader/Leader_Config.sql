@@ -224,9 +224,10 @@ INSERT INTO PlayerItems
 		(Domain,	CivilizationType,			LeaderType,				Type, Icon, Name, Description, SortIndex)
 SELECT	Domain,		'CIVILIZATION_MNX_NORSE',	'LEADER_MNX_NORSE',		Type, Icon, Name, Description, SortIndex
 FROM	PlayerItems
-WHERE	LeaderType='LEADER_HARDRADA' AND Domain='Players:Expansion2_Players' AND Type NOT IN ('MIK_IMPROVEMENT_NWY_SHIP');
+WHERE	Domain='Players:Expansion2_Players' AND Type='UNIT_NORWEGIAN_LONGSHIP';
+--WHERE	LeaderType='LEADER_HARDRADA' AND Domain='Players:Expansion2_Players' AND Type NOT IN ('MIK_IMPROVEMENT_NWY_SHIP') AND TRAIT_LEADER_UNIT_NORWEGIAN_LONGSHIP;
 
--- Add player items of other civs that unlock unique naval units
+/*-- Add player items of other civs that unlock unique naval units
 INSERT INTO PlayerItems
 		(Domain,	CivilizationType,			LeaderType,				Type, Icon, Name, Description, SortIndex)
 SELECT	Domain,		'CIVILIZATION_MNX_NORSE',	'LEADER_MNX_NORSE',		Type, Icon, Name, Description, SortIndex
@@ -237,7 +238,7 @@ INSERT INTO PlayerItems
 		(Domain,	CivilizationType,			LeaderType,				Type, Icon, Name, Description, SortIndex)
 SELECT	Domain,		'CIVILIZATION_MNX_NORSE',	'LEADER_MNX_NORSE',		Type, Icon, Name, Description, SortIndex
 FROM	PlayerItems
-WHERE	Type='UNIT_ENGLISH_SEADOG' AND Domain='Players:Expansion2_Players';
+WHERE	Type='UNIT_ENGLISH_SEADOG' AND Domain='Players:Expansion2_Players';*/
 
 INSERT INTO PlayerItems
 		(Domain,	CivilizationType,			LeaderType,				Type, Icon, Name, Description, SortIndex)

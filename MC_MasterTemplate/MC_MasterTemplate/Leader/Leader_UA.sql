@@ -101,7 +101,7 @@ VALUES	('LEADER_MNX_NORSE',	'TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER'	),
 		('LEADER_MNX_NORSE',	'TRAIT_LEADER_MNX_NORSE_ADVENTURER'		),
 		-- Norway Hadrada Leader Traits
 		('LEADER_MNX_NORSE',	'TRAIT_LEADER_AGGRESSIVE_MILITARY'		),
-		('LEADER_MNX_NORSE',	'TRAIT_LEADER_MELEE_COASTAL_RAIDS'		),
+		--('LEADER_MNX_NORSE',	'TRAIT_LEADER_MELEE_COASTAL_RAIDS'		),
 		('LEADER_MNX_NORSE',	'TRAIT_LEADER_UNIT_NORWEGIAN_LONGSHIP'	);
 
 -----------------------------------------------
@@ -110,9 +110,12 @@ VALUES	('LEADER_MNX_NORSE',	'TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER'	),
 -- In this section, we apply the Ability we defined earlier via the use of another Modifier. In this case, our ModifierId is defined and it is defined with the ModifierType that allows us to grant an ability. We set it as Permanent, as we want this application of the Ability to happen once (at the very start of the game when our custom leader is in-play).
 -----------------------------------------------
 
-INSERT INTO Modifiers
-		(ModifierId,											ModifierType,								Permanent	)
-VALUES	('TRAIT_GRANT_SETTLERS_BUILDERS_ALTITUDE_TRAINING',		'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',		1			);
+INSERT OR IGNORE INTO Modifiers 
+		(ModifierId,											ModifierType,										Permanent,		SubjectRequirementSetId)
+VALUES	-- Cheap Naval Units
+		('MOD_MNX_ODIN_CHEAP_NAVAL_UNITS',						'DMOD_MNX_PCITIES_ADJUST_UNIT_DOMAIN_PRODUCTION',	1,				NULL),
+		
+		('TRAIT_GRANT_SETTLERS_BUILDERS_ALTITUDE_TRAINING',		'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',				1,				NULL);
 
 -----------------------------------------------
 -- TraitModifiers
@@ -124,7 +127,18 @@ VALUES	('TRAIT_GRANT_SETTLERS_BUILDERS_ALTITUDE_TRAINING',		'MODIFIER_PLAYER_UNI
 
 INSERT INTO TraitModifiers 
 		(TraitType,									ModifierId											)
-VALUES	('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'TRAIT_GRANT_SETTLERS_BUILDERS_ALTITUDE_TRAINING'	);
+VALUES	-- Cheap Naval Units
+		('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'MOD_MNX_ODIN_CHEAP_NAVAL_UNITS'					),
+		
+		-- Hardrada coast raid trait without the cheap naval melee
+		('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'TRAIT_GRANT_COASTAL_RAID_ABILITY'					),
+		('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'TRAIT_LEADER_PILLAGE_SCIENCE_MINES'				),
+		('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'TRAIT_LEADER_PILLAGE_CULTURE_QUARRIES'				),
+		('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'TRAIT_LEADER_PILLAGE_CULTURE_PLANTATIONS'			),
+		('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'TRAIT_LEADER_PILLAGE_CULTURE_PASTURES'				),
+		('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'TRAIT_LEADER_PILLAGE_CULTURE_CAMPS'				),
+		
+		('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'TRAIT_GRANT_SETTLERS_BUILDERS_ALTITUDE_TRAINING'	);
 
 -----------------------------------------------
 -- ModifierArguments
@@ -143,5 +157,9 @@ VALUES	('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'TRAIT_GRANT_SETTLERS_BUILDERS_A
 -----------------------------------------------
 
 INSERT INTO ModifierArguments 
-		(ModifierId,										Name,				Value												)
-VALUES	('TRAIT_GRANT_SETTLERS_BUILDERS_ALTITUDE_TRAINING',	'AbilityType',		'ABILITY_MC_BUILDER_SETTLER_IGNORE_TERRAIN_COST'	);
+		(ModifierId,											Name,				Value												)
+VALUES	-- Cheap Naval Units
+		('MOD_MNX_ODIN_CHEAP_NAVAL_UNITS',						'Domain',			'DOMAIN_SEA'										),
+		('MOD_MNX_ODIN_CHEAP_NAVAL_UNITS',						'Amount',			'50'												),
+
+		('TRAIT_GRANT_SETTLERS_BUILDERS_ALTITUDE_TRAINING',		'AbilityType',		'ABILITY_MC_BUILDER_SETTLER_IGNORE_TERRAIN_COST'	);

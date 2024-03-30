@@ -31,9 +31,9 @@ VALUES	('TRAIT_CIVILIZATION_IMPROVEMENT_OLMEC_COLOSSAL_HEAD',	'KIND_TRAIT'				),
 -- This defines the civilization to which the TraitType is applied (i.e. which civilization gets the Unique Infrastructure). This is a simple matter of referencing the custom CivilizationType defined in Civilization_Config.sql and using the TraitType defined in this document.
 -----------------------------------------------
 		
-INSERT INTO CivilizationTraits
+/*INSERT INTO CivilizationTraits
 		(TraitType,												CivilizationType			)
-VALUES	('TRAIT_CIVILIZATION_IMPROVEMENT_OLMEC_COLOSSAL_HEAD',	'CIVILIZATION_MNX_NORSE'		);
+VALUES	('TRAIT_CIVILIZATION_IMPROVEMENT_OLMEC_COLOSSAL_HEAD',	'CIVILIZATION_MNX_NORSE'		);*/
 
 -----------------------------------------------
 -- Traits

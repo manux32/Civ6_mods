@@ -129,6 +129,12 @@
     <Content Include="MC_MasterTemplate.Art.xml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Textures\NorseAdventurerHistoricMoment.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseAdventurerHistoricMoment.tex">
+      <SubType>Content</SubType>
+    </Content>
     <XLP Include="Textures\LEADER_MC_PO_NGBE_BACKGROUND.dds">
       <SubType>Content</SubType>
     </XLP>

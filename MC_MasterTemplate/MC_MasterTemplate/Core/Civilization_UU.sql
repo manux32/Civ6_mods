@@ -68,9 +68,9 @@ VALUES	('TRAIT_CIVILIZATION_MC_WEREJAGUAR',	'LOC_UNIT_MC_WEREJAGUAR_NAME',		'LOC
 -- This defines the civilization to which the TraitType is applied (i.e. which civilization gets the Unique Unit). This is a simple matter of referencing the custom CivilizationType defined in Civilization_Config.sql and using the TraitType defined in this document.
 -----------------------------------------------
 		
-INSERT INTO CivilizationTraits
+/*INSERT INTO CivilizationTraits
 		(CivilizationType,				TraitType								)
-VALUES	('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_MC_WEREJAGUAR'		);
+VALUES	('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_MC_WEREJAGUAR'		);*/
 
 -----------------------------------------------
 -- Units

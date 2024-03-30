@@ -126,6 +126,10 @@
 			<m_ObjectName text="WerejaguarHistoricMoment"/>
 		</Element>
 		<Element>
+			<m_EntryID text="NorseAdventurerHistoricMoment"/>
+			<m_ObjectName text="NorseAdventurerHistoricMoment"/>
+		</Element>
+		<Element>
 			<m_EntryID text="ColossalHeadHistoricMoment"/>
 			<m_ObjectName text="ColossalHeadHistoricMoment"/>
 		</Element>
