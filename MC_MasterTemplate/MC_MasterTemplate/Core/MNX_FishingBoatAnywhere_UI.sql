@@ -8,8 +8,8 @@ INSERT OR IGNORE INTO Types
 VALUES	('IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DUMMY',				'KIND_IMPROVEMENT');
 
 INSERT OR IGNORE INTO Improvements
-		(ImprovementType,							Name,											Description,											Icon,											TraitType,									PlunderType,	PlunderAmount, Buildable,	Appeal,		Housing,	TilesRequired,	Goody,	Domain	)
-SELECT	'IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DUMMY',	'LOC_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_NAME',	'LOC_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DESCRIPTION',	'ICON_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DUMMY',	'TRAIT_MNX_ODIN_FISHING_BOATS_ANYWHERE',	PlunderType,	PlunderAmount, Buildable,	Appeal,		Housing,	2,				Goody,	'DOMAIN_SEA'
+		(ImprovementType,							Name,											Description,											Icon,											TraitType,									PrereqTech,				PlunderType,	PlunderAmount, Buildable,	Appeal,		Housing,	TilesRequired,	Goody,	Domain	)
+SELECT	'IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DUMMY',	'LOC_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_NAME',	'LOC_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DESCRIPTION',	'ICON_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DUMMY',	'TRAIT_MNX_ODIN_FISHING_BOATS_ANYWHERE',	'TECH_CARTOGRAPHY',		PlunderType,	PlunderAmount, Buildable,	Appeal,		Housing,	2,				Goody,	'DOMAIN_SEA'
 FROM	Improvements WHERE ImprovementType = 'IMPROVEMENT_FISHING_BOATS';
 
 INSERT OR IGNORE INTO Improvement_ValidBuildUnits

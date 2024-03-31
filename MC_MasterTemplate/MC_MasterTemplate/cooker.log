@@ -5,9 +5,9 @@ C:\Users\User\OneDrive\Documents\Firaxis ModBuddy\Civilization VI\MC_MasterTempl
 Opened output file: C:\Users\User\OneDrive\Documents\My Games\Sid Meier's Civilization VI\Mods\MC_MasterTemplate\Platforms\MacOS\BLPs/UI/Icons.blp    For XLP: 'C:\Users\User\OneDrive\Documents\Firaxis ModBuddy\Civilization VI\MC_MasterTemplate\MC_MasterTemplate\XLPs\OlmecAtlas.xlp'
 Could not load digest key: ''.  Using mod key to sign BLP.
 Starting 'UI/Icons'
-Load finished for: 'UI/Icons' in 0.062 seconds
-Cook finished for: 'UI/Icons' in 0.368 seconds
-Disk write finished for: 'UI/Icons' in 0.164 seconds
+Load finished for: 'UI/Icons' in 0.067 seconds
+Cook finished for: 'UI/Icons' in 0.353 seconds
+Disk write finished for: 'UI/Icons' in 0.156 seconds
 Cleanup finished for: 'UI/Icons' in 0.005 seconds
 XLP cook completed with success.
-Cook completed in 0.618 seconds
+Cook completed in 0.600 seconds
