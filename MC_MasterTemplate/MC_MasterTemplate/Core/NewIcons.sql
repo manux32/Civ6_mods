@@ -25,43 +25,33 @@
 -----------------------------------------------
 
 INSERT INTO IconTextureAtlases	
-		(Name,									IconSize,	IconsPerRow,	IconsPerColumn,		Filename					)
-VALUES	('ICON_ATLAS_MC_OLMEC',					22,	 		1,				1,					'OlmecAtlas22.dds'			),
-		('ICON_ATLAS_MC_OLMEC',					30,	 		1,				1,					'OlmecAtlas30.dds'			),
-		('ICON_ATLAS_MC_OLMEC',					36,	 		1,				1,					'OlmecAtlas36.dds'			),
-		('ICON_ATLAS_MC_OLMEC',					44,	 		1,				1,					'OlmecAtlas44.dds'			),
-		('ICON_ATLAS_MC_OLMEC',					48,	 		1,				1,					'OlmecAtlas48.dds'			),
-		('ICON_ATLAS_MC_OLMEC',					50,	 		1,				1,					'OlmecAtlas50.dds'			),
-		('ICON_ATLAS_MC_OLMEC',					64,	 		1,				1,					'OlmecAtlas64.dds'			),
-		('ICON_ATLAS_MC_OLMEC',					80,	 		1,				1,					'OlmecAtlas80.dds'			),
-		('ICON_ATLAS_MC_OLMEC',					200, 		1,				1,					'OlmecAtlas200.dds'			),
-		('ICON_ATLAS_MC_OLMEC',					256, 		1,				1,					'OlmecAtlas256.dds'			),
+		(Name,									IconSize,	IconsPerRow,	IconsPerColumn,		Filename						)
+VALUES	('ICON_ATLAS_MNX_NORSE',				22,	 		1,				1,					'NorseIcon22.dds'				),
+		('ICON_ATLAS_MNX_NORSE',				30,	 		1,				1,					'NorseIcon30.dds'				),
+		('ICON_ATLAS_MNX_NORSE',				36,	 		1,				1,					'NorseIcon36.dds'				),
+		('ICON_ATLAS_MNX_NORSE',				44,	 		1,				1,					'NorseIcon44.dds'				),
+		('ICON_ATLAS_MNX_NORSE',				48,	 		1,				1,					'NorseIcon48.dds'				),
+		('ICON_ATLAS_MNX_NORSE',				50,	 		1,				1,					'NorseIcon50.dds'				),
+		('ICON_ATLAS_MNX_NORSE',				64,	 		1,				1,					'NorseIcon64.dds'				),
+		('ICON_ATLAS_MNX_NORSE',				80,	 		1,				1,					'NorseIcon80.dds'				),
+		('ICON_ATLAS_MNX_NORSE',				200, 		1,				1,					'NorseIcon200.dds'				),
+		('ICON_ATLAS_MNX_NORSE',				256, 		1,				1,					'NorseIcon256.dds'				),
 
-		('ICON_ATLAS_MC_PO_NGBE',				32,	 		1,				1,					'PoNgbeIcon32.dds'			),
-		('ICON_ATLAS_MC_PO_NGBE',				45,	 		1,				1,					'PoNgbeIcon45.dds'			),
-		('ICON_ATLAS_MC_PO_NGBE',				48,	 		1,				1,					'PoNgbeIcon48.dds'			),
-		('ICON_ATLAS_MC_PO_NGBE',				50,	 		1,				1,					'PoNgbeIcon50.dds'			),
-		('ICON_ATLAS_MC_PO_NGBE',				55,	 		1,				1,					'PoNgbeIcon55.dds'			),
-		('ICON_ATLAS_MC_PO_NGBE',				64,			1,				1,					'PoNgbeIcon64.dds'			),
-		('ICON_ATLAS_MC_PO_NGBE',				80,	 		1,				1,					'PoNgbeIcon80.dds'			),
-		('ICON_ATLAS_MC_PO_NGBE',				256,	 	1,				1,					'PoNgbeIcon256.dds'			),
+		('ICON_ATLAS_MNX_ERIK_THE_RED',			32,	 		1,				1,					'PoNgbeIcon32.dds'				),
+		('ICON_ATLAS_MNX_ERIK_THE_RED',			45,	 		1,				1,					'PoNgbeIcon45.dds'				),
+		('ICON_ATLAS_MNX_ERIK_THE_RED',			48,	 		1,				1,					'PoNgbeIcon48.dds'				),
+		('ICON_ATLAS_MNX_ERIK_THE_RED',			50,	 		1,				1,					'PoNgbeIcon50.dds'				),
+		('ICON_ATLAS_MNX_ERIK_THE_RED',			55,	 		1,				1,					'PoNgbeIcon55.dds'				),
+		('ICON_ATLAS_MNX_ERIK_THE_RED',			64,			1,				1,					'PoNgbeIcon64.dds'				),
+		('ICON_ATLAS_MNX_ERIK_THE_RED',			80,	 		1,				1,					'PoNgbeIcon80.dds'				),
+		('ICON_ATLAS_MNX_ERIK_THE_RED',			256,	 	1,				1,					'PoNgbeIcon256.dds'				),
 		
-		('ICON_ATLAS_MC_WEREJAGUAR',			22,			2,				1,					'WerejaguarAtlas22.dds'		),
-		('ICON_ATLAS_MC_WEREJAGUAR',			32,			2,				1,					'WerejaguarAtlas32.dds'		),
-		('ICON_ATLAS_MC_WEREJAGUAR',			38,			2,				1,					'WerejaguarAtlas38.dds'		),
-		('ICON_ATLAS_MC_WEREJAGUAR',			50,			2,				1,					'WerejaguarAtlas50.dds'		),
-		('ICON_ATLAS_MC_WEREJAGUAR',			70,			2,				1,					'WerejaguarAtlas70.dds'		),
-		('ICON_ATLAS_MC_WEREJAGUAR',			80,			2,				1,					'WerejaguarAtlas80.dds'		),
-		('ICON_ATLAS_MC_WEREJAGUAR',			95,			2,				1,					'WerejaguarAtlas95.dds'		),
-		('ICON_ATLAS_MC_WEREJAGUAR',			200,		2,				1,					'WerejaguarAtlas200.dds'	),
-		('ICON_ATLAS_MC_WEREJAGUAR',			256,		2,				1,					'WerejaguarAtlas256.dds'	),
-		
-		('ICON_ATLAS_COLOSSAL_HEAD',			38,			1,				1,					'ColossalHead38.dds'		),
-		('ICON_ATLAS_COLOSSAL_HEAD',			40,			1,				1,					'ColossalHead40.dds'		),
-		('ICON_ATLAS_COLOSSAL_HEAD',			50,			1,				1,					'ColossalHead50.dds'		),
-		('ICON_ATLAS_COLOSSAL_HEAD',			80,			1,				1,					'ColossalHead80.dds'		),
-		('ICON_ATLAS_COLOSSAL_HEAD',			200,		1,				1,					'ColossalHead200.dds'		),
-		('ICON_ATLAS_COLOSSAL_HEAD',			256,		1,				1,					'ColossalHead256.dds'		);
+		('ICON_ATLAS_FISHING_ANYWHERE',			38,			1,				1,					'FishingBoatsAnywhere38.dds'	),
+		('ICON_ATLAS_FISHING_ANYWHERE',			40,			1,				1,					'FishingBoatsAnywhere40.dds'	),
+		('ICON_ATLAS_FISHING_ANYWHERE',			50,			1,				1,					'FishingBoatsAnywhere50.dds'	),
+		('ICON_ATLAS_FISHING_ANYWHERE',			80,			1,				1,					'FishingBoatsAnywhere80.dds'	),
+		('ICON_ATLAS_FISHING_ANYWHERE',			200,		1,				1,					'FishingBoatsAnywhere200.dds'	),
+		('ICON_ATLAS_FISHING_ANYWHERE',			256,		1,				1,					'FishingBoatsAnywhere256.dds'	);
 
 -----------------------------------------------
 -- IconDefinitions
@@ -72,8 +62,9 @@ VALUES	('ICON_ATLAS_MC_OLMEC',					22,	 		1,				1,					'OlmecAtlas22.dds'			),
 -----------------------------------------------
 
 INSERT INTO IconDefinitions
-		(Name,										Atlas,							'Index'				)
-VALUES	('ICON_CIVILIZATION_MNX_NORSE',				'ICON_ATLAS_MC_OLMEC',			0					),
-		('ICON_LEADER_MNX_NORSE',					'ICON_ATLAS_MC_PO_NGBE',		0					),
-		('ICON_UNIT_MC_WEREJAGUAR_PORTRAIT',		'ICON_ATLAS_MC_WEREJAGUAR',		0					),
-		('ICON_UNIT_MC_WEREJAGUAR',					'ICON_ATLAS_MC_WEREJAGUAR',		1					);
+		(Name,												Atlas,							'Index'				)
+VALUES	('ICON_CIVILIZATION_MNX_NORSE',						'ICON_ATLAS_MNX_NORSE',			0					),
+		('ICON_LEADER_MNX_NORSE',							'ICON_ATLAS_MNX_ERIK_THE_RED',	0					),
+		('ICON_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DUMMY',	'ICON_ATLAS_FISHING_ANYWHERE',	0					),
+		('ICON_UNIT_MNX_NORSE_ADVENTURER',					'ICON_ATLAS_UNITS',				19					),
+		('ICON_UNIT_MNX_NORSE_ADVENTURER_PORTRAIT',			'ICON_ATLAS_UNIT_PORTRAITS',	17					);

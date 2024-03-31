@@ -193,7 +193,7 @@ VALUES	/*(
 -- Identical to the base-game version, except for the added Domain property that indicates the ruleset of the active Expansion.
 -----------------------------------------------
 
-INSERT INTO PlayerItems
+/*INSERT INTO PlayerItems
 		(Domain, CivilizationType, LeaderType, Type, Icon, Name, Description, SortIndex	)
 VALUES	(
 		'Players:Expansion2_Players', -- Domain
@@ -217,6 +217,32 @@ VALUES	(
 		'LOC_IMPROVEMENT_OLMEC_COLOSSAL_HEAD_DESCRIPTION', -- Description
 		--20 -- SortIndex
 		60 -- SortIndex
+		);*/
+
+INSERT INTO PlayerItems
+		(Domain, CivilizationType, LeaderType, Type, Icon, Name, Description, SortIndex	)
+VALUES	(
+		'Players:Expansion2_Players', -- Domain
+		'CIVILIZATION_MNX_NORSE', -- CivilizationType
+		'LEADER_MNX_NORSE', -- LeaderType
+		'UNIT_MNX_NORSE_ADVENTURER', -- Type
+		'ICON_UNIT_SUPERSCOUT', -- Icon
+		'LOC_UNIT_MNX_NORSE_ADVENTURER_NAME', -- Name
+		'LOC_UNIT_MNX_NORSE_ADVENTURER_DESCRIPTION', -- Description
+		--10	-- SortIndex
+		10	-- SortIndex
+		),
+		
+		(
+		'Players:Expansion2_Players', -- Domain
+		'CIVILIZATION_MNX_NORSE', -- CivilizationType
+		'LEADER_MNX_NORSE', -- LeaderType
+		'IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DUMMY', -- Type
+		'ICON_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DUMMY', -- Icon
+		'LOC_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_NAME', -- Name
+		'LOC_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DESCRIPTION', -- Description
+		--20 -- SortIndex
+		60 -- SortIndex
 		);
 
 -- Add all player items from LEADER_HARDRADA
@@ -224,7 +250,7 @@ INSERT INTO PlayerItems
 		(Domain,	CivilizationType,			LeaderType,				Type, Icon, Name, Description, SortIndex)
 SELECT	Domain,		'CIVILIZATION_MNX_NORSE',	'LEADER_MNX_NORSE',		Type, Icon, Name, Description, SortIndex
 FROM	PlayerItems
-WHERE	Domain='Players:Expansion2_Players' AND Type='UNIT_NORWEGIAN_LONGSHIP';
+WHERE	Domain='Players:Expansion2_Players' AND Type IN ('UNIT_NORWEGIAN_LONGSHIP', 'BUILDING_STAVE_CHURCH');
 --WHERE	LeaderType='LEADER_HARDRADA' AND Domain='Players:Expansion2_Players' AND Type NOT IN ('MIK_IMPROVEMENT_NWY_SHIP') AND TRAIT_LEADER_UNIT_NORWEGIAN_LONGSHIP;
 
 /*-- Add player items of other civs that unlock unique naval units

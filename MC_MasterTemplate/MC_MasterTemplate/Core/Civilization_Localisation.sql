@@ -36,12 +36,12 @@ VALUES
 	-- Combined Traits (Norway and new) description for when we choose the player
 	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_NORSE_MAIN_NAME',				'Sons of Odin'),
 	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_NORSE_MAIN_DESCRIPTION',
-	'Coastal Cities get +2 [ICON_Housing] Housing. Coastal Districts provide +1 [ICON_Amenities] Amenity. Harbor, Encampment and Holy Site are 50% cheaper, and give/receive +1 adjacency to/from all districts. Harbor and Holy Site buildings emanate +2 of their respective yields ([ICON_Faith]/[ICON_Gold]) on adjacent tiles and districts. Districts receive minor adjacency from Coast tiles. Holy Site and Harbor buildings provide an additional +1 [ICON_Housing] Housing and +2 [ICON_Food] Food. Shrines provide +1 [ICON_TradeRoute] Trade Route capacity. Land Units can embark and ignore additional [ICON_Movement] Movement costs from embarking and disembarking. Naval melee units heal in neutral territory. Units gain the ability to enter Ocean tiles after researching the Shipbuilding technology.'),
+	'Get +2 [ICON_GreatProphet] Great Prophet, +2 [ICON_GreatAdmiral] Great Admiral, +2 [ICON_GreatGeneral] Great General, +2 [ICON_GreatMerchant] Great Merchant points per turn. Land Units can embark and ignore additional [ICON_Movement] Movement costs from embarking and disembarking. Units gain the ability to enter Ocean tiles after researching the Shipbuilding technology. Coastal Cities get +2 [ICON_Housing] Housing. Coastal Districts provide +1 [ICON_Amenities] Amenity. Harbor, Encampment and Holy Site are 50% cheaper, and give/receive +1 adjacency to/from all districts. Harbor and Holy Site buildings emanate +2 of their respective yields ([ICON_Faith]/[ICON_Gold]) on adjacent tiles and districts and +1 on water tiles. Districts receive minor adjacency from Coast tiles. Holy Site and Harbor buildings provide +2 [ICON_Food] Food. Shrines provide +1 [ICON_TradeRoute] Trade Route capacity.'),
 	
 	-- New Trait description only for when the Game Loads.
 	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_NAME',				'Sons of Odin'),
 	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_DESCRIPTION',
-	'Coastal Cities get +2 [ICON_Housing] Housing. Coastal Districts provide +1 [ICON_Amenities] Amenity. Harbor, Encampment and Holy Site are 50% cheaper, and give/receive +1 adjacency to/from all districts. Harbor and Holy Site buildings emanate +2 of their respective yields ([ICON_Faith]/[ICON_Gold]) on adjacent tiles and districts. Districts receive minor adjacency from Coast tiles. Holy Site and Harbor buildings provide an additional +1 [ICON_Housing] Housing and +2 [ICON_Food] Food. Shrines provide +1 [ICON_TradeRoute] Trade Route capacity. Land Units can embark and ignore additional [ICON_Movement] Movement costs from embarking and disembarking. Naval melee units heal in neutral territory. Units gain the ability to enter Ocean tiles after researching the Shipbuilding technology.'),
+	'Get +2 [ICON_GreatProphet] Great Prophet, +2 [ICON_GreatAdmiral] Great Admiral, +2 [ICON_GreatGeneral] Great General, +2 [ICON_GreatMerchant] Great Merchant points per turn. Land Units can embark and ignore additional [ICON_Movement] Movement costs from embarking and disembarking. Units gain the ability to enter Ocean tiles after researching the Shipbuilding technology. Coastal Cities get +2 [ICON_Housing] Housing. Coastal Districts provide +1 [ICON_Amenities] Amenity. Harbor, Encampment and Holy Site are 50% cheaper, and give/receive +1 adjacency to/from all districts. Harbor and Holy Site buildings emanate +2 of their respective yields ([ICON_Faith]/[ICON_Gold]) on adjacent tiles and districts and +1 on water tiles. Districts receive minor adjacency from Coast tiles. Holy Site and Harbor buildings provide +2 [ICON_Food] Food. Shrines provide +1 [ICON_TradeRoute] Trade Route capacity.'),
 
 -----------------------------------------------
 -- District adjacency descriptions
@@ -86,11 +86,13 @@ VALUES
 
 -- Please note: The display of in-game icons in text is achieved by using [ICON_Type].
 -----------------------------------------------
+	('en_US',	'LOC_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_NAME',				'Fishing Nets'								),
+	('en_US',	'LOC_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DESCRIPTION',		'Unlocks the Builder ability to construct Fishing Nets on any vacant Coast or Lake tile with Cartography and on any Ocean tile with Steam Power.[NEWLINE]Cannot be built on a sea resource.'),
 
-	('en_US',	'LOC_IMPROVEMENT_OLMEC_COLOSSAL_HEAD_NAME',				'Colossal Head'								),
-	('en_US',	'LOC_IMPROVEMENT_OLMEC_COLOSSAL_HEAD_DESCRIPTION',
-	'Unlocks the Builder ability to construct a Colossal Head, unique to the Olmec. [NEWLINE][NEWLINE] +1 [ICON_Faith] Faith, +1 [ICON_SCIENCE] Science. +1 [ICON_Faith] Faith if adjacent to a Campus, +1 [ICON_Science] Science if adjacent to a Holy Site. Cities with at least four Colossal heads provide a [ICON_GreatArtist] Great Artist Point. May be built on Rainforest. Cannot be constructed adjacent to another Colossal Head.'	),
-
+	-- Stave Church description override
+	('en_US',	'LOC_MNX_BUILDING_STAVE_CHURCH_OVERRIDE_DESCRIPTION',		
+	'A building unique to Norse empires. +2 [ICON_Housing] Housing, +1 [ICON_Amenities] Amenity. Holy Site gets an additional standard adjacency from Woods. +1 [ICON_PRODUCTION] Production on coastal resource tiles of this city.'),
+	
 -----------------------------------------------
 -- Civilization Unique Unit
 

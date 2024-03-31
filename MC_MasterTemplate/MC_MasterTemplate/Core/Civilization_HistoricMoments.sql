@@ -16,7 +16,7 @@
 -- Please note: For the below code to be used, Rise & Fall (Expansion1) is required.
 -----------------------------------------------
 INSERT INTO MomentIllustrations
-		(MomentIllustrationType,					MomentDataType,					GameDataType,						Texture								)
-VALUES	('MOMENT_ILLUSTRATION_UNIQUE_UNIT',			'MOMENT_DATA_UNIT',				'UNIT_MC_WEREJAGUAR',				'WerejaguarHistoricMoment.dds'		),
-		('MOMENT_ILLUSTRATION_UNIQUE_UNIT',			'MOMENT_DATA_UNIT',				'UNIT_SUPERSCOUT',					'NorseAdventurerHistoricMoment.dds'	),
-		('MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT',	'MOMENT_DATA_IMPROVEMENT',		'IMPROVEMENT_COLOSSAL_HEAD',		'ColossalHeadHistoricMoment.dds'	);
+		(MomentIllustrationType,					MomentDataType,					GameDataType,									Texture										)
+VALUES	('MOMENT_ILLUSTRATION_UNIQUE_UNIT',			'MOMENT_DATA_UNIT',				'UNIT_MNX_NORSE_ADVENTURER',					'NorseAdventurerHistoricMoment.dds'			),
+		('MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT',	'MOMENT_DATA_IMPROVEMENT',		'IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DUMMY',		'FishingBoatsAnywhereHistoricMoment.dds'	);
+		

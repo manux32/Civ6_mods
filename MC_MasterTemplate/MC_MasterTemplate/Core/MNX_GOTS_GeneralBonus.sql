@@ -91,9 +91,9 @@ VALUES	-- Grant Technologies
 
 		-- Units promotions
 		('MOD_MNX_APOSTLE_PROMO_DEBATER',					'PromotionType',			'PROMOTION_DEBATER'),
-		('MOD_MNX_RECON_PROMO_RANGER',						'PromotionType',			'PROMOTION_RANGER'),
+		--('MOD_MNX_RECON_PROMO_RANGER',						'PromotionType',			'PROMOTION_RANGER'),
 		('MOD_MNX_RECON_PROMO_ALPINE',						'PromotionType',			'PROMOTION_ALPINE'),
-		('MOD_MNX_RECON_PROMO_SENTRY',						'PromotionType',			'PROMOTION_SENTRY'),
+		--('MOD_MNX_RECON_PROMO_SENTRY',						'PromotionType',			'PROMOTION_SENTRY'),
 
 		-- Any promotion choice
 		('MOD_MNX_APOSTLE_ANY_PROMO',						'UnitType',					'UNIT_APOSTLE'),

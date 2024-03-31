@@ -33,7 +33,7 @@
     <AssemblyName>Keniisus_Civ_Template</AssemblyName>
     <RootNamespace>Keniisus_Civ_Template</RootNamespace>
     <FrontEndActionData><![CDATA[<FrontEndActions><UpdateDatabase id="NewAction"><File>Leader/Leader_Config.sql</File></UpdateDatabase><UpdateText id="NewAction"><File>Core/Civilization_Localisation.sql</File><File>Leader/Leader_Localisation.sql</File></UpdateText><UpdateColors id="NewAction"><File>Core/Civilization_Colors.sql</File><File>Leader/Leader_Colors.sql</File></UpdateColors><UpdateArt id="NewAction"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateIcons id="UpdateIcons"><File>Core/NewIcons.sql</File></UpdateIcons></FrontEndActions>]]></FrontEndActionData>
-    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="NewCIv_Database"><File>Core/Civilization_Config.sql</File><File>Leader/Leader_Core.sql</File><File>Core/Civilization_UA.sql</File><File>Core/Civilization_UI.sql</File><File>Core/Civilization_UU.sql</File><File>Leader/Leader_UA.sql</File><File>Leader/Leader_Agenda.sql</File><File>Leader/Leader_Screens.sql</File><File>Core/Civilization_HistoricMoments.sql</File></UpdateDatabase><UpdateColors id="NewAction"><File>Core/Civilization_Colors.sql</File><File>Leader/Leader_Colors.sql</File></UpdateColors><UpdateText id="NewAction"><File>Core/Civilization_Localisation.sql</File><File>Leader/Leader_Localisation.sql</File></UpdateText><UpdateIcons id="NewIcons"><File>Core/NewIcons.sql</File></UpdateIcons><UpdateArt id="NewAction"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateDatabase id="Requirements"><File>Core/MNX_Requirements.sql</File><File>Core/MNX_WorkableMountains.sql</File><File>Core/MNX_RemoveMutExcDistricts.sql</File></UpdateDatabase><UpdateDatabase id="GOTS_stuff"><Properties><LoadOrder>1000000</LoadOrder></Properties><File>Core/MNX_FaithPurchase.sql</File><File>Core/MNX_GOTS_Abilities.sql</File><File>Core/MNX_GOTS_GeneralBonus.sql</File><File>Core/MNX_OP_Testing_Cheat_Boosts.sql</File></UpdateDatabase></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="NewCIv_Database"><File>Core/Civilization_Config.sql</File><File>Leader/Leader_Core.sql</File><File>Core/Civilization_UA.sql</File><File>Leader/Leader_UA.sql</File><File>Leader/Leader_Agenda.sql</File><File>Leader/Leader_Screens.sql</File><File>Core/Civilization_HistoricMoments.sql</File><File>Core/MNX_FishingBoatAnywhere_UI.sql</File><File>Core/MNX_UU_NorseAdventurer.sql</File></UpdateDatabase><UpdateColors id="NewAction"><File>Core/Civilization_Colors.sql</File><File>Leader/Leader_Colors.sql</File></UpdateColors><UpdateText id="NewAction"><File>Core/Civilization_Localisation.sql</File><File>Leader/Leader_Localisation.sql</File></UpdateText><UpdateIcons id="NewIcons"><File>Core/NewIcons.sql</File></UpdateIcons><UpdateArt id="NewAction"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateDatabase id="Requirements"><File>Core/MNX_Requirements.sql</File><File>Core/MNX_WorkableMountains.sql</File></UpdateDatabase><UpdateDatabase id="GOTS_stuff"><Properties><LoadOrder>1000000</LoadOrder></Properties><File>Core/MNX_FaithPurchase.sql</File><File>Core/MNX_GOTS_Abilities.sql</File><File>Core/MNX_GOTS_GeneralBonus.sql</File><File>Core/MNX_OP_Testing_Cheat_Boosts.sql</File><File>Core/MNX_RemoveMutExcDistricts.sql</File></UpdateDatabase><AddGameplayScripts id="AddGameplayScripts"><File>Core/MNX_FishingBoatAnywhere_UI.lua</File></AddGameplayScripts></InGameActions>]]></InGameActionData>
     <ActionCriteriaData><![CDATA[<ActionCriteria><Criteria id="Expansion1"><GameModeInUse><GameCoreInUse>Expansion1</GameCoreInUse></GameModeInUse></Criteria></ActionCriteria>]]></ActionCriteriaData>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
@@ -51,15 +51,15 @@
     <ArtDef Include="ArtDefs\FallbackLeaders.artdef">
       <SubType>Content</SubType>
     </ArtDef>
-    <ArtDef Include="ArtDefs\Units.artdef">
-      <SubType>Content</SubType>
-    </ArtDef>
     <ArtDef Include="ArtDefs\Civilizations.artdef">
       <SubType>Content</SubType>
     </ArtDef>
     <ArtDef Include="ArtDefs\Cultures.artdef">
       <SubType>Content</SubType>
     </ArtDef>
+    <Content Include="ArtDefs\Units.artdef">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Core\Civilization_Colors.sql">
       <SubType>Content</SubType>
     </Content>
@@ -84,6 +84,12 @@
     <Content Include="Core\MNX_FaithPurchase.sql">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Core\MNX_FishingBoatAnywhere_UI.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\MNX_FishingBoatAnywhere_UI.sql">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Core\MNX_GOTS_Abilities.sql">
       <SubType>Content</SubType>
     </Content>
@@ -97,6 +103,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Core\MNX_Requirements.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\MNX_UU_NorseAdventurer.sql">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Core\MNX_WorkableMountains.sql">
@@ -129,10 +138,112 @@
     <Content Include="MC_MasterTemplate.Art.xml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Textures\FishingBoatsAnywhere200.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FishingBoatsAnywhere200.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FishingBoatsAnywhere256.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FishingBoatsAnywhere256.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FishingBoatsAnywhere38.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FishingBoatsAnywhere38.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FishingBoatsAnywhere40.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FishingBoatsAnywhere40.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FishingBoatsAnywhere50.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FishingBoatsAnywhere50.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FishingBoatsAnywhere80.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FishingBoatsAnywhere80.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FishingBoatsAnywhereHistoricMoment.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FishingBoatsAnywhereHistoricMoment.tex">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Textures\NorseAdventurerHistoricMoment.dds">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Textures\NorseAdventurerHistoricMoment.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon200.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon200.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon22.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon22.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon256.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon256.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon30.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon30.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon36.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon36.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon44.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon44.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon48.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon48.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon50.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon50.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon64.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon64.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon80.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\NorseIcon80.tex">
       <SubType>Content</SubType>
     </Content>
     <XLP Include="Textures\LEADER_MC_PO_NGBE_BACKGROUND.dds">
@@ -142,48 +253,6 @@
       <SubType>Content</SubType>
     </XLP>
     <XLP Include="XLPs\LeaderFallbacks.xlp">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHead200.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHead200.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHead256.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHead256.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHead38.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHead38.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHead40.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHead40.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHead50.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHead50.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHead80.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHead80.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHeadHistoricMoment.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\ColossalHeadHistoricMoment.tex">
       <SubType>Content</SubType>
     </XLP>
     <XLP Include="Textures\FALLBACK_NEUTRAL_PO_NGBE.dds">
@@ -202,66 +271,6 @@
       <SubType>Content</SubType>
     </XLP>
     <XLP Include="Textures\LEADER_PO_NGBE_DIPLO_BG.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas200.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas200.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas22.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas22.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas256.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas256.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas30.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas30.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas36.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas36.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas44.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas44.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas48.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas48.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas50.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas50.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas64.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas64.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas80.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\OlmecAtlas80.tex">
       <SubType>Content</SubType>
     </XLP>
     <XLP Include="Textures\PoNgbeIcon256.dds">
@@ -310,66 +319,6 @@
       <SubType>Content</SubType>
     </XLP>
     <XLP Include="Textures\PoNgbeIcon80.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas200.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas200.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas22.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas22.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas256.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas256.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas32.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas32.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas38.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas38.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas50.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas50.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas70.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas70.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas80.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas80.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas95.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarAtlas95.tex">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarHistoricMoment.dds">
-      <SubType>Content</SubType>
-    </XLP>
-    <XLP Include="Textures\WerejaguarHistoricMoment.tex">
       <SubType>Content</SubType>
     </XLP>
     <XLP Include="XLPs\OlmecAtlas.xlp">

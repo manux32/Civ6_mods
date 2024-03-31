@@ -30,7 +30,7 @@ VALUES
 	-----------------------------------------------
 	('en_US',	'LOC_TRAIT_LEADER_MNX_NORSE_MAIN_NAME',						'Explore and Conquer, the Gods will guide us!'	),
 	('en_US',	'LOC_TRAIT_LEADER_MNX_NORSE_MAIN_DESCRIPTION',
-	'Naval Units get +50% [ICON_PRODUCTION] Production, +1 [ICON_Movement] Movement, +5 [ICON_Strength] Combat Strength, and have a chance to capture defeated enemy naval vessels. Allows coastal raiding for all naval melee units. Gain the Viking Longship unique unit with Sailing. Get the Norse Adventurer, a [ICON_Strength] stronger version of the scout with a [ICON_Range] ranged attack. All recon units get +5 [ICON_Strength] Combat Strength, +1 Sight, +1 [ICON_Movement] Movement, +1 [ICON_Movement] embarked Movement, and +1 [ICON_Range] Attack Range once Archery is researched. Settlers and Builders ignore movement penalties in Hills terrain. Receive [ICON_SCIENCE] Science from pillaging and coastal raiding Mines in addition to [ICON_GOLD] Gold. Pillaging or coastal raiding Quarries, Pastures, Plantations, and Camps provide [ICON_CULTURE] Culture in addition to [ICON_FAITH] Faith.[NEWLINE] -------- We will prevail, The Gods are with us! -------- [NEWLINE]Get +2 [ICON_GreatProphet] Great Prophet, +2 [ICON_GreatAdmiral] Great Admiral, +2 [ICON_GreatGeneral] Great General, +2 [ICON_GreatMerchant] Great Merchant points per turn.[NEWLINE] -------- Once a RELIGION is founded: -------- [NEWLINE]Get +1 Wildcard policy slot. Naval Units can be purchased with [ICON_Faith] Faith and can heal in neutral territory. Buildings in City Center, Harbor, Encampment, and Holy Site can be purchased with [ICON_Faith] Faith. Cities with a Governor can purchase Districts with [ICON_Faith] Faith or [ICON_GOLD] Gold. All combat units receive +5 [ICON_Strength] Combat Strength (including Religious combat). Naval and embarked units get +1 Sight and +1 [ICON_Movement] Movement.'	),
+	'All Naval Units are 50% [ICON_PRODUCTION] cheaper, have +1 [ICON_Movement] Movement, +5 [ICON_Strength] Combat Strength, and a chance to capture defeated enemy naval vessels. Naval Melee units heal in neutral territory and can perform coastal raiding. Receive [ICON_SCIENCE] Science from pillaging and coastal raiding Mines in addition to [ICON_GOLD] Gold. Pillaging or coastal raiding Quarries, Pastures, Plantations, and Camps provide [ICON_CULTURE] Culture in addition to [ICON_FAITH] Faith.[NEWLINE] -------------------- [NEWLINE]All Recon units get +5 [ICON_Strength] Combat Strength, +1 Sight, +1 [ICON_Movement] Movement, +1 [ICON_Movement] embarked Movement, and +1 [ICON_Range] Attack Range (with Archery). Settlers, Builders and Recon units ignore movement penalties on Hills.[NEWLINE] ---------- Once a RELIGION is founded: ---------- [NEWLINE]Get +1 Wildcard policy slot. All Naval Units can be purchased with [ICON_Faith] Faith and can heal in neutral territory. Buildings in City Center, Harbor, Encampment, and Holy Site can be purchased with [ICON_Faith] Faith. Cities with a Governor can purchase Districts with [ICON_GOLD] Gold or [ICON_Faith] Faith. All combat units receive +5 [ICON_Strength] Combat Strength (including Religious combat). Naval and embarked units get +1 Sight and +1 [ICON_Movement] Movement. Land combat units can fight while embarked.'),
 
 	-----------------------------------------------
 	-- Individual Traits description for when the Game Loads.
@@ -38,17 +38,17 @@ VALUES
 	-- Explore and Conquer, the Gods will guide us!
 	('en_US',	'LOC_TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER_NAME',			'Explore and Conquer, the Gods will guide us!'	),
 	('en_US',	'LOC_TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER_DESCRIPTION',
-	'Naval Units get +50% [ICON_PRODUCTION] Production, +1 [ICON_Movement] Movement, +5 [ICON_Strength] Combat Strength, and have a chance to capture defeated enemy naval vessels. Allows coastal raiding for all naval melee units. Gain the Viking Longship unique unit with Sailing. Get the Norse Adventurer, a [ICON_Strength] stronger version of the scout with a [ICON_Range] ranged attack. All recon units get +5 [ICON_Strength] Combat Strength, +1 Sight, +1 [ICON_Movement] Movement, +1 [ICON_Movement] embarked Movement, and +1 [ICON_Range] Attack Range once Archery is researched. Settlers and Builders ignore movement penalties in Hills terrain. Receive [ICON_SCIENCE] Science from pillaging and coastal raiding Mines in addition to [ICON_GOLD] Gold. Pillaging or coastal raiding Quarries, Pastures, Plantations, and Camps provide [ICON_CULTURE] Culture in addition to [ICON_FAITH] Faith.'),
+	'All Naval Units are 50% [ICON_PRODUCTION] cheaper, have +1 [ICON_Movement] Movement, +5 [ICON_Strength] Combat Strength, and a chance to capture defeated enemy naval vessels. Naval Melee units heal in neutral territory and can perform coastal raiding. Receive [ICON_SCIENCE] Science from pillaging and coastal raiding Mines in addition to [ICON_GOLD] Gold. Pillaging or coastal raiding Quarries, Pastures, Plantations, and Camps provide [ICON_CULTURE] Culture in addition to [ICON_FAITH] Faith.[NEWLINE] -------------------- [NEWLINE]All Recon units get +5 [ICON_Strength] Combat Strength, +1 Sight, +1 [ICON_Movement] Movement, +1 [ICON_Movement] embarked Movement, and +1 [ICON_Range] Attack Range (with Archery). Settlers, Builders and Recon units ignore movement penalties on Hills.'),
 
 	-- Norse Adventurer
-	('en_US',	'LOC_TRAIT_LEADER_MNX_NORSE_ADVENTURER_NAME',			'Norse Adventurer'	),
-	('en_US',	'LOC_TRAIT_LEADER_MNX_NORSE_ADVENTURER_DESCRIPTION',
-	'A [ICON_Strength] stronger version of the scout with a [ICON_Range] ranged attack. All recon units get +5 [ICON_Strength] Combat Strength, +1 Sight, +1 [ICON_Movement] Movement, +1 [ICON_Movement] embarked Movement, and +1 [ICON_Range] Attack Range once Archery is researched.'),
+	('en_US',	'LOC_UNIT_MNX_NORSE_ADVENTURER_NAME',						'Norse Adventurer'	),
+	('en_US',	'LOC_UNIT_MNX_NORSE_ADVENTURER_DESCRIPTION',
+	'A [ICON_Strength] stronger version of the Scout with a [ICON_Range] ranged attack.'),
 
 	-- We will prevail, The Gods are with us!
 	('en_US',	'LOC_TRAIT_LEADER_MNX_THE_GODS_ARE_WITH_US_NAME',			'We will prevail, The Gods are with us!'	),
 	('en_US',	'LOC_TRAIT_LEADER_MNX_THE_GODS_ARE_WITH_US_DESCRIPTION',
-	'Get +2 [ICON_GreatProphet] Great Prophet, +2 [ICON_GreatAdmiral] Great Admiral, +2 [ICON_GreatGeneral] Great General, +2 [ICON_GreatMerchant] Great Merchant points per turn.[NEWLINE] -------- Once a RELIGION is founded: -------- [NEWLINE]Get +1 Wildcard policy slot. Naval Units can be purchased with [ICON_Faith] Faith and can heal in neutral territory. Buildings in City Center, Harbor, Encampment, and Holy Site can be purchased with [ICON_Faith] Faith. Cities with a Governor can purchase Districts with [ICON_Faith] Faith or [ICON_GOLD] Gold. All combat units receive +5 [ICON_Strength] Combat Strength (including Religious combat). Naval and embarked units get +1 Sight and +1 [ICON_Movement] Movement.'),
+	' ---------- Once a RELIGION is founded: ---------- [NEWLINE]Get +1 Wildcard policy slot. All Naval Units can be purchased with [ICON_Faith] Faith and can heal in neutral territory. Buildings in City Center, Harbor, Encampment, and Holy Site can be purchased with [ICON_Faith] Faith. Cities with a Governor can purchase Districts with [ICON_GOLD] Gold or [ICON_Faith] Faith. All combat units receive +5 [ICON_Strength] Combat Strength (including Religious combat). Naval and embarked units get +1 Sight and +1 [ICON_Movement] Movement. Land combat units can fight while embarked.'),
 
 
 	-----------------------------------------------
@@ -56,7 +56,7 @@ VALUES
 	-----------------------------------------------
 	-- Builder/Settler no hill penalty ability.
 	('en_US',	'LOC_ABILITY_MC_BUILDER_SETTLER_IGNORE_TERRAIN_COST_NAME',			'Heights dont scare us!'	),
-	('en_US',	'LOC_ABILITY_MC_BUILDER_SETTLER_IGNORE_TERRAIN_COST_DESCRIPTION',	'Settlers and Builders ignore movement penalties in Hills terrain.'),
+	('en_US',	'LOC_ABILITY_MC_BUILDER_SETTLER_IGNORE_TERRAIN_COST_DESCRIPTION',	'Settlers and Builders ignore movement penalties on Hills.'),
 
 -----------------------------------------------
 -- Leader Agenda

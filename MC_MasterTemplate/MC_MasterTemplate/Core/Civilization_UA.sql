@@ -20,6 +20,7 @@
 INSERT INTO	Types
 		(Type,														Kind			)
 VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',						'KIND_TRAIT'	),
+		('TRAIT_MNX_ODIN_FISHING_BOATS_ANYWHERE',					'KIND_TRAIT'	),
 		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',					'KIND_TRAIT'	),
 		('DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		'KIND_MODIFIER'	);
 
@@ -36,7 +37,8 @@ VALUES		('DMOD_MNX_PLAYER_DISTRICTS_ADJUST_BASE_YIELD_CHANGE',		'COLLECTION_PLAY
 
 INSERT INTO	Traits	
 		(TraitType,									Name,												Description														)
-VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_NAME',		'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_DESCRIPTION'			);
+VALUES	('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_NAME',		'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_DESCRIPTION'			),
+		('TRAIT_MNX_ODIN_FISHING_BOATS_ANYWHERE',	'LOC_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_NAME',		'LOC_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DESCRIPTION'				);
 		
 -----------------------------------------------
 -- Add dummy Trait to all Leaders or Civs to exclude our Civ's special district adjacency bonuses for all other players
@@ -66,6 +68,7 @@ WHERE	StartingCivilizationLevelType='CIVILIZATION_LEVEL_FULL_CIV' AND Civilizati
 INSERT INTO	CivilizationTraits
 		(CivilizationType,				TraitType										)
 VALUES	('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN'			),
+		('CIVILIZATION_MNX_NORSE',		'TRAIT_MNX_ODIN_FISHING_BOATS_ANYWHERE'			),
 		-- Norway Traits
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_BUILDING_STAVE_CHURCH'		),
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_UNIT_NORWEGIAN_BERSERKER'	),
@@ -74,7 +77,7 @@ VALUES	('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN'			),
 		--('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_UNIT_BYZANTINE_DROMON'		),
 		--('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_UNIT_ENGLISH_SEADOG'		),
 		('CIVILIZATION_MNX_NORSE',		'TRAIT_CIVILIZATION_UNIT_GERMAN_UBOAT'			);
-														
+										
 -----------------------------------------------
 -- TraitModifiers
 
@@ -97,6 +100,9 @@ VALUES	-- Norway Civ Knarr (Early Ocean Navigation) Trait
 		--('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'TRAIT_IGNORE_EMBARK_DISEMBARK_COST'				),
 		
 		-----------------------------------------------
+		('TRAIT_MNX_ODIN_FISHING_BOATS_ANYWHERE',			'MOD_MNX_ODIN_FISHING_BOATS_COAST'					),
+		('TRAIT_MNX_ODIN_FISHING_BOATS_ANYWHERE',			'MOD_MNX_ODIN_FISHING_BOATS_OCEAN'					),
+
 		-- Holy Site and Harbor 2X districts adjacency
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY'				),
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_HARBOR_2X_ADJACENCY'					),
@@ -181,6 +187,9 @@ VALUES	-- Holy Site and Harbor 2X districts adjacency
 		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',				0,			1,			NULL										),
 		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',				0,			1,			NULL										),
 
+		('MOD_MNX_ODIN_FISHING_BOATS_COAST',					'MODIFIER_PLAYER_CITIES_ADJUST_IMPROVEMENT_VALID_TERRAIN',	0,			1,			'REQSR_MNX_HAS_TECH_CARTOGRAPHY'			),
+		('MOD_MNX_ODIN_FISHING_BOATS_OCEAN',					'MODIFIER_PLAYER_CITIES_ADJUST_IMPROVEMENT_VALID_TERRAIN',	0,			1,			'REQSR_MNX_HAS_TECH_STEAMPOWER'				),
+
 		-----------------------------------------------
 		-- Coastal Cities Housing
 		('MOD_MNX_ODIN_COASTAL_CITY_HOUSING',					'MODIFIER_PLAYER_CITIES_ADJUST_WATER_HOUSING',				0,			1,			'PLOT_IS_COASTAL_LAND_REQUIREMENTS'			),
@@ -192,7 +201,7 @@ VALUES	-- Holy Site and Harbor 2X districts adjacency
 		('MOD_MNX_ODIN_CHEAP_HOLYSITE',							'MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION',		0,			1,			NULL										),
 		('MOD_MNX_ODIN_CHEAP_HARBOR',							'MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION',		0,			1,			NULL										),
 		('MOD_MNX_ODIN_CHEAP_ENCAMPMENT',						'MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION',		0,			1,			NULL										),
-
+		
 		-----------------------------------------------
 		-- Trade Route from Shrines
 		('MOD_MNX_ODIN_ATTACH_TRADE_ROUTE_FROM_SHRINES',		'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER',					0,			1,			'REQSR_MNX_CITY_HAS_TIER1_HOLY_BUILDING'	),
@@ -266,6 +275,11 @@ VALUES	-- Holy Site and Harbor 2X districts adjacency
 		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'YieldType',					'YIELD_GOLD'										),
 		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'Amount',						1													),
 		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'Description',					'LOC_MNX_ODIN_HARBOR_2X_DISTRICTS_ADJACENCY'		),
+		
+		('MOD_MNX_ODIN_FISHING_BOATS_COAST',						'ImprovementType',				'IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DUMMY'			),
+		('MOD_MNX_ODIN_FISHING_BOATS_COAST',						'TerrainType',					'TERRAIN_COAST'										),
+		('MOD_MNX_ODIN_FISHING_BOATS_OCEAN',						'ImprovementType',				'IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DUMMY'			),
+		('MOD_MNX_ODIN_FISHING_BOATS_OCEAN',						'TerrainType',					'TERRAIN_OCEAN'										),
 
 		-----------------------------------------------
 		-- Coastal Cities Housing
@@ -356,6 +370,10 @@ VALUES	-- Holy Site and Harbor 2X districts adjacency
 
 
 
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+-- Stave Church +2 Housing +1 Amenity
+UPDATE Buildings SET Housing = 2, Entertainment = 1, Description = 'LOC_MNX_BUILDING_STAVE_CHURCH_OVERRIDE_DESCRIPTION' WHERE BuildingType = 'BUILDING_STAVE_CHURCH';
 
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------

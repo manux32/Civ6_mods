@@ -25,7 +25,8 @@ VALUES	(
 		'COLOR_MC_OLMEC_D_SECONDARY' -- Alt3SecondaryColor
 		);*/
 
-INSERT INTO	PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, Alt1PrimaryColor, Alt1SecondaryColor, Alt2PrimaryColor, Alt2SecondaryColor, Alt3PrimaryColor, Alt3SecondaryColor )
+-- Norway Hardrada Colors
+/*INSERT INTO	PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, Alt1PrimaryColor, Alt1SecondaryColor, Alt2PrimaryColor, Alt2SecondaryColor, Alt3PrimaryColor, Alt3SecondaryColor )
 VALUES	(
 		'LEADER_MNX_NORSE', -- Type
 		'Unique', -- Usage
@@ -37,4 +38,36 @@ VALUES	(
 		'COLOR_STANDARD_YELLOW_MD', -- Alt2SecondaryColor
 		'COLOR_STANDARD_YELLOW_MD', -- Alt3PrimaryColor
 		'COLOR_STANDARD_RED_MD' -- Alt3SecondaryColor
+		);*/
+
+
+/*-- Gaul Ambiorix Colors
+INSERT INTO	PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, Alt1PrimaryColor, Alt1SecondaryColor, Alt2PrimaryColor, Alt2SecondaryColor, Alt3PrimaryColor, Alt3SecondaryColor )
+VALUES	(
+		'LEADER_MNX_NORSE', -- Type
+		'Unique', -- Usage
+		'COLOR_STANDARD_GREEN_DK', -- PrimaryColor
+		'COLOR_STANDARD_AQUA_LT', -- SecondaryColor
+		'COLOR_STANDARD_YELLOW_LT', -- Alt1PrimaryColor
+		'COLOR_STANDARD_GREEN_DK', -- Alt1SecondaryColor
+		'COLOR_STANDARD_ORANGE_DK', -- Alt2PrimaryColor
+		'COLOR_STANDARD_ORANGE_MD', -- Alt2SecondaryColor
+		'COLOR_STANDARD_ORANGE_MD', -- Alt3PrimaryColor
+		'COLOR_STANDARD_YELLOW_LT' -- Alt3SecondaryColor
+		);*/
+
+
+-- My mix
+INSERT INTO	PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, Alt1PrimaryColor, Alt1SecondaryColor, Alt2PrimaryColor, Alt2SecondaryColor, Alt3PrimaryColor, Alt3SecondaryColor )
+VALUES	(
+		'LEADER_MNX_NORSE', -- Type
+		'Unique', -- Usage
+		'COLOR_STANDARD_BLUE_DK', -- PrimaryColor
+		'COLOR_STANDARD_RED_MD', -- SecondaryColor
+		'COLOR_STANDARD_BLUE_DK', -- Alt1PrimaryColor
+		'COLOR_STANDARD_ORANGE_MD', -- Alt1SecondaryColor
+		'COLOR_STANDARD_BLUE_DK', -- Alt2PrimaryColor
+		'COLOR_STANDARD_YELLOW_MD', -- Alt2SecondaryColor
+		'COLOR_STANDARD_GREEN_DK', -- Alt3PrimaryColor
+		'COLOR_STANDARD_ORANGE_MD' -- Alt3SecondaryColor
 		);

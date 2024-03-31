@@ -32,7 +32,7 @@
 					</m_Values>
 				</m_Fields>
 				<m_ChildCollections/>
-				<m_Name text="SouthAmerican"/>
+				<m_Name text="European"/>
 				<m_AppendMergedParameterCollections>true</m_AppendMergedParameterCollections>
 			</Element>
 		</Element>
@@ -60,7 +60,7 @@
 					</m_Values>
 				</m_Fields>
 				<m_ChildCollections/>
-				<m_Name text="SouthAmerican"/>
+				<m_Name text="European"/>
 				<m_AppendMergedParameterCollections>true</m_AppendMergedParameterCollections>
 			</Element>
 		</Element>
