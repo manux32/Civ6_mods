@@ -145,7 +145,7 @@
 						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 					</Element>
 				</m_ChildCollections>
-				<m_Name text="IMPROVEMENT_MNX_ODIN_FISHING_TRAWLER"/>
+				<m_Name text="IMPROVEMENT_MNX_ODIN_FISH_FARM"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 			</Element>
 		</Element>

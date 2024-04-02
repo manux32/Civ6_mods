@@ -369,7 +369,7 @@ VALUES	('REQ_MNX_UNIT_IS_RECON_CLASS',				'Tag',						'CLASS_RECON'),
 
 		('REQ_MNX_PLOT_IS_WATER',					'RequirementSetId',			'REQSR_MNX_PLOT_HAS_WATER'),
 		
-		('REQ_MNX_PLOT_HAS_FISHING_TRAWLER',		'ImprovementType',			'IMPROVEMENT_MNX_ODIN_FISHING_TRAWLER'),
+		('REQ_MNX_PLOT_HAS_FISHING_TRAWLER',		'ImprovementType',			'IMPROVEMENT_MNX_ODIN_FISH_FARM'),
 		
 		------------------------------------------------------------------------------------------------------------------
 

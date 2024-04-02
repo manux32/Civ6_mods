@@ -4,7 +4,7 @@
 --------------------------------------------------------------
 
 local iMNXFishBoat = GameInfo.Improvements['IMPROVEMENT_FISHING_BOATS'].Index;
-local iMNXDummyBoat = GameInfo.Improvements['IMPROVEMENT_MNX_ODIN_FISHING_TRAWLER'].Index;
+local iMNXDummyBoat = GameInfo.Improvements['IMPROVEMENT_MNX_ODIN_FISH_FARM'].Index;
 
 function MNX_CreateDeepDumyBoat(PlotX, PlotY, ImprovementID, PlayerID, ResourceID, Unknown1, Unknown2)
 	if ImprovementID == iMNXDummyBoat then

@@ -86,8 +86,8 @@ VALUES
 
 -- Please note: The display of in-game icons in text is achieved by using [ICON_Type].
 -----------------------------------------------
-	('en_US',	'LOC_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_NAME',				'Fishing Trawlers'								),
-	('en_US',	'LOC_IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DESCRIPTION',		'Unlocks the Builder ability to construct Fishing Trawlers on any Coast or Lake tile with Shipbuilding and on any Ocean tile with Cartography.[NEWLINE]Cannot be built on a sea resource.'),
+	('en_US',	'LOC_IMPROVEMENT_MNX_ODIN_FISH_FARM_NAME',				'Fish Farm'								),
+	('en_US',	'LOC_IMPROVEMENT_MNX_ODIN_FISH_FARM_DESCRIPTION',		'Unlocks the Builder ability to construct Fish Farms on any Coast or Lake tile with Shipbuilding and on any Ocean tile with Cartography.[NEWLINE]Provides the same yields and bonuses as Fishing Boats.[NEWLINE]Cannot be built on a sea resource.'),
 
 	-- Stave Church description override
 	('en_US',	'LOC_MNX_BUILDING_STAVE_CHURCH_OVERRIDE_DESCRIPTION',		
