@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AssetObjects..XLP>
+	<m_Version>
+		<major>1</major>
+		<minor>0</minor>
+		<build>0</build>
+		<revision>0</revision>
+	</m_Version>
+	<m_ClassName text="UITexture"/>
+	<m_PackageName text="UI/Icons"/>
+	<m_Entries>
+		<Element>
+			<m_EntryID text="LEADER_PO_NGBE_DIPLO_BG"/>
+			<m_ObjectName text="LEADER_PO_NGBE_DIPLO_BG"/>
+		</Element>
+		<Element>
+			<m_EntryID text="NorseIcon200"/>
+			<m_ObjectName text="NorseIcon200"/>
+		</Element>
+		<Element>
+			<m_EntryID text="NorseIcon22"/>
+			<m_ObjectName text="NorseIcon22"/>
+		</Element>
+		<Element>
+			<m_EntryID text="NorseIcon256"/>
+			<m_ObjectName text="NorseIcon256"/>
+		</Element>
+		<Element>
+			<m_EntryID text="NorseIcon30"/>
+			<m_ObjectName text="NorseIcon30"/>
+		</Element>
+		<Element>
+			<m_EntryID text="NorseIcon36"/>
+			<m_ObjectName text="NorseIcon36"/>
+		</Element>
+		<Element>
+			<m_EntryID text="NorseIcon44"/>
+			<m_ObjectName text="NorseIcon44"/>
+		</Element>
+		<Element>
+			<m_EntryID text="NorseIcon48"/>
+			<m_ObjectName text="NorseIcon48"/>
+		</Element>
+		<Element>
+			<m_EntryID text="NorseIcon50"/>
+			<m_ObjectName text="NorseIcon50"/>
+		</Element>
+		<Element>
+			<m_EntryID text="NorseIcon64"/>
+			<m_ObjectName text="NorseIcon64"/>
+		</Element>
+		<Element>
+			<m_EntryID text="NorseIcon80"/>
+			<m_ObjectName text="NorseIcon80"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ErikTheRed32"/>
+			<m_ObjectName text="ErikTheRed32"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ErikTheRed45"/>
+			<m_ObjectName text="ErikTheRed45"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ErikTheRed48"/>
+			<m_ObjectName text="ErikTheRed48"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ErikTheRed50"/>
+			<m_ObjectName text="ErikTheRed50"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ErikTheRed55"/>
+			<m_ObjectName text="ErikTheRed55"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ErikTheRed64"/>
+			<m_ObjectName text="ErikTheRed64"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ErikTheRed80"/>
+			<m_ObjectName text="ErikTheRed80"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ErikTheRed256"/>
+			<m_ObjectName text="ErikTheRed256"/>
+		</Element>
+		<Element>
+			<m_EntryID text="FishingBoatsAnywhere256"/>
+			<m_ObjectName text="FishingBoatsAnywhere256"/>
+		</Element>
+		<Element>
+			<m_EntryID text="FishingBoatsAnywhere200"/>
+			<m_ObjectName text="FishingBoatsAnywhere200"/>
+		</Element>
+		<Element>
+			<m_EntryID text="FishingBoatsAnywhere80"/>
+			<m_ObjectName text="FishingBoatsAnywhere80"/>
+		</Element>
+		<Element>
+			<m_EntryID text="FishingBoatsAnywhere50"/>
+			<m_ObjectName text="FishingBoatsAnywhere50"/>
+		</Element>
+		<Element>
+			<m_EntryID text="FishingBoatsAnywhere40"/>
+			<m_ObjectName text="FishingBoatsAnywhere40"/>
+		</Element>
+		<Element>
+			<m_EntryID text="FishingBoatsAnywhere38"/>
+			<m_ObjectName text="FishingBoatsAnywhere38"/>
+		</Element>
+		<Element>
+			<m_EntryID text="NorseAdventurerHistoricMoment"/>
+			<m_ObjectName text="NorseAdventurerHistoricMoment"/>
+		</Element>
+		<Element>
+			<m_EntryID text="FishingBoatsAnywhereHistoricMoment"/>
+			<m_ObjectName text="FishingBoatsAnywhereHistoricMoment"/>
+		</Element>
+		<Element>
+			<m_EntryID text="LEADER_MC_PO_NGBE_NEUTRAL"/>
+			<m_ObjectName text="LEADER_MC_PO_NGBE_NEUTRAL"/>
+		</Element>
+		<Element>
+			<m_EntryID text="LEADER_MC_PO_NGBE_BACKGROUND"/>
+			<m_ObjectName text="LEADER_MC_PO_NGBE_BACKGROUND"/>
+		</Element>
+	</m_Entries>
+	<m_AllowedPlatforms>
+		<Element>WINDOWS</Element>
+		<Element>LINUX</Element>
+		<Element>MACOS</Element>
+		<Element>IOS</Element>
+	</m_AllowedPlatforms>
+</AssetObjects..XLP>
+

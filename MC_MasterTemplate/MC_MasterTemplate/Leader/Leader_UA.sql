@@ -160,6 +160,6 @@ INSERT INTO ModifierArguments
 		(ModifierId,											Name,				Value												)
 VALUES	-- Cheap Naval Units
 		('MOD_MNX_ODIN_CHEAP_NAVAL_UNITS',						'Domain',			'DOMAIN_SEA'										),
-		('MOD_MNX_ODIN_CHEAP_NAVAL_UNITS',						'Amount',			'50'												),
+		('MOD_MNX_ODIN_CHEAP_NAVAL_UNITS',						'Amount',			'30'												),
 
 		('TRAIT_GRANT_SETTLERS_BUILDERS_ALTITUDE_TRAINING',		'AbilityType',		'ABILITY_MC_BUILDER_SETTLER_IGNORE_TERRAIN_COST'	);

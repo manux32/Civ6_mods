@@ -121,7 +121,7 @@ VALUES	-- Norway Civ Knarr (Early Ocean Navigation) Trait
 		
 		-----------------------------------------------
 		-- Trade Route from Shrines
-		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_ATTACH_TRADE_ROUTE_FROM_SHRINES'		),
+		--('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_ATTACH_TRADE_ROUTE_FROM_SHRINES'		),
 		
 		-----------------------------------------------
 		-- Emanate yields on adjacent Districts
@@ -145,11 +145,11 @@ VALUES	-- Norway Civ Knarr (Early Ocean Navigation) Trait
 		
 		-----------------------------------------------
 		-- Water yields
-		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_WATER_FAITH_HOLYSITE_T1'				),
+		--('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_WATER_FAITH_HOLYSITE_T1'				),
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_WATER_FAITH_HOLYSITE_T2'				),
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_WATER_FAITH_HOLYSITE_T3'				),
 
-		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_WATER_GOLD_HARBOR_T1'					),
+		--('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_WATER_GOLD_HARBOR_T1'					),
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_WATER_GOLD_HARBOR_T2'					),
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',				'MOD_MNX_ODIN_WATER_GOLD_HARBOR_T3'					),
 
@@ -187,8 +187,8 @@ VALUES	-- Holy Site and Harbor 2X districts adjacency
 		('MOD_MNX_ODIN_HOLYSITE_2X_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',				0,			1,			NULL										),
 		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',					'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY',				0,			1,			NULL										),
 
-		('MOD_MNX_ODIN_FISHING_BOATS_COAST',					'MODIFIER_PLAYER_CITIES_ADJUST_IMPROVEMENT_VALID_TERRAIN',	0,			1,			'REQSR_MNX_HAS_TECH_CARTOGRAPHY'			),
-		('MOD_MNX_ODIN_FISHING_BOATS_OCEAN',					'MODIFIER_PLAYER_CITIES_ADJUST_IMPROVEMENT_VALID_TERRAIN',	0,			1,			'REQSR_MNX_HAS_TECH_STEAMPOWER'				),
+		('MOD_MNX_ODIN_FISHING_BOATS_COAST',					'MODIFIER_PLAYER_CITIES_ADJUST_IMPROVEMENT_VALID_TERRAIN',	0,			1,			'REQSR_MNX_HAS_TECH_SHIPBUILDING'			),
+		('MOD_MNX_ODIN_FISHING_BOATS_OCEAN',					'MODIFIER_PLAYER_CITIES_ADJUST_IMPROVEMENT_VALID_TERRAIN',	0,			1,			'REQSR_MNX_HAS_TECH_CARTOGRAPHY'			),
 
 		-----------------------------------------------
 		-- Coastal Cities Housing
@@ -276,9 +276,9 @@ VALUES	-- Holy Site and Harbor 2X districts adjacency
 		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'Amount',						1													),
 		('MOD_MNX_ODIN_HARBOR_2X_ADJACENCY',						'Description',					'LOC_MNX_ODIN_HARBOR_2X_DISTRICTS_ADJACENCY'		),
 		
-		('MOD_MNX_ODIN_FISHING_BOATS_COAST',						'ImprovementType',				'IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DUMMY'			),
+		('MOD_MNX_ODIN_FISHING_BOATS_COAST',						'ImprovementType',				'IMPROVEMENT_MNX_ODIN_FISHING_TRAWLER'				),
 		('MOD_MNX_ODIN_FISHING_BOATS_COAST',						'TerrainType',					'TERRAIN_COAST'										),
-		('MOD_MNX_ODIN_FISHING_BOATS_OCEAN',						'ImprovementType',				'IMPROVEMENT_MNX_ODIN_FISHING_BOAT_DUMMY'			),
+		('MOD_MNX_ODIN_FISHING_BOATS_OCEAN',						'ImprovementType',				'IMPROVEMENT_MNX_ODIN_FISHING_TRAWLER'				),
 		('MOD_MNX_ODIN_FISHING_BOATS_OCEAN',						'TerrainType',					'TERRAIN_OCEAN'										),
 
 		-----------------------------------------------
@@ -304,14 +304,14 @@ VALUES	-- Holy Site and Harbor 2X districts adjacency
 		-----------------------------------------------
 		-- Emanate yields on adjacent Districts
 		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T1',					'YieldType',					'YIELD_FAITH'										),
-		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T1',					'Amount',						2													),
+		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T1',					'Amount',						1													),
 		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T2',					'YieldType',					'YIELD_FAITH'										),
 		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T2',					'Amount',						2													),
 		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T3',					'YieldType',					'YIELD_FAITH'										),
 		('MOD_MNX_ODIN_DIST_FAITH_ADJ_HOLYSITE_T3',					'Amount',						2													),
 
 		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T1',					'YieldType',					'YIELD_GOLD'										),
-		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T1',					'Amount',						2													),
+		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T1',					'Amount',						1													),
 		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T2',					'YieldType',					'YIELD_GOLD'										),
 		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T2',					'Amount',						2													),
 		('MOD_MNX_ODIN_DIST_GOLD_ADJ_HARBOR_T3',					'YieldType',					'YIELD_GOLD'										),
@@ -320,14 +320,14 @@ VALUES	-- Holy Site and Harbor 2X districts adjacency
 		-----------------------------------------------
 		-- Emanate yields on adjacent plots
 		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T1',					'YieldType',					'YIELD_FAITH'										),
-		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T1',					'Amount',						2													),
+		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T1',					'Amount',						1													),
 		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T2',					'YieldType',					'YIELD_FAITH'										),
 		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T2',					'Amount',						2													),
 		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T3',					'YieldType',					'YIELD_FAITH'										),
 		('MOD_MNX_ODIN_PLOT_FAITH_ADJ_HOLYSITE_T3',					'Amount',						2													),
 
 		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T1',					'YieldType',					'YIELD_GOLD'										),
-		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T1',					'Amount',						2													),
+		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T1',					'Amount',						1													),
 		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T2',					'YieldType',					'YIELD_GOLD'										),
 		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T2',					'Amount',						2													),
 		('MOD_MNX_ODIN_PLOT_GOLD_ADJ_HARBOR_T3',					'YieldType',					'YIELD_GOLD'										),

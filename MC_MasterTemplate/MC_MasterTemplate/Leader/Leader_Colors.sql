@@ -63,9 +63,9 @@ VALUES	(
 		'LEADER_MNX_NORSE', -- Type
 		'Unique', -- Usage
 		'COLOR_STANDARD_BLUE_DK', -- PrimaryColor
-		'COLOR_STANDARD_RED_MD', -- SecondaryColor
+		'COLOR_STANDARD_ORANGE_MD', -- SecondaryColor
 		'COLOR_STANDARD_BLUE_DK', -- Alt1PrimaryColor
-		'COLOR_STANDARD_ORANGE_MD', -- Alt1SecondaryColor
+		'COLOR_STANDARD_RED_MD', -- Alt1SecondaryColor
 		'COLOR_STANDARD_BLUE_DK', -- Alt2PrimaryColor
 		'COLOR_STANDARD_YELLOW_MD', -- Alt2SecondaryColor
 		'COLOR_STANDARD_GREEN_DK', -- Alt3PrimaryColor

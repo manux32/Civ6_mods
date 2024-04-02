@@ -10,6 +10,7 @@
 			<relativeArtDefPaths>
 				<Element text="Cultures.artdef"/>
 				<Element text="Units.artdef"/>
+				<Element text="Improvements.artdef"/>
 			</relativeArtDefPaths>
 			<libraryDependencies>
 				<Element text="Unit"/>

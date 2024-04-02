@@ -6,12 +6,12 @@
     <Guid>a698eefc-a63c-4e19-ac8e-1adf545863fc</Guid>
     <ProjectGuid>f1d6e542-03ea-4e6d-bab2-6e3bc6353dda</ProjectGuid>
     <ModVersion>1</ModVersion>
-    <Teaser>Introduces the CIVILIZATION_NAME to Civilization VI.</Teaser>
-    <Description>Introduces the CIVILIZATION_NAME to Civilization VI.
+    <Teaser>Introduces the Norse to Civilization VI.</Teaser>
+    <Description>Introduces the Norse  to Civilization VI.
 
-[NEWLINE][NEWLINE]Lead them to glory with LEADERNAME as your leader.
+[NEWLINE][NEWLINE]Lead them to glory with Erik le Rouge as your leader.
 
-[NEWLINE][NEWLINE]Harness the fearsome UNIQUE_UNIT_NAME Unique Unit, alongside the UNIQUE_INFRASTRUCTURE_NAME Unique Improvement.</Description>
+[NEWLINE][NEWLINE]Harness the fearsome Vkinking Longship Unique Unit, alongside the Fishing Trawler Unique Improvement.</Description>
     <Authors>manux32</Authors>
     <SpecialThanks>
     </SpecialThanks>
@@ -29,11 +29,13 @@
   <Dependency type="Dlc" title="DLC: Nubia Civilization Pack" id="643EA320-8E1A-4CF1-A01C-00D88DDD131A" />
   <Dependency type="Dlc" title="DLC: Persia and Macedon Civilization Pack" id="E2749E9A-8056-45CD-901B-C368C8E83DEB" />
   <Dependency type="Dlc" title="DLC: Poland Civilization Pack" id="3809975F-263F-40A2-A747-8BFB171D821A" />
+  <Dependency type="Mod" title="Religion Expanded" id="c6775ded-6693-474a-ade5-b4c51d932bd8" />
+  <Dependency type="Mod" title="More Maritime: Seaside Sectors" id="58ecce8a-d3df-430a-b135-280908153662" />
 </Associations>]]></AssociationData>
     <AssemblyName>Keniisus_Civ_Template</AssemblyName>
     <RootNamespace>Keniisus_Civ_Template</RootNamespace>
     <FrontEndActionData><![CDATA[<FrontEndActions><UpdateDatabase id="NewAction"><File>Leader/Leader_Config.sql</File></UpdateDatabase><UpdateText id="NewAction"><File>Core/Civilization_Localisation.sql</File><File>Leader/Leader_Localisation.sql</File></UpdateText><UpdateColors id="NewAction"><File>Core/Civilization_Colors.sql</File><File>Leader/Leader_Colors.sql</File></UpdateColors><UpdateArt id="NewAction"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateIcons id="UpdateIcons"><File>Core/NewIcons.sql</File></UpdateIcons></FrontEndActions>]]></FrontEndActionData>
-    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="NewCIv_Database"><File>Core/Civilization_Config.sql</File><File>Leader/Leader_Core.sql</File><File>Core/Civilization_UA.sql</File><File>Leader/Leader_UA.sql</File><File>Leader/Leader_Agenda.sql</File><File>Leader/Leader_Screens.sql</File><File>Core/Civilization_HistoricMoments.sql</File><File>Core/MNX_FishingBoatAnywhere_UI.sql</File><File>Core/MNX_UU_NorseAdventurer.sql</File></UpdateDatabase><UpdateColors id="NewAction"><File>Core/Civilization_Colors.sql</File><File>Leader/Leader_Colors.sql</File></UpdateColors><UpdateText id="NewAction"><File>Core/Civilization_Localisation.sql</File><File>Leader/Leader_Localisation.sql</File></UpdateText><UpdateIcons id="NewIcons"><File>Core/NewIcons.sql</File></UpdateIcons><UpdateArt id="NewAction"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateDatabase id="Requirements"><File>Core/MNX_Requirements.sql</File><File>Core/MNX_WorkableMountains.sql</File></UpdateDatabase><UpdateDatabase id="GOTS_stuff"><Properties><LoadOrder>1000000</LoadOrder></Properties><File>Core/MNX_FaithPurchase.sql</File><File>Core/MNX_GOTS_Abilities.sql</File><File>Core/MNX_GOTS_GeneralBonus.sql</File><File>Core/MNX_OP_Testing_Cheat_Boosts.sql</File><File>Core/MNX_RemoveMutExcDistricts.sql</File></UpdateDatabase><AddGameplayScripts id="AddGameplayScripts"><File>Core/MNX_FishingBoatAnywhere_UI.lua</File></AddGameplayScripts></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="NewCIv_Database"><Properties><LoadOrder>10</LoadOrder></Properties><File>Core/Civilization_Config.sql</File><File>Leader/Leader_Core.sql</File><File>Core/Civilization_UA.sql</File><File>Leader/Leader_UA.sql</File><File>Leader/Leader_Agenda.sql</File><File>Leader/Leader_Screens.sql</File><File>Core/Civilization_HistoricMoments.sql</File><File>Core/MNX_FishingBoatAnywhere_UI.sql</File><File>Core/MNX_UU_NorseAdventurer.sql</File></UpdateDatabase><UpdateColors id="NewAction"><File>Core/Civilization_Colors.sql</File><File>Leader/Leader_Colors.sql</File></UpdateColors><UpdateText id="NewAction"><File>Core/Civilization_Localisation.sql</File><File>Leader/Leader_Localisation.sql</File></UpdateText><UpdateIcons id="NewIcons"><File>Core/NewIcons.sql</File></UpdateIcons><UpdateArt id="NewAction"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateDatabase id="Requirements"><Properties><LoadOrder>10</LoadOrder></Properties><File>Core/MNX_Requirements.sql</File><File>Core/MNX_WorkableMountains.sql</File></UpdateDatabase><UpdateDatabase id="GOTS_stuff"><Properties><LoadOrder>1000000</LoadOrder></Properties><File>Core/MNX_FaithPurchase.sql</File><File>Core/MNX_GOTS_Abilities.sql</File><File>Core/MNX_GOTS_GeneralBonus.sql</File><File>Core/MNX_OP_Testing_Cheat_Boosts.sql</File><File>Core/MNX_RemoveMutExcDistricts.sql</File></UpdateDatabase><AddGameplayScripts id="AddGameplayScripts"><File>Core/MNX_FishingBoatAnywhere_UI.lua</File></AddGameplayScripts></InGameActions>]]></InGameActionData>
     <ActionCriteriaData><![CDATA[<ActionCriteria><Criteria id="Expansion1"><GameModeInUse><GameCoreInUse>Expansion1</GameCoreInUse></GameModeInUse></Criteria></ActionCriteria>]]></ActionCriteriaData>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
@@ -57,6 +59,9 @@
     <ArtDef Include="ArtDefs\Cultures.artdef">
       <SubType>Content</SubType>
     </ArtDef>
+    <Content Include="ArtDefs\Improvements.artdef">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ArtDefs\Units.artdef">
       <SubType>Content</SubType>
     </Content>
@@ -273,55 +278,55 @@
     <XLP Include="Textures\LEADER_PO_NGBE_DIPLO_BG.tex">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon256.dds">
+    <XLP Include="Textures\ErikTheRed256.dds">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon256.tex">
+    <XLP Include="Textures\ErikTheRed256.tex">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon32.dds">
+    <XLP Include="Textures\ErikTheRed32.dds">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon32.tex">
+    <XLP Include="Textures\ErikTheRed32.tex">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon45.dds">
+    <XLP Include="Textures\ErikTheRed45.dds">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon45.tex">
+    <XLP Include="Textures\ErikTheRed45.tex">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon48.dds">
+    <XLP Include="Textures\ErikTheRed48.dds">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon48.tex">
+    <XLP Include="Textures\ErikTheRed48.tex">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon50.dds">
+    <XLP Include="Textures\ErikTheRed50.dds">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon50.tex">
+    <XLP Include="Textures\ErikTheRed50.tex">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon55.dds">
+    <XLP Include="Textures\ErikTheRed55.dds">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon55.tex">
+    <XLP Include="Textures\ErikTheRed55.tex">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon64.dds">
+    <XLP Include="Textures\ErikTheRed64.dds">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon64.tex">
+    <XLP Include="Textures\ErikTheRed64.tex">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon80.dds">
+    <XLP Include="Textures\ErikTheRed80.dds">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\PoNgbeIcon80.tex">
+    <XLP Include="Textures\ErikTheRed80.tex">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="XLPs\OlmecAtlas.xlp">
+    <XLP Include="XLPs\NorseAtlas.xlp">
       <SubType>Content</SubType>
     </XLP>
     <None Include="_Read_Me_First\0. Introduction.txt">
