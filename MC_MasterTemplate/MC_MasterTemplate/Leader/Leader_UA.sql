@@ -111,11 +111,8 @@ VALUES	('LEADER_MNX_NORSE',	'TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER'	),
 -----------------------------------------------
 
 INSERT OR IGNORE INTO Modifiers 
-		(ModifierId,											ModifierType,										Permanent,		SubjectRequirementSetId)
-VALUES	-- Cheap Naval Units
-		('MOD_MNX_ODIN_CHEAP_NAVAL_UNITS',						'DMOD_MNX_PCITIES_ADJUST_UNIT_DOMAIN_PRODUCTION',	1,				NULL),
-		
-		('TRAIT_GRANT_SETTLERS_BUILDERS_ALTITUDE_TRAINING',		'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',				1,				NULL);
+		(ModifierId,											ModifierType,											Permanent,		SubjectRequirementSetId)
+VALUES	('TRAIT_GRANT_SETTLERS_BUILDERS_ALTITUDE_TRAINING',		'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',					1,				NULL);
 
 -----------------------------------------------
 -- TraitModifiers
@@ -127,10 +124,7 @@ VALUES	-- Cheap Naval Units
 
 INSERT INTO TraitModifiers 
 		(TraitType,									ModifierId											)
-VALUES	-- Cheap Naval Units
-		('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'MOD_MNX_ODIN_CHEAP_NAVAL_UNITS'					),
-		
-		-- Hardrada coast raid trait without the cheap naval melee
+VALUES	-- Hardrada coast raid trait without the cheap naval melee
 		('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'TRAIT_GRANT_COASTAL_RAID_ABILITY'					),
 		('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'TRAIT_LEADER_PILLAGE_SCIENCE_MINES'				),
 		('TRAIT_LEADER_MNX_EXPLORE_AND_CONQUER',	'TRAIT_LEADER_PILLAGE_CULTURE_QUARRIES'				),
@@ -158,8 +152,4 @@ VALUES	-- Cheap Naval Units
 
 INSERT INTO ModifierArguments 
 		(ModifierId,											Name,				Value												)
-VALUES	-- Cheap Naval Units
-		('MOD_MNX_ODIN_CHEAP_NAVAL_UNITS',						'Domain',			'DOMAIN_SEA'										),
-		('MOD_MNX_ODIN_CHEAP_NAVAL_UNITS',						'Amount',			'30'												),
-
-		('TRAIT_GRANT_SETTLERS_BUILDERS_ALTITUDE_TRAINING',		'AbilityType',		'ABILITY_MNX_BUILDER_SETTLER_IGNORE_TERRAIN_COST'	);
+VALUES	('TRAIT_GRANT_SETTLERS_BUILDERS_ALTITUDE_TRAINING',		'AbilityType',		'ABILITY_MNX_BUILDER_SETTLER_IGNORE_TERRAIN_COST'	);

@@ -84,7 +84,7 @@ VALUES	('ABILITY_MNX_ALL_MOVEMENT_1',					1,			'(ODIN) +10 [ICON_Movement] Movem
 		('ABILITY_MNX_FIGHT_WHILE_EMBARKED',			1,			'(ODIN) Can fight while embarked.'),
 		('ABILITY_MNX_HEAL_NEUTRAL_TERRITORY',			1,			'(ODIN) Can heal in neutral territory (Religion).'),
 
-		('ABILITY_MNX_CAPTURE_SHIPS',					1,			'(ODIN) Has a chance to capture defeated enemy naval vessels.'),
+		('ABILITY_MNX_CAPTURE_SHIPS',					1,			'(ODIN) Has a chance to capture defeated enemies.'),
 		
 		('ABILITY_MNX_SEA_STRENGTH_1',					1,			'(ODIN) +5 [ICON_Strength] Naval Combat Strength.'),
 		--('ABILITY_MNX_SEA_STRENGTH_2',					1,			NULL),
@@ -100,7 +100,7 @@ INSERT INTO ModifierStrings
 VALUES	('MOD_MNX_ABIL_COMBAT_STRENGTH',		'Preview',		'(ODIN) +5 [ICON_Strength] Combat Strength (Religion).'					),
 		('MOD_MNX_ABIL_RECON_COMBAT',			'Preview',		'(ODIN) +5 [ICON_Strength] Combat Strength (Recon).'					),
 		('MOD_MNX_ABIL_SEA_STRENGTH_1',			'Preview',		'(ODIN) +5 [ICON_Strength] Naval Combat Strength.'						),
-		('MOD_MNX_ABIL_CAPTURE_SHIPS',			'Preview',		'{1_Amount}% chance of capturing enemy.'								),
+		--('MOD_MNX_ABIL_CAPTURE_SHIPS',			'Preview',		'{1_Amount}% chance of capturing enemy.'								),  -- Seems like an old string of CAPTURE_PRIZE_SHIPS that gets deleted in Exp 1
 		--('MOD_MNX_ABIL_EMBARK_COMBAT',			'Preview',		'(ODIN) +5 [ICON_Strength] Embarked Combat Strength (Religion).'		),
 		('MOD_MNX_ABIL_RELIGIOUS_STRENGTH_1',	'Preview',		'(ODIN) +5 [ICON_Religion] Religious Strength in Theological Combat.'	);
 
