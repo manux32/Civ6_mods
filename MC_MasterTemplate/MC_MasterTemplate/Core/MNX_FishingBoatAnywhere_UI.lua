@@ -12,12 +12,8 @@ function MNX_CreateDeepDumyBoat(PlotX, PlotY, ImprovementID, PlayerID, ResourceI
 		--ImprovementBuilder.SetImprovementType(iPlot, -1, 0)
 		--ImprovementBuilder.SetImprovementType(iPlot, iMNXFishBoat, 0)
 
-		for row in GameInfo.Resources() do
-			if row.ResourceClassType == 'RESOURCE_FISH' then
-				ResourceBuilder.SetResourceType(iPlot, row.Hash, 1);
-				break;
-			end
-		end
+		local iFishResource = GameInfo.Resources['RESOURCE_FISH'].Index;
+		ResourceBuilder.SetResourceType(iPlot, iFishResource, 1);
 	end
 end
 
