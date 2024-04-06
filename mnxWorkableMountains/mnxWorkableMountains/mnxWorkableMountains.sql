@@ -1,4 +1,9 @@
--- Taken from the below mode
+-- mnxWorkableMountains
+-- Author: User
+-- DateCreated: 4/5/2024 11:41:15 PM
+--------------------------------------------------------------
+
+-- Taken from the Civilizations Expanded mod to have a standalone version without the Civs modifications
 /* 
 	Civilizations Expanded: Global Defines
 	By p0kiehl

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>mnxDistrictsDontRemoveResources</Name>
+    <Guid>afab8635-dd1a-488a-bb01-9d82058ba8d6</Guid>
+    <ProjectGuid>8cd900c8-3473-4003-bb0f-825b5e64bc4d</ProjectGuid>
+    <ModVersion>1</ModVersion>
+    <Teaser>This mod prevents strategic and luxury reources from being removed when building districts on top of them.</Teaser>
+    <Description>This mod prevents strategic and luxury reources from being removed when building districts on top of them.</Description>
+    <Authors>manux</Authors>
+    <SpecialThanks>
+    </SpecialThanks>
+    <AffectsSavedGames>true</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+    <AssemblyName>mnxDistrictsDontRemoveResources</AssemblyName>
+    <RootNamespace>mnxDistrictsDontRemoveResources</RootNamespace>
+    <InGameActionData><![CDATA[<InGameActions><AddGameplayScripts id="AddGameplayScripts"><File>mnxDistrictsDontRemoveResources.lua</File></AddGameplayScripts></InGameActions>]]></InGameActionData>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="mnxDistrictsDontRemoveResources.lua">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
