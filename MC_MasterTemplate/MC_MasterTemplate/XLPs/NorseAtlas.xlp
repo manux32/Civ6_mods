@@ -10,8 +10,8 @@
 	<m_PackageName text="UI/Icons"/>
 	<m_Entries>
 		<Element>
-			<m_EntryID text="LEADER_PO_NGBE_DIPLO_BG"/>
-			<m_ObjectName text="LEADER_PO_NGBE_DIPLO_BG"/>
+			<m_EntryID text="LEADER_MNX_ERIK_THE_RED_DIPLO_BG"/>
+			<m_ObjectName text="LEADER_MNX_ERIK_THE_RED_DIPLO_BG"/>
 		</Element>
 		<Element>
 			<m_EntryID text="NorseIcon200"/>
@@ -86,44 +86,44 @@
 			<m_ObjectName text="ErikTheRed256"/>
 		</Element>
 		<Element>
-			<m_EntryID text="FishingBoatsAnywhere256"/>
-			<m_ObjectName text="FishingBoatsAnywhere256"/>
+			<m_EntryID text="mnx_Imp_FishFarm256"/>
+			<m_ObjectName text="mnx_Imp_FishFarm256"/>
 		</Element>
 		<Element>
-			<m_EntryID text="FishingBoatsAnywhere200"/>
-			<m_ObjectName text="FishingBoatsAnywhere200"/>
+			<m_EntryID text="mnx_Imp_FishFarm200"/>
+			<m_ObjectName text="mnx_Imp_FishFarm200"/>
 		</Element>
 		<Element>
-			<m_EntryID text="FishingBoatsAnywhere80"/>
-			<m_ObjectName text="FishingBoatsAnywhere80"/>
+			<m_EntryID text="mnx_Imp_FishFarm80"/>
+			<m_ObjectName text="mnx_Imp_FishFarm80"/>
 		</Element>
 		<Element>
-			<m_EntryID text="FishingBoatsAnywhere50"/>
-			<m_ObjectName text="FishingBoatsAnywhere50"/>
+			<m_EntryID text="mnx_Imp_FishFarm50"/>
+			<m_ObjectName text="mnx_Imp_FishFarm50"/>
 		</Element>
 		<Element>
-			<m_EntryID text="FishingBoatsAnywhere40"/>
-			<m_ObjectName text="FishingBoatsAnywhere40"/>
+			<m_EntryID text="mnx_Imp_FishFarm40"/>
+			<m_ObjectName text="mnx_Imp_FishFarm40"/>
 		</Element>
 		<Element>
-			<m_EntryID text="FishingBoatsAnywhere38"/>
-			<m_ObjectName text="FishingBoatsAnywhere38"/>
+			<m_EntryID text="mnx_Imp_FishFarm38"/>
+			<m_ObjectName text="mnx_Imp_FishFarm38"/>
 		</Element>
 		<Element>
 			<m_EntryID text="NorseAdventurerHistoricMoment"/>
 			<m_ObjectName text="NorseAdventurerHistoricMoment"/>
 		</Element>
 		<Element>
-			<m_EntryID text="FishingBoatsAnywhereHistoricMoment"/>
-			<m_ObjectName text="FishingBoatsAnywhereHistoricMoment"/>
+			<m_EntryID text="mnx_Imp_FishFarm_HistoricMoment"/>
+			<m_ObjectName text="mnx_Imp_FishFarm_HistoricMoment"/>
 		</Element>
 		<Element>
-			<m_EntryID text="LEADER_MC_PO_NGBE_NEUTRAL"/>
-			<m_ObjectName text="LEADER_MC_PO_NGBE_NEUTRAL"/>
+			<m_EntryID text="LEADER_MNX_ERIK_THE_RED_NEUTRAL"/>
+			<m_ObjectName text="LEADER_MNX_ERIK_THE_RED_NEUTRAL"/>
 		</Element>
 		<Element>
-			<m_EntryID text="LEADER_MC_PO_NGBE_BACKGROUND"/>
-			<m_ObjectName text="LEADER_MC_PO_NGBE_BACKGROUND"/>
+			<m_EntryID text="LEADER_MNX_ERIK_THE_RED_BACKGROUND"/>
+			<m_ObjectName text="LEADER_MNX_ERIK_THE_RED_BACKGROUND"/>
 		</Element>
 	</m_Entries>
 	<m_AllowedPlatforms>

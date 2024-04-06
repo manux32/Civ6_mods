@@ -16,8 +16,8 @@
 -----------------------------------------------
 
 INSERT INTO LoadingInfo
-			(LeaderType,			ForegroundImage,					BackgroundImage,					PlayDawnOfManAudio	)
-VALUES		('LEADER_MNX_NORSE',	'LEADER_MC_PO_NGBE_NEUTRAL',		'LEADER_MC_PO_NGBE_BACKGROUND',		0					);
+			(LeaderType,			ForegroundImage,						BackgroundImage,							PlayDawnOfManAudio	)
+VALUES		('LEADER_MNX_NORSE',	'LEADER_MNX_ERIK_THE_RED_NEUTRAL',		'LEADER_MNX_ERIK_THE_RED_BACKGROUND',		0					);
 
 --------------------------------------------------------------------------------------------------------------------------		
 -- Background Art
@@ -29,5 +29,5 @@ VALUES		('LEADER_MNX_NORSE',	'LEADER_MC_PO_NGBE_NEUTRAL',		'LEADER_MC_PO_NGBE_BA
 -- Please note: the foreground image of the leader, on the Diplomacy Screen, is configured via an ArtDef file and does not require any associated code.
 --------------------------------------------------------------------------------------------------------------------------			
 INSERT INTO DiplomacyInfo			
-			(Type,						BackgroundImage					)
-VALUES		('LEADER_MNX_NORSE',		'LEADER_PO_NGBE_DIPLO_BG'		);
+			(Type,						BackgroundImage							)
+VALUES		('LEADER_MNX_NORSE',		'LEADER_MNX_ERIK_THE_RED_DIPLO_BG'		);

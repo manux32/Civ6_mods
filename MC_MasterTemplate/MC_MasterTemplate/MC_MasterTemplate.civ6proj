@@ -140,46 +140,46 @@
     <Content Include="MC_MasterTemplate.Art.xml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhere200.dds">
+    <Content Include="Textures\mnx_Imp_FishFarm200.dds">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhere200.tex">
+    <Content Include="Textures\mnx_Imp_FishFarm200.tex">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhere256.dds">
+    <Content Include="Textures\mnx_Imp_FishFarm256.dds">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhere256.tex">
+    <Content Include="Textures\mnx_Imp_FishFarm256.tex">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhere38.dds">
+    <Content Include="Textures\mnx_Imp_FishFarm38.dds">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhere38.tex">
+    <Content Include="Textures\mnx_Imp_FishFarm38.tex">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhere40.dds">
+    <Content Include="Textures\mnx_Imp_FishFarm40.dds">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhere40.tex">
+    <Content Include="Textures\mnx_Imp_FishFarm40.tex">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhere50.dds">
+    <Content Include="Textures\mnx_Imp_FishFarm50.dds">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhere50.tex">
+    <Content Include="Textures\mnx_Imp_FishFarm50.tex">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhere80.dds">
+    <Content Include="Textures\mnx_Imp_FishFarm80.dds">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhere80.tex">
+    <Content Include="Textures\mnx_Imp_FishFarm80.tex">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhereHistoricMoment.dds">
+    <Content Include="Textures\mnx_Imp_FishFarm_HistoricMoment.dds">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Textures\FishingBoatsAnywhereHistoricMoment.tex">
+    <Content Include="Textures\mnx_Imp_FishFarm_HistoricMoment.tex">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Textures\NorseAdventurerHistoricMoment.dds">
@@ -248,31 +248,31 @@
     <Content Include="Textures\NorseIcon80.tex">
       <SubType>Content</SubType>
     </Content>
-    <XLP Include="Textures\LEADER_MC_PO_NGBE_BACKGROUND.dds">
+    <XLP Include="Textures\LEADER_MNX_ERIK_THE_RED_BACKGROUND.dds">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\LEADER_MC_PO_NGBE_BACKGROUND.tex">
+    <XLP Include="Textures\LEADER_MNX_ERIK_THE_RED_BACKGROUND.tex">
       <SubType>Content</SubType>
     </XLP>
     <XLP Include="XLPs\LeaderFallbacks.xlp">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\FALLBACK_NEUTRAL_PO_NGBE.dds">
+    <XLP Include="Textures\FALLBACK_NEUTRAL_MNX_ERIK_THE_RED.dds">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\FALLBACK_NEUTRAL_PO_NGBE.tex">
+    <XLP Include="Textures\FALLBACK_NEUTRAL_MNX_ERIK_THE_RED.tex">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\LEADER_MC_PO_NGBE_NEUTRAL.dds">
+    <XLP Include="Textures\LEADER_MNX_ERIK_THE_RED_NEUTRAL.dds">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\LEADER_MC_PO_NGBE_NEUTRAL.tex">
+    <XLP Include="Textures\LEADER_MNX_ERIK_THE_RED_NEUTRAL.tex">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\LEADER_PO_NGBE_DIPLO_BG.dds">
+    <XLP Include="Textures\LEADER_MNX_ERIK_THE_RED_DIPLO_BG.dds">
       <SubType>Content</SubType>
     </XLP>
-    <XLP Include="Textures\LEADER_PO_NGBE_DIPLO_BG.tex">
+    <XLP Include="Textures\LEADER_MNX_ERIK_THE_RED_DIPLO_BG.tex">
       <SubType>Content</SubType>
     </XLP>
     <XLP Include="Textures\ErikTheRed256.dds">

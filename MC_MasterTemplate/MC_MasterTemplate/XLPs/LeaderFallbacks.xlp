@@ -10,8 +10,8 @@
 	<m_PackageName text="LeaderFallbacks"/>
 	<m_Entries>
 		<Element>
-			<m_EntryID text="FALLBACK_NEUTRAL_PO_NGBE"/>
-			<m_ObjectName text="FALLBACK_NEUTRAL_PO_NGBE"/>
+			<m_EntryID text="FALLBACK_NEUTRAL_MNX_ERIK_THE_RED"/>
+			<m_ObjectName text="FALLBACK_NEUTRAL_MNX_ERIK_THE_RED"/>
 		</Element>
 	</m_Entries>
 	<m_AllowedPlatforms>

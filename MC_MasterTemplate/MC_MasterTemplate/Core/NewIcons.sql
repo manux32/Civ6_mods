@@ -46,12 +46,12 @@ VALUES	('ICON_ATLAS_MNX_NORSE',				22,	 		1,				1,					'NorseIcon22.dds'				),
 		('ICON_ATLAS_MNX_ERIK_THE_RED',			80,	 		1,				1,					'ErikTheRed80.dds'				),
 		('ICON_ATLAS_MNX_ERIK_THE_RED',			256,	 	1,				1,					'ErikTheRed256.dds'				),
 		
-		('ICON_ATLAS_FISHING_ANYWHERE',			38,			1,				1,					'FishingBoatsAnywhere38.dds'	),
-		('ICON_ATLAS_FISHING_ANYWHERE',			40,			1,				1,					'FishingBoatsAnywhere40.dds'	),
-		('ICON_ATLAS_FISHING_ANYWHERE',			50,			1,				1,					'FishingBoatsAnywhere50.dds'	),
-		('ICON_ATLAS_FISHING_ANYWHERE',			80,			1,				1,					'FishingBoatsAnywhere80.dds'	),
-		('ICON_ATLAS_FISHING_ANYWHERE',			200,		1,				1,					'FishingBoatsAnywhere200.dds'	),
-		('ICON_ATLAS_FISHING_ANYWHERE',			256,		1,				1,					'FishingBoatsAnywhere256.dds'	);
+		('ICON_ATLAS_FISHING_ANYWHERE',			38,			1,				1,					'mnx_Imp_FishFarm38.dds'	),
+		('ICON_ATLAS_FISHING_ANYWHERE',			40,			1,				1,					'mnx_Imp_FishFarm40.dds'	),
+		('ICON_ATLAS_FISHING_ANYWHERE',			50,			1,				1,					'mnx_Imp_FishFarm50.dds'	),
+		('ICON_ATLAS_FISHING_ANYWHERE',			80,			1,				1,					'mnx_Imp_FishFarm80.dds'	),
+		('ICON_ATLAS_FISHING_ANYWHERE',			200,		1,				1,					'mnx_Imp_FishFarm200.dds'	),
+		('ICON_ATLAS_FISHING_ANYWHERE',			256,		1,				1,					'mnx_Imp_FishFarm256.dds'	);
 
 -----------------------------------------------
 -- IconDefinitions
