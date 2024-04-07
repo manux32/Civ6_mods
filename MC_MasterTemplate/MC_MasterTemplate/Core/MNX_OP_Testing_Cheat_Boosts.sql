@@ -17,8 +17,9 @@ VALUES	-- Grant Technologies
 		('MOD_MNX_ADV_FLIGHT',							'MODIFIER_PLAYER_GRANT_SPECIFIC_TECHNOLOGY',					1,			NULL),
 		('MOD_MNX_SYNTH_MAT',							'MODIFIER_PLAYER_GRANT_SPECIFIC_TECHNOLOGY',					1,			NULL),
 		('MOD_MNX_COMB_ARMS',							'MODIFIER_PLAYER_GRANT_SPECIFIC_TECHNOLOGY',					1,			NULL),
+		('MOD_MNX_MASS_PRODUCTION',						'MODIFIER_PLAYER_GRANT_SPECIFIC_TECHNOLOGY',					1,			NULL),
 		('MOD_MNX_ELECTRICITY',							'MODIFIER_PLAYER_GRANT_SPECIFIC_TECHNOLOGY',					1,			NULL),
-
+		
 		-- Movement boost to all units
 		('MOD_MNX_ALL_UNITS_MOVE_BOOST',				'MODIFIER_PLAYER_UNITS_ADJUST_MOVEMENT',						1,			NULL),
 		
@@ -60,8 +61,9 @@ VALUES	-- Grant Technologies
 		('MOD_MNX_ADV_FLIGHT',							'TechType',					'TECH_ADVANCED_FLIGHT'),
 		('MOD_MNX_SYNTH_MAT',							'TechType',					'TECH_SYNTHETIC_MATERIALS'),
 		('MOD_MNX_COMB_ARMS',							'TechType',					'TECH_COMBINED_ARMS'),
+		('MOD_MNX_MASS_PRODUCTION',						'TechType',					'TECH_MASS_PRODUCTION'),
 		('MOD_MNX_ELECTRICITY',							'TechType',					'TECH_ELECTRICITY'),
-
+		
 		-- Movement boost to all units
 		('MOD_MNX_ALL_UNITS_MOVE_BOOST',				'Amount',					'10'),
 
@@ -128,9 +130,10 @@ VALUES	-- Grant Technologies
 		--('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',	'MOD_MNX_ADV_FLIGHT'),
 		--('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',	'MOD_MNX_SYNTH_MAT'),
 		--('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',	'MOD_MNX_COMB_ARMS'),
-		--('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',	'MOD_MNX_ELECTRICITY'),
-		-----------------------------------------------------------
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'MOD_MNX_MASS_PRODUCTION'),
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'MOD_MNX_ELECTRICITY'),
 
+		-----------------------------------------------------------
 		-- Movement boost to all units
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'MOD_MNX_ALL_UNITS_MOVE_BOOST'),
 
