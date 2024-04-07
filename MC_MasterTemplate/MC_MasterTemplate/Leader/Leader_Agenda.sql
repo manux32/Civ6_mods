@@ -56,8 +56,9 @@ VALUES 		('AGENDA_MC_PO_NGBE',	'TRAIT_AGENDA_MC_PO_NGBE'	);
 -----------------------------------------------
 
 INSERT INTO HistoricalAgendas
-			(LeaderType,			AgendaType				)
-VALUES 		('LEADER_MNX_NORSE',	'AGENDA_MC_PO_NGBE'		);
+			(LeaderType,			AgendaType						)
+VALUES 		--('LEADER_MNX_NORSE',	'AGENDA_MC_PO_NGBE'				),
+			('LEADER_MNX_NORSE',	'AGENDA_LAST_VIKING_KING'		);
 
 -----------------------------------------------
 -- ExclusiveAgendas
