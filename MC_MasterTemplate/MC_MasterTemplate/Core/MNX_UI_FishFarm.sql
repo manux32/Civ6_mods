@@ -1,4 +1,4 @@
--- MNX_FishingBoatAnywhere_UI
+-- MNX_UI_FishFarm
 -- Author: Code copied from mod: Secret Society - Brotherhood of The Deep by TheColdHands
 -- DateCreated: 3/30/2024 4:15:11 PM
 --------------------------------------------------------------
@@ -48,22 +48,22 @@ FROM	Boosts WHERE ImprovementType = 'IMPROVEMENT_FISHING_BOATS';
 
 -- Seasted adjacency to Fishing Trawlers
 INSERT OR IGNORE INTO Adjacency_YieldChanges
-		(ID,											Description,YieldType,YieldChange,TilesRequired,OtherDistrictAdjacent,AdjacentSeaResource,AdjacentTerrain,AdjacentFeature,AdjacentRiver,AdjacentWonder,AdjacentNaturalWonder,AdjacentImprovement,					AdjacentDistrict,PrereqCivic,PrereqTech,ObsoleteCivic,ObsoleteTech,AdjacentResource,AdjacentResourceClass,Self)
-SELECT	'MNX_ODIN_Seastead_FishingTrawler_Production',	Description,YieldType,YieldChange,TilesRequired,OtherDistrictAdjacent,AdjacentSeaResource,AdjacentTerrain,AdjacentFeature,AdjacentRiver,AdjacentWonder,AdjacentNaturalWonder,'IMPROVEMENT_MNX_ODIN_FISH_FARM',AdjacentDistrict,PrereqCivic,PrereqTech,ObsoleteCivic,ObsoleteTech,AdjacentResource,AdjacentResourceClass,Self
+		(ID,										Description,YieldType,YieldChange,TilesRequired,OtherDistrictAdjacent,AdjacentSeaResource,AdjacentTerrain,AdjacentFeature,AdjacentRiver,AdjacentWonder,AdjacentNaturalWonder,AdjacentImprovement,					AdjacentDistrict,PrereqCivic,PrereqTech,ObsoleteCivic,ObsoleteTech,AdjacentResource,AdjacentResourceClass,Self)
+SELECT	'MNX_ODIN_Seastead_FishFarm_Production',	Description,YieldType,YieldChange,TilesRequired,OtherDistrictAdjacent,AdjacentSeaResource,AdjacentTerrain,AdjacentFeature,AdjacentRiver,AdjacentWonder,AdjacentNaturalWonder,'IMPROVEMENT_MNX_ODIN_FISH_FARM',AdjacentDistrict,PrereqCivic,PrereqTech,ObsoleteCivic,ObsoleteTech,AdjacentResource,AdjacentResourceClass,Self
 FROM	Adjacency_YieldChanges WHERE ID = 'Seastead_Fishingboats_Production';
 
 INSERT OR IGNORE INTO Improvement_Adjacencies
 		(ImprovementType,								YieldChangeId)
-VALUES	('IMPROVEMENT_SEASTEAD',						'MNX_ODIN_Seastead_FishingTrawler_Production');
+VALUES	('IMPROVEMENT_SEASTEAD',						'MNX_ODIN_Seastead_FishFarm_Production');
 
--- Update PLOT_HAS_FISHINGBOATS_REQUIREMENTS to include Fishing Trawlers
+-- Update PLOT_HAS_FISHINGBOATS_REQUIREMENTS to include Fish Far,
 UPDATE	RequirementSets
 SET		RequirementSetType = 'REQUIREMENTSET_TEST_ANY'
 WHERE	RequirementSetId = 'PLOT_HAS_FISHINGBOATS_REQUIREMENTS';	
 
 INSERT OR IGNORE INTO RequirementSetRequirements
 		(RequirementSetId,								RequirementId)
-VALUES	('PLOT_HAS_FISHINGBOATS_REQUIREMENTS',			'REQ_MNX_PLOT_HAS_FISHING_TRAWLER');
+VALUES	('PLOT_HAS_FISHINGBOATS_REQUIREMENTS',			'REQ_MNX_PLOT_HAS_FISH_FARM');
 
 -- Stave Church +1 Prod to Fishing Boats and Trawlers instead of sea resources.
 UPDATE	Modifiers
