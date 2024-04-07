@@ -11,7 +11,7 @@ VALUES	('MOD_MNX_OWNER_ATTACH_MODIFIER', 		'COLLECTION_OWNER', 		'EFFECT_ATTACH_
 
 INSERT OR IGNORE INTO Types
 		(Type,												Kind)
-VALUES	('ABILITY_MNX_ALL_MOVEMENT_1',						'KIND_ABILITY'),
+VALUES	--('ABILITY_MNX_ALL_MOVEMENT_1',						'KIND_ABILITY'),
 		--('ABILITY_MNX_LAND_UNITS_MOVEMENT_1',				'KIND_ABILITY'),
 
 		('ABILITY_MNX_SEA_MOVEMENT_1',						'KIND_ABILITY'),
@@ -54,7 +54,7 @@ VALUES	('ABILITY_MNX_ALL_MOVEMENT_1',						'KIND_ABILITY'),
 
 INSERT OR IGNORE INTO UnitAbilities
 		(UnitAbilityType,								Inactive,	Description)
-VALUES	('ABILITY_MNX_ALL_MOVEMENT_1',					1,			'(ODIN) +10 [ICON_Movement] Movement to all Units.'),
+VALUES	--('ABILITY_MNX_ALL_MOVEMENT_1',					1,			'(ODIN) +10 [ICON_Movement] Movement to all Units.'),
 		--('ABILITY_MNX_LAND_UNITS_MOVEMENT_1',			1,			'(ODIN) +1 [ICON_Movement] Movement to all Land Units.'),
 
 		('ABILITY_MNX_EMBARK_MOVEMENT_1',				1,			'(ODIN) +1 [ICON_Movement] Embarked Movement (Religion).'),
@@ -107,7 +107,7 @@ VALUES	('MOD_MNX_ABIL_COMBAT_STRENGTH',		'Preview',		'(ODIN) +5 [ICON_Strength] 
 
 INSERT OR IGNORE INTO UnitAbilityModifiers
 		(UnitAbilityType,									ModifierId)
-VALUES	('ABILITY_MNX_ALL_MOVEMENT_1',						'MOD_MNX_ABIL_ALL_MOVEMENT_1'),
+VALUES	--('ABILITY_MNX_ALL_MOVEMENT_1',						'MOD_MNX_ABIL_ALL_MOVEMENT_1'),
 		--('ABILITY_MNX_LAND_UNITS_MOVEMENT_1',				'MOD_MNX_ABIL_LAND_UNITS_MOVEMENT_1'),
 		
 		('ABILITY_MNX_EMBARK_MOVEMENT_1',					'MOD_MNX_ABIL_EMBARK_MOVEMENT_1'),
@@ -157,7 +157,7 @@ VALUES	('ABILITY_MNX_COMBAT_STRENGTH',						'CLASS_ALL_COMBAT_UNITS'),
 		('ABILITY_MNX_RELIGIOUS_STRENGTH_1',				'CLASS_RELIGIOUS_ALL'),
 		--('ABILITY_MNX_RELIGIOUS_STRENGTH_2',				'CLASS_RELIGIOUS_ALL'),
 		
-		('ABILITY_MNX_ALL_MOVEMENT_1',						'CLASS_ALL_UNITS'),
+		--('ABILITY_MNX_ALL_MOVEMENT_1',						'CLASS_ALL_UNITS'),
 		
 		('ABILITY_MNX_RECON_MOVEMENT',						'CLASS_RECON'),
 		('ABILITY_MNX_RECON_EMBARK_MOVEMENT',				'CLASS_RECON'),
@@ -323,6 +323,7 @@ VALUES	('ABILITY_MNX_COMBAT_STRENGTH',						'CLASS_ALL_COMBAT_UNITS'),
 		('ABILITY_MNX_CAPTURE_SHIPS',						'CLASS_NAVAL_MELEE'),
 		('ABILITY_MNX_CAPTURE_SHIPS',						'CLASS_NAVAL_RAIDER'),
 		('ABILITY_MNX_CAPTURE_SHIPS',						'CLASS_NAVAL_RANGED'),
+		('ABILITY_MNX_CAPTURE_SHIPS',						'CLASS_NAVAL_CARRIER'),
 		
 		('ABILITY_MNX_SEA_STRENGTH_1',						'CLASS_NAVAL_MELEE'),
 		('ABILITY_MNX_SEA_STRENGTH_1',						'CLASS_NAVAL_RANGED'),
@@ -341,7 +342,7 @@ VALUES	('ABILITY_MNX_COMBAT_STRENGTH',						'CLASS_ALL_COMBAT_UNITS'),
 		('ABILITY_MNX_SEA_STRENGTH_4',						'CLASS_NAVAL_RAIDER'),
 		('ABILITY_MNX_SEA_STRENGTH_4',						'CLASS_NAVAL_CARRIER'),*/
 
-		('ABILITY_MNX_HEAL_NEUTRAL_TERRITORY',				'CLASS_NAVAL_MELEE'),
+		--('ABILITY_MNX_HEAL_NEUTRAL_TERRITORY',				'CLASS_NAVAL_MELEE'), -- Already has it through Knarr
 		('ABILITY_MNX_HEAL_NEUTRAL_TERRITORY',				'CLASS_NAVAL_RANGED'),
 		('ABILITY_MNX_HEAL_NEUTRAL_TERRITORY',				'CLASS_NAVAL_RAIDER'),
 		('ABILITY_MNX_HEAL_NEUTRAL_TERRITORY',				'CLASS_NAVAL_CARRIER');
@@ -355,7 +356,7 @@ VALUES	-------------------------------------------------------------------------
 		--('MOD_MNX_EMBARK_ALL_UNITS',					'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',				1,				NULL),
 		--('MOD_MNX_UNLOCK_OCEAN',						'MODIFIER_PLAYER_UNITS_ADJUST_VALID_TERRAIN',		1,				NULL),
 																											
-		('MOD_MNX_ALL_MOVEMENT_1',						'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',				1,				NULL),
+		--('MOD_MNX_ALL_MOVEMENT_1',						'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',				1,				NULL),
 		--('MOD_MNX_LAND_UNITS_MOVEMENT_1',				'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',				1,				NULL),
 																											
 		('MOD_MNX_EMBARK_MOVEMENT_1',					'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',				1,				'REQSR_MNX_PLAYER_HAS_FOUNDED_RELIGION'),
@@ -399,7 +400,7 @@ VALUES	-------------------------------------------------------------------------
 		----------------------------------------------------------------------------------------------------------			----------------
 		-- Unit Abilities modifiers																			
 		----------------------------------------------------------------------------------------------------------			----------------
-		('MOD_MNX_ABIL_ALL_MOVEMENT_1',					'MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT',				1,				NULL),
+		--('MOD_MNX_ABIL_ALL_MOVEMENT_1',					'MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT',				1,				NULL),
 		--('MOD_MNX_ABIL_LAND_UNITS_MOVEMENT_1',			'MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT',			1,					NULL),
 																											
 		('MOD_MNX_ABIL_EMBARK_MOVEMENT_1',				'MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT',				0,				'REQUIREMENTS_UNIT_IS_EMBARKED'),
@@ -449,7 +450,7 @@ VALUES	-------------------------------------------------------------------------
 		--('MOD_MNX_UNLOCK_OCEAN',						'TerrainType',				'TERRAIN_OCEAN'),
 		--('MOD_MNX_UNLOCK_OCEAN',						'Valid',					'1'),
 
-		('MOD_MNX_ALL_MOVEMENT_1',						'AbilityType',				'ABILITY_MNX_ALL_MOVEMENT_1'),
+		--('MOD_MNX_ALL_MOVEMENT_1',						'AbilityType',				'ABILITY_MNX_ALL_MOVEMENT_1'),
 		--('MOD_MNX_LAND_UNITS_MOVEMENT_1',				'AbilityType',				'ABILITY_MNX_LAND_UNITS_MOVEMENT_1'),
 
 		('MOD_MNX_EMBARK_MOVEMENT_1',					'AbilityType',				'ABILITY_MNX_EMBARK_MOVEMENT_1'),
@@ -493,7 +494,7 @@ VALUES	-------------------------------------------------------------------------
 		-------------------------------------------------------------------------------------------------------------------------------------------------
 		-- Units Abilities
 		-------------------------------------------------------------------------------------------------------------------------------------------------
-		('MOD_MNX_ABIL_ALL_MOVEMENT_1',					'Amount',					'10'),
+		--('MOD_MNX_ABIL_ALL_MOVEMENT_1',					'Amount',					'10'),
 		--('MOD_MNX_ABIL_LAND_UNITS_MOVEMENT_1',			'Amount',					'1'),
 
 		('MOD_MNX_ABIL_EMBARK_MOVEMENT_1',				'Amount',					'1'),
@@ -541,7 +542,7 @@ VALUES	-------------------------------------------------------------------------
 INSERT OR IGNORE INTO TraitModifiers 
 		(TraitType,					ModifierId) 
 VALUES	-- Units Abilities
-		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',			'MOD_MNX_ALL_MOVEMENT_1'),
+		--('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',			'MOD_MNX_ALL_MOVEMENT_1'),
 		--('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'MOD_MNX_LAND_UNITS_MOVEMENT_1'),
 
 		('TRAIT_LEADER_MNX_THE_GODS_ARE_WITH_US',		'MOD_MNX_EMBARK_MOVEMENT_1'),

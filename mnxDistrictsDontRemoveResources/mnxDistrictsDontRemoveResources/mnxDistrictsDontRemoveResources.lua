@@ -6,7 +6,7 @@
 local tMapResources = {}
 
 
--- Get called on the OnDistrictConstructed event. 
+-- Get called on the OnDistrictConstructed GameEvent. 
 -- This is where we re-add the resource that got wiped by the new disctrict.
 function OnDistrictConstructed(playerID, districtID, x, y)
     local iPlot = Map.GetPlot(x, y)
@@ -15,6 +15,21 @@ function OnDistrictConstructed(playerID, districtID, x, y)
 	if tMapResources[x]~=nil and tMapResources[x][y]~=nil and iPlot:GetResourceType()==-1 then
 		-- If so, add it back to the plot
 		iResource = GameInfo.Resources[tMapResources[x][y]].Index;
+		ResourceBuilder.SetResourceType(iPlot, iResource, 1);
+	end
+end
+
+
+-- Get called on the DistrictAddedToMap Event. 
+-- This is where we re-add the resource that got wiped by the new disctrict.
+-- Works better than OnDistrictConstructed for Strategic resources (gives resources right away), but Luxury is only given once district is built.
+function DistrictAddedToMap(playerID, districtID, cityID, districtX, districtY, districtIndex)
+    local iPlot = Map.GetPlot(districtX, districtY)
+
+	-- Check if there initially was a strategic or luxury resource where the district has been built
+	if tMapResources[districtX]~=nil and tMapResources[districtX][districtY]~=nil and iPlot:GetResourceType()==-1 then
+		-- If so, add it back to the plot
+		iResource = GameInfo.Resources[tMapResources[districtX][districtY]].Index;
 		ResourceBuilder.SetResourceType(iPlot, iResource, 1);
 	end
 end
@@ -71,7 +86,8 @@ Events.LoadGameViewStateDone.Add(GetMapResources)
 
 -- Wait till game starts to register our OnDistrictConstructed function to the OnDistrictConstructed event.
 function Initialize()
-	GameEvents.OnDistrictConstructed.Add(OnDistrictConstructed);
+	--GameEvents.OnDistrictConstructed.Add(OnDistrictConstructed);
+	Events.DistrictAddedToMap.Add(DistrictAddedToMap);
 end
 Events.LoadGameViewStateDone.Add(Initialize)
 
