@@ -591,7 +591,7 @@ VALUES	-- To give Com-Hub back it's regular minor districts adjacency
 		('MNX_ODIN_Science_Dist_Adj_Harbor',		'DISTRICT_HARBOR',			NULL,				'YIELD_SCIENCE',		1,				0,					  	1,				'LOC_MNX_ODIN_SCIENCE_DIST_ADJ_HARBOR'		),
 		('MNX_ODIN_Culture_Dist_Adj_Harbor',		'DISTRICT_HARBOR',			NULL,				'YIELD_CULTURE',		1,				0,					  	1,				'LOC_MNX_ODIN_CULTURE_DIST_ADJ_HARBOR'		),
 		('MNX_ODIN_Prod_Dist_Adj_Harbor',			'DISTRICT_HARBOR',			NULL,				'YIELD_PRODUCTION',		1,				0,					  	1,				'LOC_MNX_ODIN_PROD_DIST_ADJ_HARBOR'			),
-		('MNX_ODIN_Food_Dist_Adj_Harbor',			'DISTRICT_HARBOR',			NULL,				'YIELD_FOOD',			1,				0,					  	1,				'LOC_MNX_ODIN_FOOD_DIST_ADJ_HARBOR'			),
+		--('MNX_ODIN_Food_Dist_Adj_Harbor',			'DISTRICT_HARBOR',			NULL,				'YIELD_FOOD',			1,				0,					  	1,				'LOC_MNX_ODIN_FOOD_DIST_ADJ_HARBOR'			),
 
 		-- Major districts adjacency from Encampment
 		('MNX_ODIN_Faith_Dist_Adj_Encamp',			'DISTRICT_ENCAMPMENT',		NULL,				'YIELD_FAITH',			1,				0,					  	1,				'LOC_MNX_ODIN_FAITH_DIST_ADJ_ENCAMP'		),
@@ -626,11 +626,11 @@ VALUES	-- Give Com-Hub back it's regular minor districts adjacency
 		-- Major districts adjacency from Harbor
 		('DISTRICT_HOLY_SITE',				'MNX_ODIN_Faith_Dist_Adj_Harbor'),
 		('DISTRICT_HARBOR',					'MNX_ODIN_Gold_Dist_Adj_Harbor'),
-		--('DISTRICT_COMMERCIAL_HUB',		'MNX_ODIN_Gold_Dist_Adj_Harbor'),  -- Already receives +2 from Harbor
+		--('DISTRICT_COMMERCIAL_HUB',		'MNX_ODIN_Gold_Dist_Adj_Harbor'),		-- Already receives +2 from Harbor
 		('DISTRICT_CAMPUS',					'MNX_ODIN_Science_Dist_Adj_Harbor'),
 		('DISTRICT_THEATER',				'MNX_ODIN_Culture_Dist_Adj_Harbor'),
-		--('DISTRICT_INDUSTRIAL_ZONE',		'MNX_ODIN_Prod_Dist_Adj_Harbor'),  -- Already receives +1 from Harbor
-		('DISTRICT_WATERFRONT',				'MNX_ODIN_Food_Dist_Adj_Harbor'),
+		--('DISTRICT_INDUSTRIAL_ZONE',		'MNX_ODIN_Prod_Dist_Adj_Harbor'),		-- Already receives +1 from Harbor
+		--('DISTRICT_WATERFRONT',				'MNX_ODIN_Food_Dist_Adj_Harbor'),	-- Already receives +2 from Harbor
 		
 		-- Major districts adjacency from Encampment
 		('DISTRICT_HOLY_SITE',				'MNX_ODIN_Faith_Dist_Adj_Encamp'),
@@ -671,7 +671,7 @@ VALUES	-- Remove the regular Faith and Gold district adjacencies for our Civ.
 		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Science_Dist_Adj_Harbor'),
 		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Culture_Dist_Adj_Harbor'),
 		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Prod_Dist_Adj_Harbor'),
-		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Food_Dist_Adj_Harbor'),
+		--('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Food_Dist_Adj_Harbor'),
 
 		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Faith_Dist_Adj_Encamp'),
 		('TRAIT_MNX_ODIN_EXCLUDE_DIST_ADJ_BONUS',	'MNX_ODIN_Gold_Dist_Adj_Encamp'),

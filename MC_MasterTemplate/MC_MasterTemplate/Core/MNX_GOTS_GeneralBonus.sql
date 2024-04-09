@@ -81,7 +81,7 @@ VALUES	-- Tech Boosts
 
 		-- Great People boosts
 		('MOD_MNX_PROPHET_POINTS',							'GreatPersonClassType',		'GREAT_PERSON_CLASS_PROPHET'),
-		('MOD_MNX_PROPHET_POINTS',							'Amount',					'200'),
+		('MOD_MNX_PROPHET_POINTS',							'Amount',					'2'), --100
 		('MOD_MNX_ADMIRAL_POINTS',							'GreatPersonClassType',		'GREAT_PERSON_CLASS_ADMIRAL'),
 		('MOD_MNX_ADMIRAL_POINTS',							'Amount',					'2'),
 		('MOD_MNX_MERCHANT_POINTS',							'GreatPersonClassType',		'GREAT_PERSON_CLASS_MERCHANT'),
