@@ -110,12 +110,40 @@
 			<m_ObjectName text="mnx_Imp_FishFarm38"/>
 		</Element>
 		<Element>
+			<m_EntryID text="mnx_Building_GreatHall256"/>
+			<m_ObjectName text="mnx_Building_GreatHall256"/>
+		</Element>
+		<Element>
+			<m_EntryID text="mnx_Building_GreatHall128"/>
+			<m_ObjectName text="mnx_Building_GreatHall128"/>
+		</Element>
+		<Element>
+			<m_EntryID text="mnx_Building_GreatHall80"/>
+			<m_ObjectName text="mnx_Building_GreatHall80"/>
+		</Element>
+		<Element>
+			<m_EntryID text="mnx_Building_GreatHall50"/>
+			<m_ObjectName text="mnx_Building_GreatHall50"/>
+		</Element>
+		<Element>
+			<m_EntryID text="mnx_Building_GreatHall38"/>
+			<m_ObjectName text="mnx_Building_GreatHall38"/>
+		</Element>
+		<Element>
+			<m_EntryID text="mnx_Building_GreatHall32"/>
+			<m_ObjectName text="mnx_Building_GreatHall32"/>
+		</Element>
+		<Element>
 			<m_EntryID text="NorseAdventurerHistoricMoment"/>
 			<m_ObjectName text="NorseAdventurerHistoricMoment"/>
 		</Element>
 		<Element>
 			<m_EntryID text="mnx_Imp_FishFarm_HistoricMoment"/>
 			<m_ObjectName text="mnx_Imp_FishFarm_HistoricMoment"/>
+		</Element>
+		<Element>
+			<m_EntryID text="mnx_Building_GreatHall_HistoricMoment"/>
+			<m_ObjectName text="mnx_Building_GreatHall_HistoricMoment"/>
 		</Element>
 		<Element>
 			<m_EntryID text="LEADER_MNX_ERIK_THE_RED_NEUTRAL"/>

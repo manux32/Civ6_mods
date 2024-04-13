@@ -18,5 +18,6 @@
 INSERT INTO MomentIllustrations
 		(MomentIllustrationType,					MomentDataType,					GameDataType,									Texture										)
 VALUES	('MOMENT_ILLUSTRATION_UNIQUE_UNIT',			'MOMENT_DATA_UNIT',				'UNIT_MNX_NORSE_ADVENTURER',					'NorseAdventurerHistoricMoment.dds'			),
-		('MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT',	'MOMENT_DATA_IMPROVEMENT',		'IMPROVEMENT_MNX_ODIN_FISH_FARM',				'mnx_Imp_FishFarm_HistoricMoment.dds'	);
+		('MOMENT_ILLUSTRATION_UNIQUE_BUILDING',		'MOMENT_DATA_BUILDING',			'BUILDING_MNX_GREAT_HALL',						'mnx_Building_GreatHall_HistoricMoment.dds'			),
+		('MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT',	'MOMENT_DATA_IMPROVEMENT',		'IMPROVEMENT_MNX_ODIN_FISH_FARM',				'mnx_Imp_FishFarm_HistoricMoment.dds'		);
 		

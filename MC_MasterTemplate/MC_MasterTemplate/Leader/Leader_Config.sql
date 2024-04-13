@@ -226,13 +226,25 @@ VALUES	(
 		'CIVILIZATION_MNX_NORSE', -- CivilizationType
 		'LEADER_MNX_NORSE', -- LeaderType
 		'UNIT_MNX_NORSE_ADVENTURER', -- Type
-		'ICON_UNIT_SUPERSCOUT', -- Icon
+		'ICON_UNIT_MNX_NORSE_ADVENTURER', -- Icon
 		'LOC_UNIT_MNX_NORSE_ADVENTURER_NAME', -- Name
 		'LOC_UNIT_MNX_NORSE_ADVENTURER_DESCRIPTION', -- Description
 		--10	-- SortIndex
 		10	-- SortIndex
 		),
 		
+		(
+		'Players:Expansion2_Players', -- Domain
+		'CIVILIZATION_MNX_NORSE', -- CivilizationType
+		'LEADER_MNX_NORSE', -- LeaderType
+		'BUILDING_MNX_GREAT_HALL', -- Type
+		'ICON_BUILDING_MNX_GREAT_HALL', -- Icon
+		'LOC_BUILDING_MNX_GREAT_HALL_NAME', -- Name
+		'LOC_BUILDING_MNX_GREAT_HALL_DESCRIPTION', -- Description
+		--10	-- SortIndex
+		20	-- SortIndex
+		),
+
 		(
 		'Players:Expansion2_Players', -- Domain
 		'CIVILIZATION_MNX_NORSE', -- CivilizationType

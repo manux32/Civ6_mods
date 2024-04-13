@@ -51,7 +51,14 @@ VALUES	('ICON_ATLAS_MNX_NORSE',				22,	 		1,				1,					'NorseIcon22.dds'				),
 		('ICON_ATLAS_FISHING_ANYWHERE',			50,			1,				1,					'mnx_Imp_FishFarm50.dds'	),
 		('ICON_ATLAS_FISHING_ANYWHERE',			80,			1,				1,					'mnx_Imp_FishFarm80.dds'	),
 		('ICON_ATLAS_FISHING_ANYWHERE',			200,		1,				1,					'mnx_Imp_FishFarm200.dds'	),
-		('ICON_ATLAS_FISHING_ANYWHERE',			256,		1,				1,					'mnx_Imp_FishFarm256.dds'	);
+		('ICON_ATLAS_FISHING_ANYWHERE',			256,		1,				1,					'mnx_Imp_FishFarm256.dds'	),
+		
+		('ICON_ATLAS_MNX_GREAT_HALL',			32,			1,				1,					'mnx_Building_GreatHall32.dds'	),
+		('ICON_ATLAS_MNX_GREAT_HALL',			38,			1,				1,					'mnx_Building_GreatHall38.dds'	),
+		('ICON_ATLAS_MNX_GREAT_HALL',			50,			1,				1,					'mnx_Building_GreatHall50.dds'	),
+		('ICON_ATLAS_MNX_GREAT_HALL',			80,			1,				1,					'mnx_Building_GreatHall80.dds'	),
+		('ICON_ATLAS_MNX_GREAT_HALL',			128,		1,				1,					'mnx_Building_GreatHall128.dds'	),
+		('ICON_ATLAS_MNX_GREAT_HALL',			256,		1,				1,					'mnx_Building_GreatHall256.dds'	);
 
 -----------------------------------------------
 -- IconDefinitions
@@ -66,5 +73,6 @@ INSERT INTO IconDefinitions
 VALUES	('ICON_CIVILIZATION_MNX_NORSE',						'ICON_ATLAS_MNX_NORSE',			0					),
 		('ICON_LEADER_MNX_NORSE',							'ICON_ATLAS_MNX_ERIK_THE_RED',	0					),
 		('ICON_IMPROVEMENT_MNX_ODIN_FISH_FARM',				'ICON_ATLAS_FISHING_ANYWHERE',	0					),
+		('ICON_BUILDING_MNX_GREAT_HALL',					'ICON_ATLAS_MNX_GREAT_HALL',	0					),
 		('ICON_UNIT_MNX_NORSE_ADVENTURER',					'ICON_ATLAS_UNITS',				19					),
 		('ICON_UNIT_MNX_NORSE_ADVENTURER_PORTRAIT',			'ICON_ATLAS_UNIT_PORTRAITS',	17					);

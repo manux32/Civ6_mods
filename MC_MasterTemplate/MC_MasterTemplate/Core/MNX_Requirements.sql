@@ -17,6 +17,14 @@ VALUES	('REQSR_MNX_PLOT_HAS_WATER',					'REQUIREMENTSET_TEST_ANY'),
 		('REQSR_MNX_CITY_HAS_TIER2_HARBOR_BUILDING',	'REQUIREMENTSET_TEST_ANY'),
 		('REQSR_MNX_CITY_HAS_TIER3_HARBOR_BUILDING',	'REQUIREMENTSET_TEST_ANY'),
 
+		('REQSR_MNX_CITY_HAS_TIER1_ENCAMP_BUILDING',	'REQUIREMENTSET_TEST_ANY'),
+		('REQSR_MNX_CITY_HAS_TIER2_ENCAMP_BUILDING',	'REQUIREMENTSET_TEST_ANY'),
+		('REQSR_MNX_CITY_HAS_TIER3_ENCAMP_BUILDING',	'REQUIREMENTSET_TEST_ANY'),
+
+		('REQSR_MNX_CITY_HAS_TIER1_AERO_BUILDING',		'REQUIREMENTSET_TEST_ANY'),
+		('REQSR_MNX_CITY_HAS_TIER2_AERO_BUILDING',		'REQUIREMENTSET_TEST_ANY'),
+		('REQSR_MNX_CITY_HAS_TIER3_AERO_BUILDING',		'REQUIREMENTSET_TEST_ANY'),
+
 		('REQSR_MNX_PLOT_ADJ_TO_WATER',					'REQUIREMENTSET_TEST_ANY'),
 
 		('REQSR_MNX_PLOT_HAS_ADJ_HOLYSITE',				'REQUIREMENTSET_TEST_ALL'),
@@ -101,8 +109,6 @@ VALUES	('REQSR_MNX_PLOT_HAS_WATER',					'REQUIREMENTSET_TEST_ANY'),
 
 		('REQSR_MNX_IS_TRADER_HAS_RELIGION',			'REQUIREMENTSET_TEST_ALL'),
 
-		('REQSR_MNX_CITY_HAS_ENCAMP_HOLY_TIER3',		'REQUIREMENTSET_TEST_ALL'),
-
 		('REQSR_MNX_CITY_HAS_REL_GOV_HARBOR_TIER2',		'REQUIREMENTSET_TEST_ALL'),
 
 		('REQSR_MNX_CITY_HAS_GOV_HOLY_HARB_T3',			'REQUIREMENTSET_TEST_ALL'),
@@ -110,6 +116,12 @@ VALUES	('REQSR_MNX_PLOT_HAS_WATER',					'REQUIREMENTSET_TEST_ANY'),
 		('REQSR_MNX_CITY_HAS_HOLY_TIER3_HARBOR_TIER1',	'REQUIREMENTSET_TEST_ALL'),
 		('REQSR_MNX_CITY_HAS_HOLY_TIER3_HARBOR_TIER2',	'REQUIREMENTSET_TEST_ALL'),
 		
+		('REQSR_MNX_CITY_HAS_HOLY_TIER3_ENCAMP_TIER1',	'REQUIREMENTSET_TEST_ALL'),
+		('REQSR_MNX_CITY_HAS_HOLY_TIER3_ENCAMP_TIER2',	'REQUIREMENTSET_TEST_ALL'),
+		
+		('REQSR_MNX_CITY_HAS_HOLY_TIER3_AERO_TIER1',	'REQUIREMENTSET_TEST_ALL'),
+		('REQSR_MNX_CITY_HAS_HOLY_TIER3_AERO_TIER2',	'REQUIREMENTSET_TEST_ALL'),
+
 		('REQSR_MNX_PLOT_HAS_FISH_FARM',				'REQUIREMENTSET_TEST_ALL');
 
 
@@ -283,9 +295,6 @@ VALUES	('REQSR_MNX_UNIT_IS_RELIGIOUS',					'REQUIRES_UNIT_IS_RELIGIOUS_ALL'),
 		('REQSR_MNX_IS_TRADER_HAS_RELIGION',			'REQUIRES_UNIT_IS_TRADER'),
 		('REQSR_MNX_IS_TRADER_HAS_RELIGION',			'REQUIRES_PLAYER_HAS_FOUNDED_A_RELIGION'),
 
-		('REQSR_MNX_CITY_HAS_ENCAMP_HOLY_TIER3',		'REQUIRES_CITY_HAS_ENCAMPMENT'),
-		('REQSR_MNX_CITY_HAS_ENCAMP_HOLY_TIER3',		'REQ_MNX_CITY_HAS_TIER3_HOLY_BUILDING'),
-
 		('REQSR_MNX_CITY_HAS_REL_GOV_HARBOR_TIER2',		'REQUIRES_PLAYER_HAS_FOUNDED_A_RELIGION'),
 		('REQSR_MNX_CITY_HAS_REL_GOV_HARBOR_TIER2',		'REQUIRES_CITY_HAS_GOVERNOR'),
 		('REQSR_MNX_CITY_HAS_REL_GOV_HARBOR_TIER2',		'REQ_MNX_CITY_HAS_TIER2_HARBOR_BUILDING'),
@@ -300,6 +309,16 @@ VALUES	('REQSR_MNX_UNIT_IS_RELIGIOUS',					'REQUIRES_UNIT_IS_RELIGIOUS_ALL'),
 		('REQSR_MNX_CITY_HAS_HOLY_TIER3_HARBOR_TIER2',	'REQ_MNX_CITY_HAS_TIER3_HOLY_BUILDING'),
 		('REQSR_MNX_CITY_HAS_HOLY_TIER3_HARBOR_TIER2',	'REQ_MNX_CITY_HAS_TIER2_HARBOR_BUILDING'),
 
+		('REQSR_MNX_CITY_HAS_HOLY_TIER3_ENCAMP_TIER1',	'REQ_MNX_CITY_HAS_TIER3_HOLY_BUILDING'),
+		('REQSR_MNX_CITY_HAS_HOLY_TIER3_ENCAMP_TIER1',	'REQ_MNX_CITY_HAS_TIER1_ENCAMP_BUILDING'),
+		('REQSR_MNX_CITY_HAS_HOLY_TIER3_ENCAMP_TIER2',	'REQ_MNX_CITY_HAS_TIER3_HOLY_BUILDING'),
+		('REQSR_MNX_CITY_HAS_HOLY_TIER3_ENCAMP_TIER2',	'REQ_MNX_CITY_HAS_TIER2_ENCAMP_BUILDING'),
+		
+		('REQSR_MNX_CITY_HAS_HOLY_TIER3_AERO_TIER1',	'REQ_MNX_CITY_HAS_TIER3_HOLY_BUILDING'),
+		('REQSR_MNX_CITY_HAS_HOLY_TIER3_AERO_TIER1',	'REQ_MNX_CITY_HAS_TIER1_AERO_BUILDING'),
+		('REQSR_MNX_CITY_HAS_HOLY_TIER3_AERO_TIER2',	'REQ_MNX_CITY_HAS_TIER3_HOLY_BUILDING'),
+		('REQSR_MNX_CITY_HAS_HOLY_TIER3_AERO_TIER2',	'REQ_MNX_CITY_HAS_TIER2_AERO_BUILDING'),
+		
 		('REQSR_MNX_PLOT_HAS_FISH_FARM',				'REQ_MNX_PLOT_HAS_FISH_FARM');
 
 
@@ -328,6 +347,14 @@ VALUES	('REQ_MNX_UNIT_IS_RECON_CLASS',					'REQUIREMENT_UNIT_TAG_MATCHES',						
 		('REQ_MNX_CITY_HAS_TIER1_HARBOR_BUILDING',		'REQUIREMENT_REQUIREMENTSET_IS_MET',					0),
 		('REQ_MNX_CITY_HAS_TIER2_HARBOR_BUILDING',		'REQUIREMENT_REQUIREMENTSET_IS_MET',					0),
 		('REQ_MNX_CITY_HAS_TIER3_HARBOR_BUILDING',		'REQUIREMENT_REQUIREMENTSET_IS_MET',					0),
+
+		('REQ_MNX_CITY_HAS_TIER1_ENCAMP_BUILDING',		'REQUIREMENT_REQUIREMENTSET_IS_MET',					0),
+		('REQ_MNX_CITY_HAS_TIER2_ENCAMP_BUILDING',		'REQUIREMENT_REQUIREMENTSET_IS_MET',					0),
+		('REQ_MNX_CITY_HAS_TIER3_ENCAMP_BUILDING',		'REQUIREMENT_REQUIREMENTSET_IS_MET',					0),
+
+		('REQ_MNX_CITY_HAS_TIER1_AERO_BUILDING',		'REQUIREMENT_REQUIREMENTSET_IS_MET',					0),
+		('REQ_MNX_CITY_HAS_TIER2_AERO_BUILDING',		'REQUIREMENT_REQUIREMENTSET_IS_MET',					0),
+		('REQ_MNX_CITY_HAS_TIER3_AERO_BUILDING',		'REQUIREMENT_REQUIREMENTSET_IS_MET',					0),
 
 		('REQ_MNX_PLOT_ADJ_TO_COAST',					'REQUIREMENT_PLOT_ADJACENT_TERRAIN_TYPE_MATCHES',		0),
 		('REQ_MNX_PLOT_ADJ_TO_OCEAN',					'REQUIREMENT_PLOT_ADJACENT_TERRAIN_TYPE_MATCHES',		0),
@@ -358,7 +385,15 @@ VALUES	('REQ_MNX_UNIT_IS_RECON_CLASS',				'Tag',						'CLASS_RECON'),
 		('REQ_MNX_CITY_HAS_TIER1_HARBOR_BUILDING',	'RequirementSetId',			'REQSR_MNX_CITY_HAS_TIER1_HARBOR_BUILDING'),
 		('REQ_MNX_CITY_HAS_TIER2_HARBOR_BUILDING',	'RequirementSetId',			'REQSR_MNX_CITY_HAS_TIER2_HARBOR_BUILDING'),
 		('REQ_MNX_CITY_HAS_TIER3_HARBOR_BUILDING',	'RequirementSetId',			'REQSR_MNX_CITY_HAS_TIER3_HARBOR_BUILDING'),
-
+		
+		('REQ_MNX_CITY_HAS_TIER1_ENCAMP_BUILDING',	'RequirementSetId',			'REQSR_MNX_CITY_HAS_TIER1_ENCAMP_BUILDING'),
+		('REQ_MNX_CITY_HAS_TIER2_ENCAMP_BUILDING',	'RequirementSetId',			'REQSR_MNX_CITY_HAS_TIER2_ENCAMP_BUILDING'),
+		('REQ_MNX_CITY_HAS_TIER3_ENCAMP_BUILDING',	'RequirementSetId',			'REQSR_MNX_CITY_HAS_TIER3_ENCAMP_BUILDING'),
+		
+		('REQ_MNX_CITY_HAS_TIER1_AERO_BUILDING',	'RequirementSetId',			'REQSR_MNX_CITY_HAS_TIER1_AERO_BUILDING'),
+		('REQ_MNX_CITY_HAS_TIER2_AERO_BUILDING',	'RequirementSetId',			'REQSR_MNX_CITY_HAS_TIER2_AERO_BUILDING'),
+		('REQ_MNX_CITY_HAS_TIER3_AERO_BUILDING',	'RequirementSetId',			'REQSR_MNX_CITY_HAS_TIER3_AERO_BUILDING'),
+		
 		('REQ_MNX_PLOT_ADJ_TO_COAST',				'TerrainType',				'TERRAIN_COAST'),
 		('REQ_MNX_PLOT_ADJ_TO_OCEAN',				'TerrainType',				'TERRAIN_OCEAN'),
 
@@ -516,3 +551,157 @@ INSERT OR IGNORE INTO RequirementArguments
 SELECT	'REQ_MNX_CITY_HAS_'||Building,					'BuildingType',		Building
 FROM	BuildingPrereqs
 WHERE	(PrereqBuilding='BUILDING_SHIPYARD');
+
+
+
+-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
+-- City has Tier 1 Encampment building 
+-----------------------------------------------------------------------------------------------------------
+INSERT OR IGNORE INTO RequirementSetRequirements 
+			(RequirementSetId,								RequirementId)
+SELECT		'REQSR_MNX_CITY_HAS_TIER1_ENCAMP_BUILDING',		'REQ_MNX_CITY_HAS_'||BuildingType
+FROM		Buildings
+WHERE		(PrereqDistrict='DISTRICT_ENCAMPMENT') AND (BuildingType NOT IN (SELECT Building FROM BuildingPrereqs));
+
+INSERT OR IGNORE INTO Requirements 
+			(RequirementId,							RequirementType)
+SELECT		'REQ_MNX_CITY_HAS_'||BuildingType,		'REQUIREMENT_CITY_HAS_BUILDING'
+FROM		Buildings
+WHERE		(PrereqDistrict='DISTRICT_ENCAMPMENT') AND (BuildingType NOT IN (SELECT Building FROM BuildingPrereqs));
+
+INSERT OR IGNORE INTO RequirementArguments 
+			(RequirementId,							Name,				Value)
+SELECT		'REQ_MNX_CITY_HAS_'||BuildingType,		'BuildingType',		BuildingType
+FROM		Buildings
+WHERE		(PrereqDistrict='DISTRICT_ENCAMPMENT') AND (BuildingType NOT IN (SELECT Building FROM BuildingPrereqs));
+
+
+-- City has Tier 2 Encampment building 
+INSERT OR IGNORE INTO RequirementSetRequirements 
+		(RequirementSetId,								RequirementId)
+VALUES	('REQSR_MNX_CITY_HAS_TIER2_ENCAMP_BUILDING',		'REQ_MNX_CITY_HAS_BUILDING_ARMORY');
+
+INSERT OR IGNORE INTO Requirements
+		(RequirementId,									RequirementType)
+VALUES	('REQ_MNX_CITY_HAS_BUILDING_ARMORY',			'REQUIREMENT_CITY_HAS_BUILDING');
+
+INSERT OR IGNORE INTO RequirementArguments
+		(RequirementId,									Name,						Value)
+VALUES	('REQ_MNX_CITY_HAS_BUILDING_ARMORY',			'BuildingType',				'BUILDING_ARMORY');
+
+
+INSERT OR IGNORE INTO RequirementSetRequirements 
+		(RequirementSetId,								RequirementId)
+SELECT	'REQSR_MNX_CITY_HAS_TIER2_ENCAMP_BUILDING',		'REQ_MNX_CITY_HAS_'||CivUniqueBuildingType
+FROM	BuildingReplaces
+WHERE	(ReplacesBuildingType='BUILDING_ARMORY');
+
+INSERT OR IGNORE INTO Requirements 
+		(RequirementId,									RequirementType)
+SELECT	'REQ_MNX_CITY_HAS_'||CivUniqueBuildingType,		'REQUIREMENT_CITY_HAS_BUILDING'
+FROM	BuildingReplaces
+WHERE	(ReplacesBuildingType='BUILDING_ARMORY');
+
+INSERT OR IGNORE INTO RequirementArguments 
+		(RequirementId,									Name,				Value)
+SELECT	'REQ_MNX_CITY_HAS_'||CivUniqueBuildingType,		'BuildingType',		CivUniqueBuildingType
+FROM	BuildingReplaces
+WHERE	(ReplacesBuildingType='BUILDING_ARMORY');
+
+
+-- City has Tier 3 Encampment building 
+INSERT OR IGNORE INTO RequirementSetRequirements 
+		(RequirementSetId,								RequirementId)
+SELECT	'REQSR_MNX_CITY_HAS_TIER3_ENCAMP_BUILDING',		'REQ_MNX_CITY_HAS_'||Building
+FROM	BuildingPrereqs
+WHERE	(PrereqBuilding='BUILDING_ARMORY');
+
+INSERT OR IGNORE INTO Requirements 
+		(RequirementId,									RequirementType)
+SELECT	'REQ_MNX_CITY_HAS_'||Building,					'REQUIREMENT_CITY_HAS_BUILDING'
+FROM	BuildingPrereqs
+WHERE	(PrereqBuilding='BUILDING_ARMORY');
+
+INSERT OR IGNORE INTO RequirementArguments 
+		(RequirementId,									Name,				Value)
+SELECT	'REQ_MNX_CITY_HAS_'||Building,					'BuildingType',		Building
+FROM	BuildingPrereqs
+WHERE	(PrereqBuilding='BUILDING_ARMORY');
+
+
+
+-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
+-- City has Tier 1 Aerodrome building 
+-----------------------------------------------------------------------------------------------------------
+INSERT OR IGNORE INTO RequirementSetRequirements 
+			(RequirementSetId,								RequirementId)
+SELECT		'REQSR_MNX_CITY_HAS_TIER1_AERO_BUILDING',		'REQ_MNX_CITY_HAS_'||BuildingType
+FROM		Buildings
+WHERE		(PrereqDistrict='DISTRICT_AERODROME') AND (BuildingType NOT IN (SELECT Building FROM BuildingPrereqs));
+
+INSERT OR IGNORE INTO Requirements 
+			(RequirementId,							RequirementType)
+SELECT		'REQ_MNX_CITY_HAS_'||BuildingType,		'REQUIREMENT_CITY_HAS_BUILDING'
+FROM		Buildings
+WHERE		(PrereqDistrict='DISTRICT_AERODROME') AND (BuildingType NOT IN (SELECT Building FROM BuildingPrereqs));
+
+INSERT OR IGNORE INTO RequirementArguments 
+			(RequirementId,							Name,				Value)
+SELECT		'REQ_MNX_CITY_HAS_'||BuildingType,		'BuildingType',		BuildingType
+FROM		Buildings
+WHERE		(PrereqDistrict='DISTRICT_AERODROME') AND (BuildingType NOT IN (SELECT Building FROM BuildingPrereqs));
+
+
+-- City has Tier 2 Aerodrome building 
+INSERT OR IGNORE INTO RequirementSetRequirements 
+		(RequirementSetId,								RequirementId)
+VALUES	('REQSR_MNX_CITY_HAS_TIER2_AERO_BUILDING',		'REQ_MNX_CITY_HAS_BUILDING_AIRPORT');
+
+INSERT OR IGNORE INTO Requirements
+		(RequirementId,									RequirementType)
+VALUES	('REQ_MNX_CITY_HAS_BUILDING_AIRPORT',			'REQUIREMENT_CITY_HAS_BUILDING');
+
+INSERT OR IGNORE INTO RequirementArguments
+		(RequirementId,									Name,						Value)
+VALUES	('REQ_MNX_CITY_HAS_BUILDING_AIRPORT',			'BuildingType',				'BUILDING_AIRPORT');
+
+
+INSERT OR IGNORE INTO RequirementSetRequirements 
+		(RequirementSetId,								RequirementId)
+SELECT	'REQSR_MNX_CITY_HAS_TIER2_AERO_BUILDING',		'REQ_MNX_CITY_HAS_'||CivUniqueBuildingType
+FROM	BuildingReplaces
+WHERE	(ReplacesBuildingType='BUILDING_AIRPORT');
+
+INSERT OR IGNORE INTO Requirements 
+		(RequirementId,									RequirementType)
+SELECT	'REQ_MNX_CITY_HAS_'||CivUniqueBuildingType,		'REQUIREMENT_CITY_HAS_BUILDING'
+FROM	BuildingReplaces
+WHERE	(ReplacesBuildingType='BUILDING_AIRPORT');
+
+INSERT OR IGNORE INTO RequirementArguments 
+		(RequirementId,									Name,				Value)
+SELECT	'REQ_MNX_CITY_HAS_'||CivUniqueBuildingType,		'BuildingType',		CivUniqueBuildingType
+FROM	BuildingReplaces
+WHERE	(ReplacesBuildingType='BUILDING_AIRPORT');
+
+
+-- City has Tier 3 Aerodrome building 
+INSERT OR IGNORE INTO RequirementSetRequirements 
+		(RequirementSetId,								RequirementId)
+SELECT	'REQSR_MNX_CITY_HAS_TIER3_AERO_BUILDING',		'REQ_MNX_CITY_HAS_'||Building
+FROM	BuildingPrereqs
+WHERE	(PrereqBuilding='BUILDING_AIRPORT');
+
+INSERT OR IGNORE INTO Requirements 
+		(RequirementId,									RequirementType)
+SELECT	'REQ_MNX_CITY_HAS_'||Building,					'REQUIREMENT_CITY_HAS_BUILDING'
+FROM	BuildingPrereqs
+WHERE	(PrereqBuilding='BUILDING_AIRPORT');
+
+INSERT OR IGNORE INTO RequirementArguments 
+		(RequirementId,									Name,				Value)
+SELECT	'REQ_MNX_CITY_HAS_'||Building,					'BuildingType',		Building
+FROM	BuildingPrereqs
+WHERE	(PrereqBuilding='BUILDING_AIRPORT');

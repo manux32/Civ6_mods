@@ -36,12 +36,12 @@ VALUES
 	-- Combined Traits (Norway and new) description for when we choose the player
 	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_NORSE_MAIN_NAME',				'Norse: Sons of Odin'),
 	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_NORSE_MAIN_DESCRIPTION',
-	'+2 Great [ICON_GreatProphet] Prophet, [ICON_GreatAdmiral] Admiral, [ICON_GreatGeneral] General, and [ICON_GreatMerchant] Merchant points per turn. Land Units can embark from the start and ignore embark/disembark [ICON_Movement] costs. Units can enter Ocean tiles at Shipbuilding. Coastal Cities get +2 [ICON_Housing] Housing. Coastal Districts provide +1 [ICON_Amenities] Amenity. Harbor, Encampment and Holy Site are 50% [ICON_PRODUCTION] cheaper to build, and give/receive +1 adjacency to/from all districts. Harbor and Holy Site buildings emanate some of their respective yields ([ICON_Faith]/[ICON_Gold]) on adjacent tiles and districts, and on water tiles with later eras buildings. Districts receive minor adjacency from Water tiles. Holy Site and Harbor buildings provide +2 [ICON_Food] Food.'),	-- Shrines provide +1 [ICON_TradeRoute] Trade Route capacity.'),
+	'+2 Great [ICON_GreatProphet] Prophet, [ICON_GreatAdmiral] Admiral, [ICON_GreatGeneral] General, and [ICON_GreatMerchant] Merchant points per turn. Land Units can embark from the start and ignore embark/disembark [ICON_Movement] costs. Units can enter Ocean tiles at Shipbuilding. Coastal Cities get +1 [ICON_Housing] Housing. Coastal Districts provide +1 [ICON_Amenities] Amenity. Harbor, Encampment and Holy Site are 50% [ICON_PRODUCTION] cheaper to build, and give/receive +1 adjacency to/from all districts. Harbor and Holy Site buildings emanate some of their respective yields ([ICON_Faith]/[ICON_Gold]) on adjacent tiles and districts, and on water tiles with later eras buildings. Districts receive minor adjacency from Water tiles. Holy Site and Harbor buildings provide +2 [ICON_Food] Food.'),	-- Shrines provide +1 [ICON_TradeRoute] Trade Route capacity.'),
 
 	-- New Trait description only for when the Game Loads.
 	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_NAME',				'Norse: Sons of Odin'),
 	('en_US',	'LOC_TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN_DESCRIPTION',
-	'+2 Great [ICON_GreatProphet] Prophet, [ICON_GreatAdmiral] Admiral, [ICON_GreatGeneral] General, and [ICON_GreatMerchant] Merchant points per turn. Land Units can embark from the start and ignore embark/disembark [ICON_Movement] costs. Units can enter Ocean tiles at Shipbuilding. Coastal Cities get +2 [ICON_Housing] Housing. Coastal Districts provide +1 [ICON_Amenities] Amenity. Harbor, Encampment and Holy Site are 50% [ICON_PRODUCTION] cheaper to build, and give/receive +1 adjacency to/from all districts. Harbor and Holy Site buildings emanate some of their respective yields ([ICON_Faith]/[ICON_Gold]) on adjacent tiles and districts, and on water tiles with later eras buildings. Districts receive minor adjacency from Water tiles. Holy Site and Harbor buildings provide +2 [ICON_Food] Food.'),	-- Shrines provide +1 [ICON_TradeRoute] Trade Route capacity.'),
+	'+2 Great [ICON_GreatProphet] Prophet, [ICON_GreatAdmiral] Admiral, [ICON_GreatGeneral] General, and [ICON_GreatMerchant] Merchant points per turn. Land Units can embark from the start and ignore embark/disembark [ICON_Movement] costs. Units can enter Ocean tiles at Shipbuilding. Coastal Cities get +1 [ICON_Housing] Housing. Coastal Districts provide +1 [ICON_Amenities] Amenity. Harbor, Encampment and Holy Site are 50% [ICON_PRODUCTION] cheaper to build, and give/receive +1 adjacency to/from all districts. Harbor and Holy Site buildings emanate some of their respective yields ([ICON_Faith]/[ICON_Gold]) on adjacent tiles and districts, and on water tiles with later eras buildings. Districts receive minor adjacency from Water tiles. Holy Site and Harbor buildings provide +2 [ICON_Food] Food.'),	-- Shrines provide +1 [ICON_TradeRoute] Trade Route capacity.'),
 
 -----------------------------------------------
 -- District adjacency descriptions
@@ -86,6 +86,9 @@ VALUES
 
 -- Please note: The display of in-game icons in text is achieved by using [ICON_Type].
 -----------------------------------------------
+	('en_US',	'LOC_BUILDING_MNX_GREAT_HALL_NAME',						'Great Hall'								),
+	('en_US',	'LOC_BUILDING_MNX_GREAT_HALL_DESCRIPTION',				'A building unique to the Norse that unlocks with Mining. +2 [ICON_Housing] Housing, +1 [ICON_Amenities] Amenity, and +2 [ICON_Food][ICON_Production][ICON_Gold][ICON_Faith][ICON_Culture].'),
+	
 	('en_US',	'LOC_IMPROVEMENT_MNX_ODIN_FISH_FARM_NAME',				'Fish Farm'								),
 	('en_US',	'LOC_IMPROVEMENT_MNX_ODIN_FISH_FARM_DESCRIPTION',		'Unlocks the Builder ability to construct Fish Farms on any Coast or Lake tile with Shipbuilding and on any Ocean tile with Cartography. Provides the same yields and bonuses as Fishing Boats. Cannot be built on a sea resource.'),
 

@@ -20,6 +20,9 @@ VALUES	-- Grant Technologies
 		('MOD_MNX_MASS_PRODUCTION',						'MODIFIER_PLAYER_GRANT_SPECIFIC_TECHNOLOGY',					1,			NULL),
 		('MOD_MNX_ELECTRICITY',							'MODIFIER_PLAYER_GRANT_SPECIFIC_TECHNOLOGY',					1,			NULL),
 		
+		-- Great Prophet points
+		('MOD_MNX_CHEAT_PROPHET_POINTS',				'MODIFIER_PLAYER_ADJUST_GREAT_PERSON_POINTS',					1,			NULL),
+		
 		-- Movement boost to all units
 		('MOD_MNX_ALL_UNITS_MOVE_BOOST',				'MODIFIER_PLAYER_UNITS_ADJUST_MOVEMENT',						1,			NULL),
 		
@@ -64,6 +67,10 @@ VALUES	-- Grant Technologies
 		('MOD_MNX_MASS_PRODUCTION',						'TechType',					'TECH_MASS_PRODUCTION'),
 		('MOD_MNX_ELECTRICITY',							'TechType',					'TECH_ELECTRICITY'),
 		
+		-- Great Prophet points
+		('MOD_MNX_CHEAT_PROPHET_POINTS',				'GreatPersonClassType',		'GREAT_PERSON_CLASS_PROPHET'),
+		('MOD_MNX_CHEAT_PROPHET_POINTS',				'Amount',					'200'),
+
 		-- Movement boost to all units
 		('MOD_MNX_ALL_UNITS_MOVE_BOOST',				'Amount',					'10'),
 
@@ -134,6 +141,9 @@ VALUES	-- Grant Technologies
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'MOD_MNX_ELECTRICITY'),
 
 		-----------------------------------------------------------
+		-- Great Prophet points
+		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'MOD_MNX_CHEAT_PROPHET_POINTS'),
+		
 		-- Movement boost to all units
 		('TRAIT_CIVILIZATION_MNX_SONS_OF_ODIN',		'MOD_MNX_ALL_UNITS_MOVE_BOOST'),
 

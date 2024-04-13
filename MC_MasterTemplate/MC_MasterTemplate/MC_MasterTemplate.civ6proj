@@ -35,7 +35,7 @@
     <AssemblyName>Keniisus_Civ_Template</AssemblyName>
     <RootNamespace>Keniisus_Civ_Template</RootNamespace>
     <FrontEndActionData><![CDATA[<FrontEndActions><UpdateDatabase id="NewAction"><File>Leader/Leader_Config.sql</File></UpdateDatabase><UpdateText id="NewAction"><File>Core/Civilization_Localisation.sql</File><File>Leader/Leader_Localisation.sql</File></UpdateText><UpdateColors id="NewAction"><File>Core/Civilization_Colors.sql</File><File>Leader/Leader_Colors.sql</File></UpdateColors><UpdateArt id="NewAction"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateIcons id="UpdateIcons"><File>Core/NewIcons.sql</File></UpdateIcons></FrontEndActions>]]></FrontEndActionData>
-    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="NewCIv_Database"><Properties><LoadOrder>10</LoadOrder></Properties><File>Core/Civilization_Config.sql</File><File>Leader/Leader_Core.sql</File><File>Core/Civilization_UA.sql</File><File>Leader/Leader_UA.sql</File><File>Leader/Leader_Agenda.sql</File><File>Leader/Leader_Screens.sql</File><File>Core/Civilization_HistoricMoments.sql</File><File>Core/MNX_UU_NorseAdventurer.sql</File><File>Core/MNX_UI_FishFarm.sql</File></UpdateDatabase><UpdateColors id="NewAction"><File>Core/Civilization_Colors.sql</File><File>Leader/Leader_Colors.sql</File></UpdateColors><UpdateText id="NewAction"><File>Core/Civilization_Localisation.sql</File><File>Leader/Leader_Localisation.sql</File></UpdateText><UpdateIcons id="NewIcons"><File>Core/NewIcons.sql</File></UpdateIcons><UpdateArt id="NewAction"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateDatabase id="Requirements"><Properties><LoadOrder>10</LoadOrder></Properties><File>Core/MNX_Requirements.sql</File></UpdateDatabase><UpdateDatabase id="GOTS_stuff"><Properties><LoadOrder>1000000</LoadOrder></Properties><File>Core/MNX_FaithPurchase.sql</File><File>Core/MNX_GOTS_Abilities.sql</File><File>Core/MNX_GOTS_GeneralBonus.sql</File><File>Core/MNX_RemoveMutExcDistricts.sql</File></UpdateDatabase></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="NewCIv_Database"><Properties><LoadOrder>10</LoadOrder></Properties><File>Core/Civilization_Config.sql</File><File>Leader/Leader_Core.sql</File><File>Core/Civilization_UA.sql</File><File>Leader/Leader_UA.sql</File><File>Leader/Leader_Agenda.sql</File><File>Leader/Leader_Screens.sql</File><File>Core/Civilization_HistoricMoments.sql</File><File>Core/MNX_UU_NorseAdventurer.sql</File><File>Core/MNX_UI_FishFarm.sql</File><File>Core/MNX_UB_GreatHall.sql</File></UpdateDatabase><UpdateColors id="NewAction"><File>Core/Civilization_Colors.sql</File><File>Leader/Leader_Colors.sql</File></UpdateColors><UpdateText id="NewAction"><File>Core/Civilization_Localisation.sql</File><File>Leader/Leader_Localisation.sql</File></UpdateText><UpdateIcons id="NewIcons"><File>Core/NewIcons.sql</File></UpdateIcons><UpdateArt id="NewAction"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateDatabase id="Requirements"><Properties><LoadOrder>10</LoadOrder></Properties><File>Core/MNX_Requirements.sql</File></UpdateDatabase><UpdateDatabase id="GOTS_stuff"><Properties><LoadOrder>1000000</LoadOrder></Properties><File>Core/MNX_FaithPurchase.sql</File><File>Core/MNX_GOTS_Abilities.sql</File><File>Core/MNX_GOTS_GeneralBonus.sql</File><File>Core/MNX_RemoveMutExcDistricts.sql</File></UpdateDatabase></InGameActions>]]></InGameActionData>
     <ActionCriteriaData><![CDATA[<ActionCriteria><Criteria id="Expansion1"><GameModeInUse><GameCoreInUse>Expansion1</GameCoreInUse></GameModeInUse></Criteria></ActionCriteria>]]></ActionCriteriaData>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
@@ -89,6 +89,9 @@
     <Content Include="Core\MNX_FaithPurchase.sql">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Core\MNX_UB_GreatHall.sql">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Core\MNX_UI_FishFarm.sql">
       <SubType>Content</SubType>
     </Content>
@@ -135,6 +138,48 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="MC_MasterTemplate.Art.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall128.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall128.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall256.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall256.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall32.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall32.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall38.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall38.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall50.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall50.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall80.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall80.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall_HistoricMoment.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\mnx_Building_GreatHall_HistoricMoment.tex">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Textures\mnx_Imp_FishFarm200.dds">

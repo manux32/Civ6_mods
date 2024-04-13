@@ -22,6 +22,13 @@ FROM	Improvement_ValidBuildUnits WHERE ImprovementType = 'IMPROVEMENT_FISHING_BO
 VALUES	('IMPROVEMENT_MNX_ODIN_FISH_FARM',	'TERRAIN_COAST'),
 		('IMPROVEMENT_MNX_ODIN_FISH_FARM',	'TERRAIN_OCEAN');*/
 
+-- Allow fish farms on Reef and Suk Oceans Kelp
+-- TODO: Implement this better for when not using Suk Oceans
+INSERT OR IGNORE INTO Improvement_ValidFeatures
+		(ImprovementType,								FeatureType)
+VALUES	('IMPROVEMENT_MNX_ODIN_FISH_FARM',				'FEATURE_SUK_KELP'),
+		('IMPROVEMENT_MNX_ODIN_FISH_FARM',				'FEATURE_REEF');
+
 INSERT OR IGNORE INTO Improvement_YieldChanges
 		(ImprovementType,							YieldType,					YieldChange		)
 SELECT	'IMPROVEMENT_MNX_ODIN_FISH_FARM',		YieldType,					YieldChange
